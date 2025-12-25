@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { Calendar, Eye, User, Share2, Facebook, Twitter, Linkedin, Clock } from 'lucide-react'
 import allNewsData from '../../mockDatas/allNews.json'
 import Breadcrumb from '../../components/shared/Breadcrumb'
+import { formatDate } from '@/lib/utils'
 
 const NewDetailsPage = () => {
   const { slug } = useParams()
@@ -44,7 +45,7 @@ const NewDetailsPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen pb-12">
       {/* Breadcrumb */}
-      <Breadcrumb items={breadcrumbItems} />
+      
 
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-10">
@@ -80,7 +81,7 @@ const NewDetailsPage = () => {
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Calendar className="w-4 h-4" />
-                  <time>{new Date(news.createdAt).toLocaleDateString('az-AZ', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+                  <time>{formatDate(news.createdAt)}</time>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Eye className="w-4 h-4" />
@@ -155,9 +156,12 @@ const NewDetailsPage = () => {
                 <p className="text-sm text-gray-600 mb-6">
                     Təcrübəli jurnalist və yazar. Amasya və bölgə xəbərləri üzrə mütəxəssis.
                 </p>
-                <button className="w-full py-2.5 border border-blue-600 text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-colors">
+                <Link 
+                  to={`/author/${encodeURIComponent(news.author?.name)}`}
+                  className="block w-full py-2.5 border border-blue-600 text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-colors"
+                >
                     Müəllifin bütün paylaşımları
-                </button>
+                </Link>
              </div>
 
              {/* Related News */}

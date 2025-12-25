@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import videosData from '../../../mockDatas/allVideos.json'
 import { Play } from 'lucide-react'
+import { formatDate } from '@/lib/utils'
 
 const LatestVideos = () => {
   const videos = useMemo(() => {
@@ -75,7 +76,7 @@ const LatestVideos = () => {
               <div className="p-3 md:p-4">
                 <div className="text-lg md:text-xl font-bold">{active.title}</div>
                 <div className="text-xs md:text-sm text-white/70 mt-1">
-                  {active.duration} • {new Date(active.publishedAt).toLocaleDateString('az-AZ')}
+                  {active.duration} • {formatDate(active.publishedAt)}
                 </div>
               </div>
             </div>

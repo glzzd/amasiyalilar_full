@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Eye, Calendar } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { cn, formatDate } from '@/lib/utils'
 
 const NewsCard = ({ news, className }) => {
   return (
@@ -32,7 +32,7 @@ const NewsCard = ({ news, className }) => {
         <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
           <div className="flex items-center gap-1.5">
             <Calendar className="w-3.5 h-3.5" />
-            <time>{new Date(news.createdAt).toLocaleDateString('az-AZ')}</time>
+            <time>{formatDate(news.createdAt)}</time>
           </div>
           <div className="flex items-center gap-1.5">
             <Eye className="w-3.5 h-3.5" />

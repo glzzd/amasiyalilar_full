@@ -11,7 +11,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import Breadcrumb from "../../components/shared/Breadcrumb";
 
 const AllNewsPage = () => {
@@ -113,7 +113,6 @@ const AllNewsPage = () => {
           </div>
         </div>
       </div>
-      <Breadcrumb items={breadcrumbItems} />
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Main Content Area (Left) */}
@@ -303,7 +302,7 @@ const AllNewsPage = () => {
                       <div className="flex items-center gap-2 text-xs text-gray-500">
                         <Calendar className="w-3 h-3" />
                         <time>
-                          {new Date(news.createdAt).toLocaleDateString("az-AZ")}
+                          {formatDate(news.createdAt)}
                         </time>
                       </div>
                     </div>

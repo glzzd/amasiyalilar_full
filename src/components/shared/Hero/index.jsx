@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import allNews from '../../../mockDatas/allNews.json'
+import { formatDate } from '@/lib/utils'
 
 const Card = ({ item, size = 'md' }) => (
   <Link to={item.slug ? `/news/${item.slug}` : '#'} className="group relative block md:h-full overflow-hidden rounded-md transform-gpu transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
@@ -19,7 +20,7 @@ const Card = ({ item, size = 'md' }) => (
     </div>
     <div className="absolute left-0 right-0 bottom-0 p-4">
       <div className="text-white/80 text-xs">
-        {new Date(item.createdAt).toLocaleDateString('tr-TR', { year: 'numeric', month: 'short', day: '2-digit' })}
+        {formatDate(item.createdAt)}
       </div>
       <div className={`text-white font-bold ${size === 'lg' ? 'text-xl md:text-2xl' : 'text-sm md:text-base'} mt-1 line-clamp-2 transition-colors group-hover:text-red-400`}>
         {item.title}

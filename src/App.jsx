@@ -5,6 +5,9 @@ import PrivateLayout from './layouts/PrivateLayout'
 import HomePage from './pages/HomePage'
 import AllNewsPage from './pages/News/AllNewsPage'
 import NewDetailsPage from './pages/News/NewDetailsPage'
+import AuthorNewsPage from './pages/News/AuthorNewsPage'
+import AllMartyrsPage from './pages/Martyrs/AllMartyrsPage'
+import MartyrDetailsPage from './pages/Martyrs/MartyrDetailsPage'
 
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
           <Route index element={<HomePage/>} />
           <Route path="news" element={<AllNewsPage />} />
           <Route path="news/:slug" element={<NewDetailsPage />} />
+          <Route path="author/:authorName" element={<AuthorNewsPage />} />
+          <Route path="martyrs" element={<AllMartyrsPage />} />
+          <Route path="martyrs/:slug" element={<MartyrDetailsPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>

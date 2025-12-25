@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "fullName": "Mübariz İbrahimov",
+    "slug": "mubariz-ibrahimov",
+    "rank": "Gizir",
+    "birthDate": "1988-02-07",
+    "deathDate": "2010-06-18",
+    "location": "Tərtər rayonu, Çaylı kəndi",
+    "description": "Azərbaycan Milli Qəhrəmanı. 2010-cu ilin iyunun 18-dən 19-na keçən gecə Tərtər rayonunun Çaylı kəndi istiqamətində düşmən hücumunun qarşısını alarkən qəhrəmancasına şəhid olmuşdur. Göstərdiyi şücaətə görə ölümündən sonra Azərbaycanın Milli Qəhrəmanı adına layiq görülmüşdür.",
+    "image": "https://placehold.co/600x400/png?text=Mübariz+İbrahimov",
+    "awards": ["Azərbaycanın Milli Qəhrəmanı", "Qızıl Ulduz Medalı"]
+  },
+  {
+    "id": 2,
+    "fullName": "Polad Həşimov",
+    "slug": "polad-hashimov",
+    "rank": "General-mayor",
+    "birthDate": "1975-01-02",
+    "deathDate": "2020-07-14",
+    "location": "Tovuz rayonu",
+    "description": "Azərbaycan Silahlı Qüvvələrinin general-mayoru. 2020-ci il iyulun 14-də Tovuz rayonu istiqamətində gedən döyüşlərdə ön xətdə əsgərlərinin yanında olarkən qəhrəmancasına şəhid olmuşdur. Azərbaycanın Milli Qəhrəmanıdır.",
+    "image": "https://placehold.co/600x400/png?text=Polad+Həşimov",
+    "awards": ["Azərbaycanın Milli Qəhrəmanı", "Vətən uğrunda medalı"]
+  },
+  {
+    "id": 3,
+    "fullName": "Xudayar Yusifzadə",
+    "slug": "xudayar-yusifzade",
+    "rank": "Gizir",
+    "birthDate": "1998-07-15",
+    "deathDate": "2020-10-22",
+    "location": "Zəngilan rayonu, Ağbənd qəsəbəsi",
+    "description": "Vətən Müharibəsi şəhidi. Döyüşlərdə göstərdiyi igidliyə görə tanınır. Oxuduğu 'Vətən yaxşıdır' təsnifi ilə xalqın yaddaşında əbədi iz buraxmışdır. Zəngilanın azadlığı uğrunda gedən döyüşlərdə şəhid olmuşdur.",
+    "image": "https://placehold.co/600x400/png?text=Xudayar+Yusifzadə",
+    "awards": ["Vətən uğrunda medalı", "Zəngilanın azad olunmasına görə medalı"]
+  },
+  {
+    "id": 4,
+    "fullName": "Cəbrayıl Dövlətzadə",
+    "slug": "cebrayil-dovletzade",
+    "rank": "Əsgər",
+    "birthDate": "2001-09-11",
+    "deathDate": "2020-09-28",
+    "location": "Murovdağ",
+    "description": "Vətən Müharibəsi şəhidi. Murovdağ istiqamətində gedən döyüşlərdə düşmən generalını məhv edərək böyük qəhrəmanlıq göstərmiş və şəhidlik zirvəsinə ucalmışdır.",
+    "image": "https://placehold.co/600x400/png?text=Cəbrayıl+Dövlətzadə",
+    "awards": ["Azərbaycan Bayrağı ordeni", "Vətən uğrunda medalı"]
+  },
+  {
+    "id": 5,
+    "fullName": "Albert Aqarunov",
+    "slug": "albert-agarunov",
+    "rank": "Tank komandiri",
+    "birthDate": "1969-04-25",
+    "deathDate": "1992-05-08",
+    "location": "Şuşa",
+    "description": "Azərbaycanın Milli Qəhrəmanı. Yəhudi əsilli Azərbaycan tankçısı. Birinci Qarabağ müharibəsində Şuşanın müdafiəsi zamanı göstərdiyi misilsiz qəhrəmanlıqla tanınır.",
+    "image": "https://placehold.co/600x400/png?text=Albert+Aqarunov",
+    "awards": ["Azərbaycanın Milli Qəhrəmanı"]
+  },
+  {
+    "id": 6,
+    "fullName": "Fərid Əhmədov",
+    "slug": "ferid-ehmedov",
+    "rank": "Baş leytenant",
+    "birthDate": "1986-01-19",
+    "deathDate": "2010-09-04",
+    "location": "Tərtər rayonu, Çiləbürt",
+    "description": "Azərbaycan zabiti. 2010-cu ildə Tərtər cəbhəsində döyüş tapşırığını yerinə yetirərkən şəhid olmuşdur. İgidliyinə görə 'İgidliyə görə' medalı ilə təltif edilmişdir.",
+    "image": "https://placehold.co/600x400/png?text=Fərid+Əhmədov",
+    "awards": ["İgidliyə görə medalı"]
+  },
+  {
+    "id": 7,
+    "fullName": "Samid İmanov",
+    "slug": "samid-imanov",
+    "rank": "Mayor",
+    "birthDate": "1981-10-14",
+    "deathDate": "2016-04-04",
+    "location": "Tərtər rayonu, Talış kəndi",
+    "description": "Azərbaycanın Milli Qəhrəmanı. 2016-cı il Aprel döyüşlərində göstərdiyi xüsusi qəhrəmanlığa görə bu ada layiq görülmüşdür. Xüsusi Təyinatlı Qüvvələrin zabiti olmuşdur.",
+    "image": "https://placehold.co/600x400/png?text=Samid+İmanov",
+    "awards": ["Azərbaycanın Milli Qəhrəmanı"]
+  },
+  {
+    "id": 8,
+    "fullName": "Çingiz Mustafayev",
+    "slug": "cingiz-mustafayev",
+    "rank": "Jurnalist, Kapitan (ölümündən sonra)",
+    "birthDate": "1960-08-29",
+    "deathDate": "1992-06-15",
+    "location": "Xocalı, Naxçıvanik",
+    "description": "Azərbaycanın Milli Qəhrəmanı. Jurnalist kimi Qarabağ müharibəsini işıqlandırmış, Xocalı soyqırımının görüntülərini dünyaya çatdırmışdır. Döyüş bölgəsində çəkiliş apararkən şəhid olmuşdur.",
+    "image": "https://placehold.co/600x400/png?text=Çingiz+Mustafayev",
+    "awards": ["Azərbaycanın Milli Qəhrəmanı"]
+  },
+  {
+    "id": 9,
+    "fullName": "Allahverdi Bağırov",
+    "slug": "allahverdi-bagirov",
+    "rank": "Komandir",
+    "birthDate": "1946-04-22",
+    "deathDate": "1992-06-12",
+    "location": "Ağdam rayonu",
+    "description": "Azərbaycanın Milli Qəhrəmanı. Qarabağ müharibəsində Ağdam batalyonunun komandiri olmuşdur. Xocalı soyqırımı zamanı yüzlərlə azərbaycanlının həyatını xilas etməsi ilə tanınır.",
+    "image": "https://placehold.co/600x400/png?text=Allahverdi+Bağırov",
+    "awards": ["Azərbaycanın Milli Qəhrəmanı"]
+  }
+]

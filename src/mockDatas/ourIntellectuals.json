@@ -1,0 +1,122 @@
+[
+  {
+    "id": "int-0001",
+    "name": "Aydın Məmmədov",
+    "title": "Tarixçi, tədqiqatçı",
+    "bio": "Qərbi Azərbaycanın arxiv materialları üzərində araşdırmalar aparır, bölgənin mədəni irsini sənədləşdirir.",
+    "image": "https://placehold.co/600x800/png?text=Aydin+Memmedov",
+    "sharedBy": "Nigar Rüstəmova",
+    "sharedByImage": "https://placehold.co/100x100/png?text=NR",
+    "createdAt": "2024-04-21T09:00:00.000Z"
+  },
+  {
+    "id": "int-0002",
+    "name": "Sevinc Qasımova",
+    "title": "Folklorşünas",
+    "bio": "El şənlikləri, mərasim ənənələri və xalq ədəbiyyatı üzrə nümunələri toplayır və nəşr etdirir.",
+    "image": "https://placehold.co/600x800/png?text=Sevinc+Qasimova",
+    "sharedBy": "Elgiz Səfərov",
+    "sharedByImage": "https://placehold.co/100x100/png?text=ES",
+    "createdAt": "2024-04-19T11:20:00.000Z"
+  },
+  {
+    "id": "int-0003",
+    "name": "Murad Vəliyev",
+    "title": "Dilçi",
+    "bio": "Qərbi Azərbaycan şivələrinin leksik xüsusiyyətlərini araşdırır, lüğət bazası hazırlayır.",
+    "image": "https://placehold.co/600x800/png?text=Murad+Veliev",
+    "sharedBy": "Kamran Əliyev",
+    "sharedByImage": "https://placehold.co/100x100/png?text=KA",
+    "createdAt": "2024-04-18T08:35:00.000Z"
+  },
+  {
+    "id": "int-0004",
+    "name": "Aynur Quliyeva",
+    "title": "Rəssam, kurator",
+    "bio": "Bölgənin vizual mədəniyyətini sərgi layihələri ilə tanıdır, gənc rəssamları dəstəkləyir.",
+    "image": "https://placehold.co/600x800/png?text=Aynur+Quliyeva",
+    "sharedBy": "Zeynəb Kaya",
+    "sharedByImage": "https://placehold.co/100x100/png?text=ZK",
+    "createdAt": "2024-04-17T14:05:00.000Z"
+  },
+  {
+    "id": "int-0005",
+    "name": "Ramin Cavadov",
+    "title": "Yazıçı, publisist",
+    "bio": "Qərbi Azərbaycan həyatından hekayələr yazır, yerel yaddaşı müasir ədəbiyyatda əks etdirir.",
+    "image": "https://placehold.co/600x800/png?text=Ramin+Cavadov",
+    "sharedBy": "Orxan Bayramov",
+    "sharedByImage": "https://placehold.co/100x100/png?text=OB",
+    "createdAt": "2024-04-16T16:40:00.000Z"
+  },
+  {
+    "id": "int-0006",
+    "name": "Günel Məmmədova",
+    "title": "Etnoqraf",
+    "bio": "Məişət mədəniyyəti və milli geyimlər üzərində araşdırmalar aparır, foto-arxiv yaradır.",
+    "image": "https://placehold.co/600x800/png?text=Gunel+Memmedova",
+    "sharedBy": "Hicran Tağıyeva",
+    "sharedByImage": "https://placehold.co/100x100/png?text=HT",
+    "createdAt": "2024-04-15T10:10:00.000Z"
+  },
+  {
+    "id": "int-0007",
+    "name": "Tural İsmayılov",
+    "title": "Sənətşünas",
+    "bio": "Xalçaçılıq və toxuculuq ənənələrini sənədli layihələrlə işıqlandırır, ustalarla müsahibələr aparır.",
+    "image": "https://placehold.co/600x800/png?text=Tural+Ismayilov",
+    "sharedBy": "Pərviz Ələkbərov",
+    "sharedByImage": "https://placehold.co/100x100/png?text=PE",
+    "createdAt": "2024-04-14T12:00:00.000Z"
+  },
+  {
+    "id": "int-0008",
+    "name": "Nərmin Həsənli",
+    "title": "Musiqi tədqiqatçısı",
+    "bio": "Aşıq musiqisi və xalq melodiyaları üzrə sahə araşdırmaları aparır, arxiv yazılarını bərpa edir.",
+    "image": "https://placehold.co/600x800/png?text=Nermin+Hesenli",
+    "sharedBy": "Rüfət Sadıqov",
+    "sharedByImage": "https://placehold.co/100x100/png?text=RS",
+    "createdAt": "2024-04-13T09:25:00.000Z"
+  },
+  {
+    "id": "int-0009",
+    "name": "Elvin Quliyev",
+    "title": "Arxeoloq",
+    "bio": "Regional arxeoloji abidələri tədqiq edir, yeni tapıntıları elmi ictimaiyyətə təqdim edir.",
+    "image": "https://placehold.co/600x800/png?text=Elvin+Quliyev",
+    "sharedBy": "Əfsanə Məlikova",
+    "sharedByImage": "https://placehold.co/100x100/png?text=EM",
+    "createdAt": "2024-04-12T18:15:00.000Z"
+  },
+  {
+    "id": "int-0010",
+    "name": "Sara Məmmədli",
+    "title": "Sosioloq",
+    "bio": "Mühacirlik hekayələri və sosial yaddaş mövzularında tədqiqatlar aparır.",
+    "image": "https://placehold.co/600x800/png?text=Sara+Memmedli",
+    "sharedBy": "Səidə Qasımzadə",
+    "sharedByImage": "https://placehold.co/100x100/png?text=SQ",
+    "createdAt": "2024-04-11T20:45:00.000Z"
+  },
+  {
+    "id": "int-0011",
+    "name": "Emin Rəhimov",
+    "title": "Foto-sənədçi",
+    "bio": "Bölgənin gündəlik həyatını foto-sənəd layihələri ilə təqdim edir, arxivləşdirir.",
+    "image": "https://placehold.co/600x800/png?text=Emin+Rehimov",
+    "sharedBy": "Şahin Həsənov",
+    "sharedByImage": "https://placehold.co/100x100/png?text=SH",
+    "createdAt": "2024-04-10T07:55:00.000Z"
+  },
+  {
+    "id": "int-0012",
+    "name": "Orxan Bayramov",
+    "title": "Araşdırmaçı-yazar",
+    "bio": "Qərbi Azərbaycan tarixinin az bilinən səhifələrini məqalələrində işıqlandırır.",
+    "image": "https://placehold.co/600x800/png?text=Orxan+Bayramov",
+    "sharedBy": "Nigar Rüstəmova",
+    "sharedByImage": "https://placehold.co/100x100/png?text=NR",
+    "createdAt": "2024-04-09T13:05:00.000Z"
+  }
+]

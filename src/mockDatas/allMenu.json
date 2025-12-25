@@ -1,0 +1,327 @@
+[
+  {
+    "id": "menu-home",
+    "label": "ANA SƏHİFƏ",
+    "path": "/",
+    "order": 1,
+    "icon": "home",
+    "permissions": ["public"],
+    "visible": true,
+    "children": [
+      {
+        "id": "submenu-home-news",
+        "parentId": "menu-home",
+        "label": "XƏBƏRLƏR",
+        "path": "/news",
+        "order": 1,
+        "icon": "newspaper",
+        "permissions": ["public"],
+        "visible": true
+        
+      },
+      {
+        "id": "submenu-home-martyrs",
+        "parentId": "menu-home",
+        "label": "ŞƏHİDLƏR",
+        "path": "/martyrs",
+        "order": 2,
+        "icon": "shield",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-home-veterans",
+        "parentId": "menu-home",
+        "label": "QAZİLƏR",
+        "path": "/veterans",
+        "order": 3,
+        "icon": "medal",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-home-documentaries",
+        "parentId": "menu-home",
+        "label": "SƏNƏDLİ FİLİMLƏR",
+        "path": "/documentaries",
+        "order": 4,
+        "icon": "film",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-home-heroes",
+        "parentId": "menu-home",
+        "label": "UNUDULMAZ QƏHRƏMANLAR",
+        "path": "/heroes",
+        "order": 5,
+        "icon": "star",
+        "permissions": ["public"],
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "menu-about",
+    "label": "HAQQIMIZDA",
+    "path": "/about",
+    "order": 2,
+    "icon": "info",
+    "permissions": ["public"],
+    "visible": true
+  },
+  {
+    "id": "menu-mahals",
+    "label": "MAHALLAR",
+    "path": "/mahallar",
+    "order": 3,
+    "icon": "map",
+    "permissions": ["public"],
+    "visible": true,
+    "children": [
+      {
+        "id": "submenu-mahals-agbaba",
+        "parentId": "menu-mahals",
+        "label": "AĞBABA MAHALI",
+        "path": "/mahallar/agbaba",
+        "order": 1,
+        "icon": "landmark",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-mahals-soreyel",
+        "parentId": "menu-mahals",
+        "label": "ŞÖRƏYEL MAHALI",
+        "path": "/mahallar/soreyel",
+        "order": 2,
+        "icon": "landmark",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-mahals-villages",
+        "parentId": "menu-mahals",
+        "label": "KƏNDLƏRİ",
+        "path": "/mahallar/villages",
+        "order": 3,
+        "icon": "map-pin",
+        "permissions": ["public"],
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "menu-garbi-azerbaycan",
+    "label": "QƏRBİ AZƏRBAYCAN",
+    "path": "/garbi-azerbaycan",
+    "order": 4,
+    "icon": "globe",
+    "permissions": ["public"],
+    "visible": true,
+    "children": [
+      {
+        "id": "submenu-garbi-azerbaycan-regions",
+        "parentId": "menu-garbi-azerbaycan",
+        "label": "ŞƏHƏR VƏ RAYONLARI",
+        "path": "/garbi-azerbaycan/regions",
+        "order": 1,
+        "icon": "city",
+        "permissions": ["public"],
+        "visible": true,
+        "children": [
+          {
+            "id": "subsubmenu-regions-rayonlar",
+            "parentId": "submenu-garbi-azerbaycan-regions",
+            "label": "RAYONLAR",
+            "path": "/garbi-azerbaycan/regions/rayonlar",
+            "order": 1,
+            "icon": "map",
+            "permissions": ["public"],
+            "visible": true
+          },
+          {
+            "id": "subsubmenu-regions-mahals",
+            "parentId": "submenu-garbi-azerbaycan-regions",
+            "label": "MAHALLAR",
+            "path": "/garbi-azerbaycan/regions/mahals",
+            "order": 2,
+            "icon": "map",
+            "permissions": ["public"],
+            "visible": true
+          },
+          {
+            "id": "subsubmenu-regions-city",
+            "parentId": "submenu-garbi-azerbaycan-regions",
+            "label": "ŞƏHƏR",
+            "path": "/garbi-azerbaycan/regions/city",
+            "order": 3,
+            "icon": "building",
+            "permissions": ["public"],
+            "visible": true
+          },
+          {
+            "id": "subsubmenu-regions-area",
+            "parentId": "submenu-garbi-azerbaycan-regions",
+            "label": "ƏRAZİSİ",
+            "path": "/garbi-azerbaycan/regions/area",
+            "order": 4,
+            "icon": "ruler",
+            "permissions": ["public"],
+            "visible": true
+          },
+          {
+            "id": "subsubmenu-regions-authors",
+            "parentId": "submenu-garbi-azerbaycan-regions",
+            "label": "ŞAİRLƏRİ VƏ YAZIÇILARI",
+            "path": "/garbi-azerbaycan/regions/authors",
+            "order": 5,
+            "icon": "pen",
+            "permissions": ["public"],
+            "visible": true
+          },
+          {
+            "id": "subsubmenu-regions-monuments",
+            "parentId": "submenu-garbi-azerbaycan-regions",
+            "label": "ABİDƏLƏR",
+            "path": "/garbi-azerbaycan/regions/monuments",
+            "order": 6,
+            "icon": "landmark",
+            "permissions": ["public"],
+            "visible": true
+          }
+        ]
+      },
+      {
+        "id": "submenu-garbi-azerbaycan-library",
+        "parentId": "menu-garbi-azerbaycan",
+        "label": "KİTABXANA",
+        "path": "/garbi-azerbaycan/library",
+        "order": 2,
+        "icon": "library",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-garbi-azerbaycan-about",
+        "parentId": "menu-garbi-azerbaycan",
+        "label": "HAQQINDA",
+        "path": "/garbi-azerbaycan/about",
+        "order": 3,
+        "icon": "info",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-garbi-azerbaycan-intellectuals",
+        "parentId": "menu-garbi-azerbaycan",
+        "label": "ZİYALLILAR",
+        "path": "/garbi-azerbaycan/intellectuals",
+        "order": 4,
+        "icon": "users",
+        "permissions": ["public"],
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "menu-amasiyalilar",
+    "label": "AMASİYALILAR",
+    "path": "/amasiyalilar",
+    "order": 5,
+    "icon": "users",
+    "permissions": ["public"],
+    "visible": true,
+    "children": [
+      {
+        "id": "submenu-amasiyalilar-officials",
+        "parentId": "menu-amasiyalilar",
+        "label": "VƏZİFƏLİ ŞƏXSLƏR",
+        "path": "/amasiyalilar/officials",
+        "order": 1,
+        "icon": "badge",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-amasiyalilar-authors",
+        "parentId": "menu-amasiyalilar",
+        "label": "ŞAİRLƏR VƏ YAZIÇILAR",
+        "path": "/amasiyalilar/authors",
+        "order": 2,
+        "icon": "pen",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-amasiyalilar-doctors-teachers",
+        "parentId": "menu-amasiyalilar",
+        "label": "HƏKİMLƏR VƏ MÜƏLLİMLƏR",
+        "path": "/amasiyalilar/doctors-teachers",
+        "order": 3,
+        "icon": "stethoscope",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-amasiyalilar-athletes",
+        "parentId": "menu-amasiyalilar",
+        "label": "İDMANÇILAR",
+        "path": "/amasiyalilar/athletes",
+        "order": 4,
+        "icon": "trophy",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-amasiyalilar-videos",
+        "parentId": "menu-amasiyalilar",
+        "label": "VİDEOLAR",
+        "path": "/amasiyalilar/videos",
+        "order": 5,
+        "icon": "video",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-amasiyalilar-musics",
+        "parentId": "menu-amasiyalilar",
+        "label": "MUSİQİLƏR",
+        "path": "/amasiyalilar/musics",
+        "order": 6,
+        "icon": "music",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-amasiyalilar-business",
+        "parentId": "menu-amasiyalilar",
+        "label": "İŞ ADAMLARI",
+        "path": "/amasiyalilar/business",
+        "order": 7,
+        "icon": "briefcase",
+        "permissions": ["public"],
+        "visible": true
+      },
+      {
+        "id": "submenu-amasiyalilar-abroad",
+        "parentId": "menu-amasiyalilar",
+        "label": "XARİCDƏ YAŞAYANLAR",
+        "path": "/amasiyalilar/abroad",
+        "order": 8,
+        "icon": "plane",
+        "permissions": ["public"],
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "menu-contact",
+    "label": "ƏLAQƏ",
+    "path": "/contact",
+    "order": 6,
+    "icon": "phone",
+    "permissions": ["public"],
+    "visible": true
+  }
+]

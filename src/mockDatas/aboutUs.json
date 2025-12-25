@@ -1,0 +1,14 @@
+{
+  "title": "Bu saytı yaratmaqda məqsədimiz",
+  "desc": "Qərbi Azərbaycan Türklərinin və Qərbi Azərbaycanda yaşayan insanların həyat tərzlərini, el şənliklərini, ziyalılarını, ilmələrini və sairəni sosial şəbəkə vasitəsilə hər yanda tanıtmaq."
+  ,
+  "photos": [
+    "https://placehold.co/800x500/png?text=Hakkimizda+1",
+    "https://placehold.co/800x500/png?text=Hakkimizda+2"
+  ],
+  "label": "HAQQIMIZDA",
+  "cta": {
+    "text": "Daha ətraflı",
+    "href": "/about"
+  }
+}

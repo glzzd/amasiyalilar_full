@@ -17,7 +17,7 @@ const PublicLayout = () => {
         <AdBanner src={rightImg} alt="sağ yan görsel" width={160} height={600} />
       </aside> */}
       
-      <main className="px-[15px] mx-[10px] sm:mx-[20px] lg:mx-[360px] my-4 md:my-6 pt-12">
+      <main className="px-[15px] mx-[10px] sm:mx-[20px] lg:mx-[360px] pt-12">
         <Outlet />
       </main>
       <Footer />

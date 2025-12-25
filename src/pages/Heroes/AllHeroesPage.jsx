@@ -47,7 +47,7 @@ const AllHeroesPage = () => {
       
       {/* Hero Section */}
       <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-12 text-center">
+        <div className="container mx-auto px-4 pb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Milli Qəhrəmanlarımız
           </h1>

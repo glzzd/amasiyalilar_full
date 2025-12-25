@@ -14,6 +14,8 @@ import AllHeroesPage from './pages/Heroes/AllHeroesPage'
 import HeroDetailsPage from './pages/Heroes/HeroDetailsPage'
 import AllDocumentariesPage from './pages/Documentaries/AllDocumentariesPage'
 import DocumentaryDetailsPage from './pages/Documentaries/DocumentaryDetailsPage'
+import LocusDetailsPage from './pages/Locus/LocusDetailsPage'
+import AllLocusPage from './pages/Locus/AllLocusPage'
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
           <Route path="heroes/:slug" element={<HeroDetailsPage />} />
           <Route path="documentaries" element={<AllDocumentariesPage />} />
           <Route path="documentaries/:slug" element={<DocumentaryDetailsPage />} />
+          <Route path="locus" element={<AllLocusPage />} />
+          <Route path="locus/:slug" element={<LocusDetailsPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>

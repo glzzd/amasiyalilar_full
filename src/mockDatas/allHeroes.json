@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "fullName": "Həzi Aslanov",
+    "slug": "hezi-aslanov",
+    "title": "İki dəfə Sovet İttifaqı Qəhrəmanı",
+    "birthDate": "1910-01-22",
+    "deathDate": "1945-01-24",
+    "location": "Lənkəran",
+    "image": "https://placehold.co/600x400/png?text=Həzi+Aslanov",
+    "description": "Azərbaycanlı sovet hərbi xadimi, general-mayor. İki dəfə Sovet İttifaqı Qəhrəmanı adına layiq görülmüş yeganə azərbaycanlıdır.",
+    "awards": ["Lenin ordeni", "Qırmızı Bayraq ordeni", "Suvorov ordeni"]
+  },
+  {
+    "id": 2,
+    "fullName": "Mehdi Hüseynzadə",
+    "slug": "mehdi-huseynzade",
+    "title": "Mixaylo",
+    "birthDate": "1918-12-22",
+    "deathDate": "1944-11-02",
+    "location": "Bakı",
+    "image": "https://placehold.co/600x400/png?text=Mehdi+Hüseynzadə",
+    "description": "Azərbaycanlı partizan, kəşfiyyatçı. İkinci Dünya Müharibəsi zamanı Yuqoslaviya və İtaliya ərazisində faşistlərə qarşı mübarizə aparmışdır.",
+    "awards": ["Sovet İttifaqı Qəhrəmanı"]
+  },
+  {
+    "id": 3,
+    "fullName": "Koroğlu",
+    "slug": "koroglu",
+    "title": "Xalq Qəhrəmanı",
+    "birthDate": "XVI əsr",
+    "deathDate": "XVI əsr",
+    "location": "Çənlibel",
+    "image": "https://placehold.co/600x400/png?text=Koroğlu",
+    "description": "Azərbaycan xalq dastanı qəhrəmanı. Haqsızlığa və zülmə qarşı mübarizənin rəmzidir.",
+    "awards": []
+  },
+  {
+    "id": 4,
+    "fullName": "Babək Xürrəmi",
+    "slug": "babek",
+    "title": "Xürrəmilər hərəkatının rəhbəri",
+    "birthDate": "798",
+    "deathDate": "838",
+    "location": "Bilalabad",
+    "image": "https://placehold.co/600x400/png?text=Babək",
+    "description": "Azərbaycan xalq qəhrəmanı, ərəb xilafətinə qarşı üsyanın rəhbəri. 20 ildən artıq azadlıq mübarizəsi aparmışdır.",
+    "awards": []
+  },
+  {
+    "id": 5,
+    "fullName": "Şah İsmayıl Xətai",
+    "slug": "sah-ismayil",
+    "title": "Səfəvilər dövlətinin banisi",
+    "birthDate": "1487-07-17",
+    "deathDate": "1524-05-23",
+    "location": "Ərdəbil",
+    "image": "https://placehold.co/600x400/png?text=Şah+İsmayıl",
+    "description": "Azərbaycan Səfəvilər dövlətinin banisi və ilk şahı. Görkəmli şair və sərkərdə.",
+    "awards": []
+  },
+  {
+    "id": 6,
+    "fullName": "Cavad xan",
+    "slug": "cavad-xan",
+    "title": "Gəncə xanı",
+    "birthDate": "1748",
+    "deathDate": "1804",
+    "location": "Gəncə",
+    "image": "https://placehold.co/600x400/png?text=Cavad+xan",
+    "description": "Gəncə xanlığının sonuncu hökmdarı. Çar Rusiyası qoşunlarına qarşı qəhrəmancasına döyüşərək şəhid olmuşdur.",
+    "awards": []
+  },
+  {
+    "id": 7,
+    "fullName": "Nigar Şıxlinskaya",
+    "slug": "nigar-sixlinskaya",
+    "title": "İlk şəfqət bacısı",
+    "birthDate": "1871",
+    "deathDate": "1931",
+    "location": "Tiflis",
+    "image": "https://placehold.co/600x400/png?text=Nigar+Şıxlinskaya",
+    "description": "İlk azərbaycanlı şəfqət bacısı, Birinci Dünya Müharibəsi iştirakçısı. Yaralı əsgərlərə yardım etmişdir.",
+    "awards": []
+  },
+  {
+    "id": 8,
+    "fullName": "Əliağa Şıxlinski",
+    "slug": "eliaga-sixlinski",
+    "title": "Artilleriya generalı",
+    "birthDate": "1863",
+    "deathDate": "1943",
+    "location": "Qazax",
+    "image": "https://placehold.co/600x400/png?text=Əliağa+Şıxlinski",
+    "description": "Çar Rusiyası və Azərbaycan Xalq Cümhuriyyəti ordusunun general-leytenantı. 'Artilleriya allahı' ləqəbi ilə tanınır.",
+    "awards": ["Müqəddəs Georgi ordeni"]
+  },
+  {
+    "id": 9,
+    "fullName": "Tomris Xatun",
+    "slug": "tomris",
+    "title": "Massagetlərin kraliçası",
+    "birthDate": "E.ə. VI əsr",
+    "deathDate": "E.ə. VI əsr",
+    "location": "Araz çayı sahili",
+    "image": "https://placehold.co/600x400/png?text=Tomris",
+    "description": "Massagetlərin hökmdarı. Əhəmənilər imperiyasının banisi II Kirə qalib gəlmişdir.",
+    "awards": []
+  },
+  {
+    "id": 10,
+    "fullName": "Çingiz Mustafayev",
+    "slug": "cingiz-mustafayev",
+    "title": "Milli Qəhrəman, Jurnalist",
+    "birthDate": "1960-08-29",
+    "deathDate": "1992-06-15",
+    "location": "Bakı",
+    "image": "https://placehold.co/600x400/png?text=Çingiz+Mustafayev",
+    "description": "Azərbaycanlı jurnalist, Milli Qəhrəman. Qarabağ müharibəsi zamanı cəbhədən verdiyi reportajlarla tanınır.",
+    "awards": ["Azərbaycanın Milli Qəhrəmanı"]
+  }
+]

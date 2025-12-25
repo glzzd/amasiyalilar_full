@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Şuşa, sən azadsan!",
+    "slug": "susa-sen-azadsan",
+    "thumbnail": "https://placehold.co/600x400/png?text=Şuşa+Sən+Azadsan",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "Şuşanın işğaldan azad olunmasına həsr olunmuş sənədli film. Əməliyyatın detalları və qəhrəmanların xatirələri.",
+    "duration": "45 dəqiqə",
+    "publishDate": "2021-11-08",
+    "category": "Tarix"
+  },
+  {
+    "id": 2,
+    "title": "Dəmir Yumruq",
+    "slug": "demir-yumruq",
+    "thumbnail": "https://placehold.co/600x400/png?text=Dəmir+Yumruq",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "İkinci Qarabağ Müharibəsinin xronikası. 44 günlük müharibənin gedişatı və qələbə.",
+    "duration": "60 dəqiqə",
+    "publishDate": "2020-12-10",
+    "category": "Müharibə"
+  },
+  {
+    "id": 3,
+    "title": "Əsrin Müqaviləsi",
+    "slug": "esrin-muqavilesi",
+    "thumbnail": "https://placehold.co/600x400/png?text=Əsrin+Müqaviləsi",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "Azərbaycan neft strategiyasının uğuru. 1994-cü ildə imzalanmış tarixi müqavilə haqqında.",
+    "duration": "30 dəqiqə",
+    "publishDate": "2014-09-20",
+    "category": "İqtisadiyyat"
+  },
+  {
+    "id": 4,
+    "title": "Qarabağ Azərbaycandır!",
+    "slug": "qarabag-azerbaycandir",
+    "thumbnail": "https://placehold.co/600x400/png?text=Qarabağ+Azərbaycandır",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "Qarabağın tarixi və mədəniyyəti haqqında sənədli film.",
+    "duration": "50 dəqiqə",
+    "publishDate": "2022-05-15",
+    "category": "Mədəniyyət"
+  },
+  {
+    "id": 5,
+    "title": "Xocalı Soyqırımı",
+    "slug": "xocali-soyqirimi",
+    "thumbnail": "https://placehold.co/600x400/png?text=Xocalı+Soyqırımı",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "1992-ci il Xocalı faciəsi qurbanlarının xatirəsinə həsr olunmuş film.",
+    "duration": "40 dəqiqə",
+    "publishDate": "2019-02-26",
+    "category": "Tarix"
+  },
+  {
+    "id": 6,
+    "title": "Azərbaycan Xalq Cümhuriyyəti",
+    "slug": "axc",
+    "thumbnail": "https://placehold.co/600x400/png?text=AXC",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "Şərqdə ilk demokratik respublika olan AXC-nin yaranması və süqutu.",
+    "duration": "55 dəqiqə",
+    "publishDate": "2018-05-28",
+    "category": "Tarix"
+  },
+  {
+    "id": 7,
+    "title": "Heydər Əliyev: Şəxsiyyət",
+    "slug": "heyder-eliyev",
+    "thumbnail": "https://placehold.co/600x400/png?text=Heydər+Əliyev",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "Ümummilli lider Heydər Əliyevin həyat və fəaliyyəti haqqında.",
+    "duration": "70 dəqiqə",
+    "publishDate": "2023-05-10",
+    "category": "Bioqrafiya"
+  },
+  {
+    "id": 8,
+    "title": "Vətən Müharibəsi Qəhrəmanları",
+    "slug": "veten-muharibesi-qehremanlari",
+    "thumbnail": "https://placehold.co/600x400/png?text=Qəhrəmanlar",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "44 günlük müharibədə şücaət göstərmiş əsgər və zabitlərimiz.",
+    "duration": "35 dəqiqə",
+    "publishDate": "2021-06-26",
+    "category": "Hərb"
+  },
+  {
+    "id": 9,
+    "title": "Bakı: Tarixin Güzgüsü",
+    "slug": "baki-tarixin-guzgusu",
+    "thumbnail": "https://placehold.co/600x400/png?text=Bakı+Tarixi",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "Bakı şəhərinin qədim tarixi və müasir inkişafı.",
+    "duration": "48 dəqiqə",
+    "publishDate": "2022-09-15",
+    "category": "Səyahət"
+  },
+  {
+    "id": 10,
+    "title": "Qobustan Sirləri",
+    "slug": "qobustan",
+    "thumbnail": "https://placehold.co/600x400/png?text=Qobustan",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "Qobustan qayaüstü rəsmlərinin sirli dünyası.",
+    "duration": "25 dəqiqə",
+    "publishDate": "2020-03-21",
+    "category": "Mədəniyyət"
+  }
+]

@@ -8,6 +8,12 @@ import NewDetailsPage from './pages/News/NewDetailsPage'
 import AuthorNewsPage from './pages/News/AuthorNewsPage'
 import AllMartyrsPage from './pages/Martyrs/AllMartyrsPage'
 import MartyrDetailsPage from './pages/Martyrs/MartyrDetailsPage'
+import AllVeteransPage from './pages/Veterans/AllVeteransPage'
+import VeteranDetailsPage from './pages/Veterans/VeteranDetailsPage'
+import AllHeroesPage from './pages/Heroes/AllHeroesPage'
+import HeroDetailsPage from './pages/Heroes/HeroDetailsPage'
+import AllDocumentariesPage from './pages/Documentaries/AllDocumentariesPage'
+import DocumentaryDetailsPage from './pages/Documentaries/DocumentaryDetailsPage'
 
 
 function App() {
@@ -22,6 +28,12 @@ function App() {
           <Route path="author/:authorName" element={<AuthorNewsPage />} />
           <Route path="martyrs" element={<AllMartyrsPage />} />
           <Route path="martyrs/:slug" element={<MartyrDetailsPage />} />
+          <Route path="veterans" element={<AllVeteransPage />} />
+          <Route path="veterans/:slug" element={<VeteranDetailsPage />} />
+          <Route path="heroes" element={<AllHeroesPage />} />
+          <Route path="heroes/:slug" element={<HeroDetailsPage />} />
+          <Route path="documentaries" element={<AllDocumentariesPage />} />
+          <Route path="documentaries/:slug" element={<DocumentaryDetailsPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>

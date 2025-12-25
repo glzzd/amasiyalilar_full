@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "fullName": "Arif Məmmədov",
+    "slug": "arif-mammadov",
+    "rank": "Baş Leytenant",
+    "birthDate": "1990-05-15",
+    "location": "Bakı şəhəri",
+    "image": "https://placehold.co/600x400/png?text=Arif+Məmmədov",
+    "description": "Vətən müharibəsi qazisi. Füzuli və Cəbrayıl istiqamətində gedən döyüşlərdə iştirak etmişdir.",
+    "awards": ["Cəsur Döyüşçü", "Füzulinin azad olunmasına görə"]
+  },
+  {
+    "id": 2,
+    "fullName": "Elvin Həsənov",
+    "slug": "elvin-hasanov",
+    "rank": "Əsgər",
+    "birthDate": "1995-08-20",
+    "location": "Gəncə şəhəri",
+    "image": "https://placehold.co/600x400/png?text=Elvin+Həsənov",
+    "description": "Vətən müharibəsi iştirakçısı. Şuşa uğrunda gedən döyüşlərdə yaralanmışdır.",
+    "awards": ["Şuşanın azad olunmasına görə"]
+  },
+  {
+    "id": 3,
+    "fullName": "Vüsal Əliyev",
+    "slug": "vusal-aliyev",
+    "rank": "Gizir",
+    "birthDate": "1988-12-10",
+    "location": "Sumqayıt şəhəri",
+    "image": "https://placehold.co/600x400/png?text=Vüsal+Əliyev",
+    "description": "Xüsusi Təyinatlı Qüvvələrin mənsubu. Kəlbəcər istiqamətində döyüşmüşdür.",
+    "awards": ["İgidliyə görə", "Kəlbəcərin azad olunmasına görə"]
+  },
+  {
+    "id": 4,
+    "fullName": "Ramil Quliyev",
+    "slug": "ramil-guliyev",
+    "rank": "Kapitan",
+    "birthDate": "1985-03-25",
+    "location": "Naxçıvan MR",
+    "image": "https://placehold.co/600x400/png?text=Ramil+Quliyev",
+    "description": "Topçu batareyasının komandiri. Hadrut döyüşlərində fərqlənmişdir.",
+    "awards": ["Vətən uğrunda", "Hadrutun azad olunmasına görə"]
+  },
+  {
+    "id": 5,
+    "fullName": "Samir Kərimov",
+    "slug": "samir-karimov",
+    "rank": "MAHHXHQ",
+    "birthDate": "1992-07-07",
+    "location": "Şəki rayonu",
+    "image": "https://placehold.co/600x400/png?text=Samir+Kərimov",
+    "description": "Tankçı. Ağdam istiqamətində gedən döyüşlərdə iştirak etmişdir.",
+    "awards": ["Ağdamın azad olunmasına görə"]
+  },
+  {
+    "id": 6,
+    "fullName": "Orxan İsmayılov",
+    "slug": "orxan-ismayilov",
+    "rank": "Leytenant",
+    "birthDate": "1993-11-30",
+    "location": "Quba rayonu",
+    "image": "https://placehold.co/600x400/png?text=Orxan+İsmayılov",
+    "description": "Kəşfiyyatçı. Murovdağ əməliyyatında iştirak etmişdir.",
+    "awards": ["Suqovuşanın azad olunmasına görə"]
+  },
+  {
+    "id": 7,
+    "fullName": "Nurlan Vəliyev",
+    "slug": "nurlan-valiyev",
+    "rank": "Çavuş",
+    "birthDate": "1994-09-12",
+    "location": "Lənkəran rayonu",
+    "image": "https://placehold.co/600x400/png?text=Nurlan+Vəliyev",
+    "description": "Rabitəçi. Cəbrayıl istiqamətində gedən döyüşlərdə iştirak etmişdir.",
+    "awards": ["Cəbrayılın azad olunmasına görə"]
+  },
+  {
+    "id": 8,
+    "fullName": "Tural Məmmədov",
+    "slug": "tural-mammadov",
+    "rank": "Əsgər",
+    "birthDate": "1996-04-05",
+    "location": "Mingəçevir şəhəri",
+    "image": "https://placehold.co/600x400/png?text=Tural+Məmmədov",
+    "description": "Sürücü. Arxa cəbhədə təminat daşınmasında iştirak etmişdir.",
+    "awards": ["Hərbi xidmətlərə görə"]
+  },
+  {
+    "id": 9,
+    "fullName": "Kənan Hüseynov",
+    "slug": "kanan-huseynov",
+    "rank": "Gizir",
+    "birthDate": "1989-01-18",
+    "location": "Bərdə rayonu",
+    "image": "https://placehold.co/600x400/png?text=Kənan+Hüseynov",
+    "description": "Snayper. Zəngilan istiqamətində düşmənə ağır itkilər verdirmişdir.",
+    "awards": ["Zəngilanın azad olunmasına görə"]
+  },
+  {
+    "id": 10,
+    "fullName": "Azər Qasımov",
+    "slug": "azer-gasimov",
+    "rank": "Baş Leytenant",
+    "birthDate": "1991-06-22",
+    "location": "Qəbələ rayonu",
+    "image": "https://placehold.co/600x400/png?text=Azər+Qasımov",
+    "description": "Tabor komandirinin müavini. Qubadlı istiqamətində gedən döyüşlərdə iştirak etmişdir.",
+    "awards": ["Qubadlının azad olunmasına görə"]
+  }
+]

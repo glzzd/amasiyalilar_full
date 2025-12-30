@@ -103,7 +103,7 @@
         "id": "submenu-mahals-villages",
         "parentId": "menu-mahals",
         "label": "KƏNDLƏRİ",
-        "path": "/mahallar/villages",
+        "path": "/locus/villages",
         "order": 3,
         "icon": "map-pin",
         "permissions": ["public"],

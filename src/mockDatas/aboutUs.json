@@ -1,12 +1,32 @@
 {
   "title": "Bu saytı yaratmaqda məqsədimiz",
-  "desc": "Qərbi Azərbaycan Türklərinin və Qərbi Azərbaycanda yaşayan insanların həyat tərzlərini, el şənliklərini, ziyalılarını, ilmələrini və sairəni sosial şəbəkə vasitəsilə hər yanda tanıtmaq."
-  ,
+  "desc": "Qərbi Azərbaycan Türklərinin və Qərbi Azərbaycanda yaşayan insanların həyat tərzlərini, el şənliklərini, ziyalılarını, ilmələrini və sairəni sosial şəbəkə vasitəsilə hər yanda tanıtmaq.",
   "photos": [
-    "https://placehold.co/800x500/png?text=Hakkimizda+1",
-    "https://placehold.co/800x500/png?text=Hakkimizda+2"
+    "https://placehold.co/1200x700/png?text=Haqqimizda+Hero",
+    "https://placehold.co/800x500/png?text=Haqqimizda+Galeri+1",
+    "https://placehold.co/800x500/png?text=Haqqimizda+Galeri+2"
   ],
   "label": "HAQQIMIZDA",
+  "bullets": [
+    "Tarixi irsimizi rəqəmsal mühitdə yaşatmaq",
+    "Ziyalılarımızı və qəhrəmanlarımızı tanıtmaq",
+    "Gənc nəsil üçün etibarlı mənbə yaratmaq",
+    "Məlumatların hamı üçün əlçatan olmasını təmin etmək"
+  ],
+  "mission": "Qərbi Azərbaycan mədəni irsini sistemli şəkildə toplayıb, təşkil edərək, hamının asanlıqla faydalana biləcəyi müasir və dinamik platforma yaratmaq.",
+  "vision": "Rəqəmsal mədəniyyət arxivi olaraq bölgəmizin tarixi, ədəbiyyatı və insanlarının hekayələrini gələcək nəsillərə çatdıran aparıcı mənbə olmaq.",
+  "stats": [
+    { "label": "Toplanan məqalə", "value": 250 },
+    { "label": "Şəhid və qazilər haqqında qeyd", "value": 120 },
+    { "label": "Sənədli film", "value": 35 },
+    { "label": "Foto arxiv", "value": 800 }
+  ],
+  "team": [
+    { "name": "İlkin Quluzadə", "role": "Layihə rəhbəri", "avatar": "https://placehold.co/160x160/png?text=IQ" },
+    { "name": "Aysel Məmmədli", "role": "Məzmun redaktoru", "avatar": "https://placehold.co/160x160/png?text=AM" },
+    { "name": "Rəşad Əliyev", "role": "Frontend developer", "avatar": "https://placehold.co/160x160/png?text=RA" },
+    { "name": "Nigar Hüseynova", "role": "Araşdırmaçı", "avatar": "https://placehold.co/160x160/png?text=NH" }
+  ],
   "cta": {
     "text": "Daha ətraflı",
     "href": "/about"

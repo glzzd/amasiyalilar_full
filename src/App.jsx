@@ -16,6 +16,9 @@ import AllDocumentariesPage from './pages/Documentaries/AllDocumentariesPage'
 import DocumentaryDetailsPage from './pages/Documentaries/DocumentaryDetailsPage'
 import LocusDetailsPage from './pages/Locus/LocusDetailsPage'
 import AllLocusPage from './pages/Locus/AllLocusPage'
+import AboutPage from './pages/About'
+import AllVillagesPage from './pages/Locus/Villages/AllVillagesPage'
+import VillageDetailsPage from './pages/Locus/Villages/VillageDetailsPage'
 
 
 function App() {
@@ -25,6 +28,7 @@ function App() {
       <Routes>
         <Route element={<PublicLayout />}>
           <Route index element={<HomePage/>} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="news" element={<AllNewsPage />} />
           <Route path="news/:slug" element={<NewDetailsPage />} />
           <Route path="author/:authorName" element={<AuthorNewsPage />} />
@@ -38,6 +42,8 @@ function App() {
           <Route path="documentaries/:slug" element={<DocumentaryDetailsPage />} />
           <Route path="locus" element={<AllLocusPage />} />
           <Route path="locus/:slug" element={<LocusDetailsPage />} />
+          <Route path="locus/villages" element={<AllVillagesPage />} />
+          <Route path="locus/villages/:slug" element={<VillageDetailsPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>

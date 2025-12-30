@@ -1,7 +1,6 @@
 import React, { useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, Award, MapPin, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import Breadcrumb from '../../components/shared/Breadcrumb'
 import allVeterans from '../../mockDatas/allVeterans.json'
 import { formatDate } from '@/lib/utils'
 import OtherVeteransSlider from '../../components/shared/OtherVeteransSlider'

@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import NewsCard from "../../components/shared/NewsCard";
 import allNewsData from "../../mockDatas/allNews.json";
@@ -12,7 +12,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { cn, formatDate } from "@/lib/utils";
-import Breadcrumb from "../../components/shared/Breadcrumb";
 
 const AllNewsPage = () => {
   // States
@@ -22,10 +21,7 @@ const AllNewsPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
-  const breadcrumbItems = [
-    { label: "Ana Səhifə", path: "/" },
-    { label: "Xəbərlər" },
-  ];
+  
 
   // Derived Data: Categories with counts
   const categories = useMemo(() => {
@@ -77,10 +73,7 @@ const AllNewsPage = () => {
   // Pagination Logic
   const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
 
-  // Reset page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [sortOrder, searchQuery, selectedCategory]);
+  
 
   // Get current page items
   const currentNews = useMemo(() => {
@@ -135,7 +128,10 @@ const AllNewsPage = () => {
                 <Filter className="w-4 h-4 text-gray-400" />
                 <select
                   value={sortOrder}
-                  onChange={(e) => setSortOrder(e.target.value)}
+                  onChange={(e) => {
+                    setSortOrder(e.target.value)
+                    setCurrentPage(1)
+                  }}
                   className="bg-transparent text-sm font-medium text-gray-700 focus:outline-none cursor-pointer"
                 >
                   <option value="newest">Ən yeni</option>
@@ -231,7 +227,10 @@ const AllNewsPage = () => {
                   type="text"
                   placeholder="Xəbər axtar..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value)
+                    setCurrentPage(1)
+                  }}
                   className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                 />
                 <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
@@ -248,7 +247,10 @@ const AllNewsPage = () => {
                 {categories.map((cat) => (
                   <button
                     key={cat.name}
-                    onClick={() => setSelectedCategory(cat.name)}
+                    onClick={() => {
+                      setSelectedCategory(cat.name)
+                      setCurrentPage(1)
+                    }}
                     className={cn(
                       "w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm transition-all duration-200",
                       selectedCategory === cat.name

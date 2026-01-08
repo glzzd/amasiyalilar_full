@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Calendar, Eye, User, Share2, Facebook, Twitter, Linkedin, Clock } from 'lucide-react'
+import { Calendar, Eye, Share2, Facebook, Twitter, Linkedin, Clock } from 'lucide-react'
 import allNewsData from '../../mockDatas/allNews.json'
-import Breadcrumb from '../../components/shared/Breadcrumb'
 import { formatDate } from '@/lib/utils'
 
 const NewDetailsPage = () => {
@@ -19,15 +18,6 @@ const NewDetailsPage = () => {
     return allNewsData
       .filter(item => item.category === news.category && item._id !== news._id)
       .slice(0, 3)
-  }, [news])
-
-  const breadcrumbItems = useMemo(() => {
-    if (!news) return []
-    return [
-      { label: 'Ana Səhifə', path: '/' },
-      { label: 'Xəbərlər', path: '/news' },
-      { label: news.title }
-    ]
   }, [news])
 
   if (!news) {

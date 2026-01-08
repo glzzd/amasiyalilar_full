@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/intellectuals" className="inline-flex items-center gap-2 text-white/90 hover:text-red-400 transition-colors text-sm">
-                  <ChevronRight size={16} /> Bilgə insanlar
+                  <ChevronRight size={16} /> Ziyalılar
                 </Link>
               </li>
               <li>

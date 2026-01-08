@@ -1,0 +1,47 @@
+{
+  "name": "Qərbi Azərbaycan Ərazisi",
+  "slug": "western-azerbaijan-area",
+  "image": "https://placehold.co/1200x700/png?text=Q%C9%99rbi+Az%C9%99rbaycan+%C6%8Far%C9%99zisi",
+  "description": "Qərbi Azərbaycan geniş coğrafi sahəni əhatə edən, tarixən şəhərlər, rayonlar və kəndlərlə zəngin olan bir ərazidir. Mədəniyyət, sənətkarlıq, ticarət və xalq ənənələri ilə seçilir.",
+  "stats": {
+    "area": "50,000+ km²",
+    "population": "Tarixən 1,000,000+",
+    "elevation": "500–3000 m",
+    "districtsCount": 20
+  },
+  "founded": "Qədim dövrlər",
+  "geography": "Dağ silsilələri, vadilər və düzənliklər; kontinental iqlim üstünlük təşkil edir. Çaylar və təbii göllər regionun ekosistemini formalaşdırır.",
+  "economy": "Tarixən ticarət yolları üzərində yerləşdiyi üçün bazar mədəniyyəti, sənətkarlıq və kənd təsərrüfatı inkişaf etmişdir.",
+  "culture": "Qalalar, məscidlər, karvansaralar, dastanlar və aşıq ənənəsi; zəngin musiqi və folklor irsi.",
+  "gallery": [
+    "https://placehold.co/800x500/png?text=%C6%8Far%C9%99zi+Panorama+1",
+    "https://placehold.co/800x500/png?text=%C6%8Far%C9%99zi+Panorama+2",
+    "https://placehold.co/800x500/png?text=%C6%8Far%C9%99zi+Panorama+3"
+  ],
+  "landmarks": [
+    {
+      "title": "Tarixi Qala Kompleksi",
+      "image": "https://placehold.co/600x400/png?text=Tarixi+Qala",
+      "period": "Orta əsrlər",
+      "location": "Mərkəzi hissə"
+    },
+    {
+      "title": "Karvansara Yolu",
+      "image": "https://placehold.co/600x400/png?text=Karvansara+Yolu",
+      "period": "XVII–XVIII əsrlər",
+      "location": "Ticarət marşrutu"
+    }
+  ],
+  "regions": [
+    "İrəvan",
+    "Göyçə",
+    "Zəngəzur",
+    "Şörəyel",
+    "Dərələyəz"
+  ],
+  "neighbors": [
+    "Naxçıvan",
+    "Şərqi Anadolu",
+    "Qafqaz Dağları ətrafı"
+  ]
+}

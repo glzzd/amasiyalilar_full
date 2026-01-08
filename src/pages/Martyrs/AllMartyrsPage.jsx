@@ -1,7 +1,6 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Search, Calendar, Award, MapPin, ChevronLeft, ChevronRight } from 'lucide-react'
-import Breadcrumb from '../../components/shared/Breadcrumb'
 import allMartyrs from '../../mockDatas/allMartyrs.json'
 import { cn, formatDate } from '@/lib/utils'
 
@@ -10,10 +9,6 @@ const AllMartyrsPage = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 9
   
-  const breadcrumbItems = [
-    { label: 'Ana Səhifə', path: '/' },
-    { label: 'Şəhidlərimiz' }
-  ]
 
   const filteredMartyrs = useMemo(() => {
     return allMartyrs.filter(martyr => 
@@ -26,9 +21,7 @@ const AllMartyrsPage = () => {
   // Pagination Logic
   const totalPages = Math.ceil(filteredMartyrs.length / itemsPerPage)
 
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery])
+  
 
   const currentMartyrs = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage
@@ -61,7 +54,10 @@ const AllMartyrsPage = () => {
               type="text" 
               placeholder="Şəhid axtar..." 
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value)
+                setCurrentPage(1)
+              }}
               className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all shadow-sm"
             />
             <Search className="w-6 h-6 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" />

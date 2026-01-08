@@ -18,15 +18,6 @@ const VeteranDetailsPage = () => {
     return allVeterans.find(item => item.slug === slug)
   }, [slug])
 
-  const breadcrumbItems = useMemo(() => {
-    if (!veteran) return []
-    return [
-      { label: 'Ana Səhifə', path: '/' },
-      { label: 'Qazilərimiz', path: '/veterans' },
-      { label: veteran.fullName }
-    ]
-  }, [veteran])
-
   if (!veteran) {
     return (
       <div className="container mx-auto px-4 py-20 text-center">

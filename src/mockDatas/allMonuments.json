@@ -1,0 +1,344 @@
+[
+  {
+    "id": "mon-0001",
+    "name": "İrəvan Qalası",
+    "slug": "irevan-qalasi",
+    "image": "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+Qalas%C4%B1",
+    "region": "İrəvan",
+    "location": "Mərkəz",
+    "type": "Qala",
+    "period": "Orta əsrlər",
+    "description": "Şəhərin strateji nöqtəsində yerləşən tarixi müdafiə qalası. Şəhər memarlığının əsas simvollarından biridir.",
+    "stats": { "built": "XVI əsr", "height": "—" },
+    "materials": ["Daş", "Kəsma daş", "Kirec harç"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qalıqlar mövcuddur",
+    "coordinates": { "lat": 40.1772, "lng": 44.5126 },
+    "historicalEvents": [
+      "Şəhərin müdafiəsində əsas rol",
+      "Orta əsr ticarət və idarəetmə mərkəzi"
+    ],
+    "restoration": { "lastRestorationYear": null, "notes": "Elmi tədqiqatlar aparılıb" },
+    "references": [
+      { "title": "İrəvan tarixi", "url": "https://example.com/irevan-tarixi" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Qala+Panorama+1",
+      "https://placehold.co/800x500/png?text=Qala+Panorama+2"
+    ]
+  },
+  {
+    "id": "mon-0002",
+    "name": "Göyçə Karvansarası",
+    "slug": "goyce-karvansarasi",
+    "image": "https://placehold.co/800x500/png?text=G%C3%B6y%C3%A7%C9%99+Karvansaras%C4%B1",
+    "region": "Göyçə",
+    "location": "Ticarət marşrutu",
+    "type": "Karvansara",
+    "period": "XVII–XVIII əsrlər",
+    "description": "Ticarət yolları üzərində inşa edilmiş karvansara kompleksi, sənətkarlıq və bazar mədəniyyətinin izlərini daşıyır.",
+    "stats": { "built": "XVII əsr", "height": "—" },
+    "materials": ["Daş", "Kərpic", "Ağac"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qismən qorunub",
+    "coordinates": { "lat": 40.3499, "lng": 45.1183 },
+    "historicalEvents": [
+      "Karvan yolları üzərində ticarətin mərkəzi",
+      "Sənətkarlıq dükanlarının formalaşması"
+    ],
+    "restoration": { "lastRestorationYear": 1985, "notes": "Qismən konservasiya" },
+    "references": [
+      { "title": "Karvansara memarlığı", "url": "https://example.com/karvansara" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Karvansara+1",
+      "https://placehold.co/800x500/png?text=Karvansara+2"
+    ]
+  },
+  {
+    "id": "mon-0003",
+    "name": "Zəngəzur Qalası",
+    "slug": "zengezur-qalasi",
+    "image": "https://placehold.co/800x500/png?text=Z%C9%99ng%C9%99zur+Qalas%C4%B1",
+    "region": "Zəngəzur",
+    "location": "Dağ keçidi",
+    "type": "Qala",
+    "period": "Orta əsrlər",
+    "description": "Dağ keçidlərini nəzarətdə saxlayan tarixi qala. Strateji müdafiə sistemi ilə seçilir.",
+    "stats": { "built": "XIV əsr", "height": "—" },
+    "materials": ["Daş", "Çaydaşı"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qalıqlar qorunub",
+    "coordinates": { "lat": 39.1983, "lng": 46.5653 },
+    "historicalEvents": [
+      "Keçid yollarının müdafiəsi",
+      "Regional idarəetmə nöqtəsi"
+    ],
+    "restoration": { "lastRestorationYear": null, "notes": "Araşdırma mərhələsi" },
+    "references": [
+      { "title": "Zəngəzur tarixi", "url": "https://example.com/zengezur" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Z%C9%99ng%C9%99zur+1",
+      "https://placehold.co/800x500/png?text=Z%C9%99ng%C9%99zur+2"
+    ]
+  },
+  {
+    "id": "mon-0004",
+    "name": "Dərələyəz Məscidi",
+    "slug": "dereləyaz-mescidi",
+    "image": "https://placehold.co/800x500/png?text=D%C9%99r%C9%99l%C9%99y%C9%99z+M%C9%99scidi",
+    "region": "Dərələyəz",
+    "location": "Tarixi məhəllə",
+    "type": "Məscid",
+    "period": "XVII əsr",
+    "description": "Klassik üslubda tikilmiş, memarlıq detalları ilə diqqət çəkən tarixi məscid.",
+    "stats": { "built": "XVII əsr", "height": "—" },
+    "materials": ["Kərpic", "Daş", "Taxta"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qismən bərpa olunub",
+    "coordinates": { "lat": 39.9085, "lng": 45.3267 },
+    "historicalEvents": [
+      "Dini və ictimai mərkəz",
+      "Mədrəsə ilə komplekt"
+    ],
+    "restoration": { "lastRestorationYear": 1998, "notes": "Fasad təmiri" },
+    "references": [
+      { "title": "Məscid memarlığı", "url": "https://example.com/mescid" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=M%C9%99scid+1",
+      "https://placehold.co/800x500/png?text=M%C9%99scid+2"
+    ]
+  },
+  {
+    "id": "mon-0005",
+    "name": "Şörəyel Qala Divarları",
+    "slug": "soreyel-qala-divarlari",
+    "image": "https://placehold.co/800x500/png?text=%C5%9E%C3%B6r%C9%99yel+Qala+Divarlar%C4%B1",
+    "region": "Şörəyel",
+    "location": "Yüksəklik",
+    "type": "Qala",
+    "period": "Orta əsrlər",
+    "description": "Müdafiə sisteminin qalıqları, bölgənin tarixi hərbi memarlığını təqdim edir.",
+    "stats": { "built": "XIII əsr", "height": "—" },
+    "materials": ["Daş"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qalıqlar qorunur",
+    "coordinates": { "lat": 40.7863, "lng": 43.8492 },
+    "historicalEvents": [
+      "Sərhəd müdafiəsi",
+      "Regional təhlükəsizlik sistemi"
+    ],
+    "restoration": { "lastRestorationYear": null, "notes": "Monitorinq aparılır" },
+    "references": [
+      { "title": "Qala divarları", "url": "https://example.com/qala-divarlari" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Divar+1",
+      "https://placehold.co/800x500/png?text=Divar+2"
+    ]
+  },
+  {
+    "id": "mon-0006",
+    "name": "İrəvan Karvansarası",
+    "slug": "irevan-karvansarasi",
+    "image": "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+Karvansaras%C4%B1",
+    "region": "İrəvan",
+    "location": "Bazaar ətrafı",
+    "type": "Karvansara",
+    "period": "XVII əsr",
+    "description": "Şəhər bazarı ilə bağlı ticarət hərəkatını daşıyan tarixi karvansara.",
+    "stats": { "built": "XVII əsr", "height": "—" },
+    "materials": ["Daş", "Kərpic"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qismən qorunub",
+    "coordinates": { "lat": 40.1780, "lng": 44.5115 },
+    "historicalEvents": [
+      "Şəhər ticarətinin inkişafı"
+    ],
+    "restoration": { "lastRestorationYear": 1975, "notes": "İnteryer konservasiya" },
+    "references": [
+      { "title": "İrəvan bazarı", "url": "https://example.com/irevan-bazari" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+Karvansara+1",
+      "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+Karvansara+2"
+    ]
+  },
+  {
+    "id": "mon-0007",
+    "name": "Göyçə Qala Qapısı",
+    "slug": "goyce-qala-qapisi",
+    "image": "https://placehold.co/800x500/png?text=G%C3%B6y%C3%A7%C9%99+Qala+Qap%C4%B1s%C4%B1",
+    "region": "Göyçə",
+    "location": "Mərkəz",
+    "type": "Qala",
+    "period": "Orta əsrlər",
+    "description": "Qalanın giriş hissəsi, daş oyma naxışları və simvolik yazıları ilə tanınır.",
+    "stats": { "built": "XIV əsr", "height": "—" },
+    "materials": ["Daş", "Oyma daş"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Əsas elementlər qorunub",
+    "coordinates": { "lat": 40.3540, "lng": 45.1210 },
+    "historicalEvents": [
+      "Qalanın girişində nəzarət",
+      "Simvolik yazılarla bəzədilmə"
+    ],
+    "restoration": { "lastRestorationYear": 2005, "notes": "Dekor elementlərinin təmizlənməsi" },
+    "references": [
+      { "title": "Qala qapıları", "url": "https://example.com/qala-qapisi" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Qap%C4%B1+1",
+      "https://placehold.co/800x500/png?text=Qap%C4%B1+2"
+    ]
+  },
+  {
+    "id": "mon-0008",
+    "name": "Zəngəzur Karvansara Körpüsü",
+    "slug": "zengezur-karvansara-koprusu",
+    "image": "https://placehold.co/800x500/png?text=Karvansara+K%C3%B6pr%C3%BCs%C3%BC",
+    "region": "Zəngəzur",
+    "location": "Çay üzəri",
+    "type": "Körpü",
+    "period": "XVII əsr",
+    "description": "Karvansaraya giriş üçün inşa edilmiş tarixi daş körpü.",
+    "stats": { "built": "XVII əsr", "height": "—" },
+    "materials": ["Daş", "Kəsma daş"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Yükdaşıma üçün uyğun deyil",
+    "coordinates": { "lat": 39.2050, "lng": 46.5700 },
+    "historicalEvents": [
+      "Karvansara kompleksinə giriş"
+    ],
+    "restoration": { "lastRestorationYear": 1992, "notes": "Taxta elementlərin yenilənməsi" },
+    "references": [
+      { "title": "Tarixi körpülər", "url": "https://example.com/korpuler" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=K%C3%B6pr%C3%BC+1",
+      "https://placehold.co/800x500/png?text=K%C3%B6pr%C3%BC+2"
+    ]
+  },
+  {
+    "id": "mon-0009",
+    "name": "Dərələyəz Saat Qülləsi",
+    "slug": "dereləyaz-saat-qullesi",
+    "image": "https://placehold.co/800x500/png?text=Saat+Q%C3%BCll%C9%99si",
+    "region": "Dərələyəz",
+    "location": "Meydan",
+    "type": "Qüllə",
+    "period": "XIX əsr",
+    "description": "Şəhər meydanının mərkəzində yerləşən, vaxtı göstərən tarixi saat qülləsi.",
+    "stats": { "built": "XIX əsr", "height": "30 m" },
+    "materials": ["Kərpic", "Metal", "Ağac"],
+    "dimensions": { "height": "30 m", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Yaxşı",
+    "coordinates": { "lat": 39.9100, "lng": 45.3300 },
+    "historicalEvents": [
+      "Meydan mədəniyyətinin simvolu"
+    ],
+    "restoration": { "lastRestorationYear": 2001, "notes": "Saat mexanizminin təmiri" },
+    "references": [
+      { "title": "Saat qüllələri", "url": "https://example.com/saat-qullesi" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Q%C3%BCll%C9%99+1",
+      "https://placehold.co/800x500/png?text=Q%C3%BCll%C9%99+2"
+    ]
+  },
+  {
+    "id": "mon-0010",
+    "name": "Şörəyel Karvansara Meydanı",
+    "slug": "soreyel-karvansara-meydani",
+    "image": "https://placehold.co/800x500/png?text=Karvansara+Meydan%C4%B1",
+    "region": "Şörəyel",
+    "location": "Meydan",
+    "type": "Meydan",
+    "period": "XVII əsr",
+    "description": "Karvansara kompleksinin ətrafında formalaşmış ticarət meydanı.",
+    "stats": { "built": "XVII əsr", "height": "—" },
+    "materials": ["Daş döşəmə", "Kərpic"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qismən qorunub",
+    "coordinates": { "lat": 40.7850, "lng": 43.8500 },
+    "historicalEvents": [
+      "Ticarət və sənətkarlığın mərkəzi"
+    ],
+    "restoration": { "lastRestorationYear": null, "notes": "Arxeoloji tədqiqatlar aparılıb" },
+    "references": [
+      { "title": "Şəhər meydanları", "url": "https://example.com/meydanlar" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Meydan+1",
+      "https://placehold.co/800x500/png?text=Meydan+2"
+    ]
+  },
+  {
+    "id": "mon-0011",
+    "name": "İrəvan Hamamı",
+    "slug": "irevan-hamami",
+    "image": "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+Hamam%C4%B1",
+    "region": "İrəvan",
+    "location": "Tarixi məhəllə",
+    "type": "Hamam",
+    "period": "XVIII əsr",
+    "description": "Şəhər mədəniyyətinin mühüm elementi olan tarixi hamam kompleksi.",
+    "stats": { "built": "XVIII əsr", "height": "—" },
+    "materials": ["Kərpic", "Daş", "Mərmər detalları"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Bərpa tələb edir",
+    "coordinates": { "lat": 40.1765, "lng": 44.5140 },
+    "historicalEvents": [
+      "İctimai ab-ı isti mədəniyyəti"
+    ],
+    "restoration": { "lastRestorationYear": 1990, "notes": "Hissəvi bərpa" },
+    "references": [
+      { "title": "Hamamlar tarixi", "url": "https://example.com/hamamlar" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Hamam+1",
+      "https://placehold.co/800x500/png?text=Hamam+2"
+    ]
+  },
+  {
+    "id": "mon-0012",
+    "name": "Göyçə Qala Müşahidə Küləyi",
+    "slug": "goyce-musahide-kuleyi",
+    "image": "https://placehold.co/800x500/png?text=M%C3%BC%C5%9Fahid%C9%99+K%C3%BCl%C9%99yi",
+    "region": "Göyçə",
+    "location": "Yüksəklik",
+    "type": "Qüllə",
+    "period": "Orta əsrlər",
+    "description": "Qala sisteminin müşahidə funksiyasını yerinə yetirən tarixi qüllə.",
+    "stats": { "built": "XIV əsr", "height": "—" },
+    "materials": ["Daş", "Çaydaşı"],
+    "dimensions": { "height": "—", "width": "—", "length": "—", "area": "—" },
+    "protectionStatus": "Tarixi irs abidəsi",
+    "condition": "Qismən qorunub",
+    "coordinates": { "lat": 40.3600, "lng": 45.1250 },
+    "historicalEvents": [
+      "Müşahidə və siqnal funksiyası"
+    ],
+    "restoration": { "lastRestorationYear": null, "notes": "Araşdırma tələb edir" },
+    "references": [
+      { "title": "Qüllələr sistemi", "url": "https://example.com/qulleler" }
+    ],
+    "gallery": [
+      "https://placehold.co/800x500/png?text=K%C3%BCl%C9%99+1",
+      "https://placehold.co/800x500/png?text=K%C3%BCl%C9%99+2"
+    ]
+  }
+]

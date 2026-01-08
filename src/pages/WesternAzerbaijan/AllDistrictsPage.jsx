@@ -4,7 +4,9 @@ import { Map, Ruler, Mountain, Landmark, Users, CalendarDays } from 'lucide-reac
 import allDistricts from '../../mockDatas/allDistricts.json'
 
 const AllDistrictsPage = () => {
-  const rayonlar = Array.isArray(allDistricts) ? allDistricts : []
+  const rayonlar = useMemo(() => {
+    return Array.isArray(allDistricts) ? allDistricts : []
+  }, [allDistricts])
   const [query, setQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6

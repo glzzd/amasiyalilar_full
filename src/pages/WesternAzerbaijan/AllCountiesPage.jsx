@@ -4,7 +4,9 @@ import { Map, Landmark, Mountain, Users, CalendarDays, Ruler } from 'lucide-reac
 import allCounties from '../../mockDatas/allCounties.json'
 
 const AllCountiesPage = () => {
-  const mahals = Array.isArray(allCounties) ? allCounties : []
+  const mahals = useMemo(() => {
+    return Array.isArray(allCounties) ? allCounties : []
+  }, [allCounties])
   const [query, setQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6

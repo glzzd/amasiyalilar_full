@@ -24,6 +24,11 @@ import DistrictDetailsPage from './pages/WesternAzerbaijan/DistrictDetailsPage'
 import AllCountiesPage from './pages/WesternAzerbaijan/AllCountiesPage'
 import CountyDetailsPage from './pages/WesternAzerbaijan/CountyDetailsPage'
 import CityDetailsPage from './pages/WesternAzerbaijan/CityDetailsPage'
+import AreaDetailsPage from './pages/WesternAzerbaijan/AreaDetailsPage'
+import AllAuthorsPage from './pages/WesternAzerbaijan/AllAuthorsPage'
+import AuthorDetailsPage from './pages/WesternAzerbaijan/AuthorDetailsPage'
+import AllMonumentsPage from './pages/WesternAzerbaijan/AllMonumentsPage'
+import MonumentDetailsPage from './pages/WesternAzerbaijan/MonumentDetailsPage'
 
 
 function App() {
@@ -54,6 +59,11 @@ function App() {
           <Route path="western-azerbaijan/city-and-districts/counties" element={<AllCountiesPage />} />
           <Route path="western-azerbaijan/city-and-districts/counties/:slug" element={<CountyDetailsPage />} />
           <Route path="western-azerbaijan/city" element={<CityDetailsPage />} />
+          <Route path="western-azerbaijan/area" element={<AreaDetailsPage />} />
+          <Route path="western-azerbaijan/authors" element={<AllAuthorsPage />} />
+          <Route path="western-azerbaijan/authors/:slug" element={<AuthorDetailsPage />} />
+          <Route path="western-azerbaijan/monuments" element={<AllMonumentsPage />} />
+          <Route path="western-azerbaijan/monuments/:slug" element={<MonumentDetailsPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>

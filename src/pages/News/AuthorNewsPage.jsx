@@ -1,10 +1,9 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import NewsCard from '../../components/shared/NewsCard'
 import allNewsData from '../../mockDatas/allNews.json'
 import { Search, TrendingUp, Calendar, Filter, ChevronLeft, ChevronRight, User } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import Breadcrumb from '../../components/shared/Breadcrumb'
 
 const AuthorNewsPage = () => {
   const { authorName } = useParams()
@@ -16,11 +15,7 @@ const AuthorNewsPage = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 9
 
-  const breadcrumbItems = [
-    { label: 'Ana Səhifə', path: '/' },
-    { label: 'Xəbərlər', path: '/news' },
-    { label: decodedAuthorName }
-  ]
+  
 
   // Filtered & Sorted News for this Author
   const filteredNews = useMemo(() => {
@@ -50,10 +45,7 @@ const AuthorNewsPage = () => {
   // Pagination Logic
   const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
   
-  // Reset page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [sortOrder, searchQuery, decodedAuthorName]);
+  
 
   // Get current page items
   const currentNews = useMemo(() => {
@@ -126,7 +118,10 @@ const AuthorNewsPage = () => {
                 <Filter className="w-4 h-4 text-gray-400" />
                 <select 
                   value={sortOrder}
-                  onChange={(e) => setSortOrder(e.target.value)}
+                  onChange={(e) => {
+                    setSortOrder(e.target.value)
+                    setCurrentPage(1)
+                  }}
                   className="bg-transparent text-sm font-medium text-gray-700 focus:outline-none cursor-pointer"
                 >
                   <option value="newest">Ən yeni</option>

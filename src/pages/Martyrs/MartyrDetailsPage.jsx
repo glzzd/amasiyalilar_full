@@ -1,7 +1,6 @@
 import React, { useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, Award, MapPin, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import Breadcrumb from '../../components/shared/Breadcrumb'
 import allMartyrs from '../../mockDatas/allMartyrs.json'
 import { formatDate } from '@/lib/utils'
 import OtherMartyrsSlider from '../../components/shared/OtherMartyrsSlider'
@@ -18,15 +17,6 @@ const MartyrDetailsPage = () => {
   const martyr = useMemo(() => {
     return allMartyrs.find(item => item.slug === slug)
   }, [slug])
-
-  const breadcrumbItems = useMemo(() => {
-    if (!martyr) return []
-    return [
-      { label: 'Ana Səhifə', path: '/' },
-      { label: 'Şəhidlərimiz', path: '/martyrs' },
-      { label: martyr.fullName }
-    ]
-  }, [martyr])
 
   if (!martyr) {
     return (

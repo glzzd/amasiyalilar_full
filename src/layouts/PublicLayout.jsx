@@ -2,8 +2,6 @@ import React from 'react'
 import Header from '@/components/shared/Header'
 import Footer from '@/components/shared/Footer'
 import AdBanner from '@/components/shared/AdBanner'
-import leftImg from '@/assets/sidebars/left.svg'
-import rightImg from '@/assets/sidebars/right.svg'
 import { Outlet } from 'react-router-dom'
 
 const PublicLayout = () => {

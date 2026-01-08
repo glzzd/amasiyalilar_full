@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import allVeterans from '../../../mockDatas/allVeterans.json'
@@ -6,7 +6,6 @@ import allVeterans from '../../../mockDatas/allVeterans.json'
 const OtherVeteransSlider = ({ currentSlug }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
-  const containerRef = useRef(null)
 
   const others = useMemo(() => {
     return allVeterans.filter(v => v.slug !== currentSlug)

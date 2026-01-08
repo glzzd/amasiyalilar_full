@@ -6,7 +6,7 @@ import allCounties from '../../mockDatas/allCounties.json'
 const AllCountiesPage = () => {
   const mahals = useMemo(() => {
     return Array.isArray(allCounties) ? allCounties : []
-  }, [allCounties])
+  }, [])
   const [query, setQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6

@@ -1,7 +1,6 @@
 import React, { useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, Tag } from 'lucide-react'
-import Breadcrumb from '../../components/shared/Breadcrumb'
 import allDocumentaries from '../../mockDatas/allDocumentaries.json'
 import { formatDate } from '@/lib/utils'
 import OtherDocumentariesSlider from '../../components/shared/OtherDocumentariesSlider'
@@ -18,15 +17,6 @@ const DocumentaryDetailsPage = () => {
   const doc = useMemo(() => {
     return allDocumentaries.find(item => item.slug === slug)
   }, [slug])
-
-  const breadcrumbItems = useMemo(() => {
-    if (!doc) return []
-    return [
-      { label: 'Ana Səhifə', path: '/' },
-      { label: 'Sənədli Filmlər', path: '/documentaries' },
-      { label: doc.title }
-    ]
-  }, [doc])
 
   if (!doc) {
     return (

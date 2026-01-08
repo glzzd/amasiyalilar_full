@@ -6,7 +6,7 @@ import allDistricts from '../../mockDatas/allDistricts.json'
 const AllDistrictsPage = () => {
   const rayonlar = useMemo(() => {
     return Array.isArray(allDistricts) ? allDistricts : []
-  }, [allDistricts])
+  }, [])
   const [query, setQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6

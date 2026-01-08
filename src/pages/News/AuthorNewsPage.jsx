@@ -11,7 +11,6 @@ const AuthorNewsPage = () => {
 
   // States
   const [sortOrder, setSortOrder] = useState('newest') // 'newest', 'oldest', 'popular'
-  const [searchQuery, setSearchQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 9
 
@@ -20,15 +19,6 @@ const AuthorNewsPage = () => {
   // Filtered & Sorted News for this Author
   const filteredNews = useMemo(() => {
     let result = allNewsData.filter(news => news.author?.name === decodedAuthorName);
-
-    // Filter by Search
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(news => 
-        news.title.toLowerCase().includes(query) || 
-        news.content.toLowerCase().includes(query)
-      );
-    }
 
     // Sort
     if (sortOrder === 'newest') {
@@ -40,7 +30,7 @@ const AuthorNewsPage = () => {
     }
 
     return result;
-  }, [sortOrder, searchQuery, decodedAuthorName]);
+  }, [sortOrder, decodedAuthorName]);
 
   // Pagination Logic
   const totalPages = Math.ceil(filteredNews.length / itemsPerPage);

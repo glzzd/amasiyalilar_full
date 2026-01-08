@@ -1,9 +1,7 @@
 import React, { useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, Award, MapPin, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import Breadcrumb from '../../components/shared/Breadcrumb'
 import allHeroes from '../../mockDatas/allHeroes.json'
-import { formatDate } from '@/lib/utils'
 import OtherHeroesSlider from '../../components/shared/OtherHeroesSlider'
 
 const HeroDetailsPage = () => {
@@ -18,15 +16,6 @@ const HeroDetailsPage = () => {
   const hero = useMemo(() => {
     return allHeroes.find(item => item.slug === slug)
   }, [slug])
-
-  const breadcrumbItems = useMemo(() => {
-    if (!hero) return []
-    return [
-      { label: 'Ana Səhifə', path: '/' },
-      { label: 'Qəhrəmanlar', path: '/heroes' },
-      { label: hero.fullName }
-    ]
-  }, [hero])
 
   if (!hero) {
     return (

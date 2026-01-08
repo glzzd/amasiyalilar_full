@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
 import allDocumentaries from '../../../mockDatas/allDocumentaries.json'
@@ -6,7 +6,6 @@ import allDocumentaries from '../../../mockDatas/allDocumentaries.json'
 const OtherDocumentariesSlider = ({ currentSlug }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
-  const containerRef = useRef(null)
 
   const others = useMemo(() => {
     return allDocumentaries.filter(d => d.slug !== currentSlug)

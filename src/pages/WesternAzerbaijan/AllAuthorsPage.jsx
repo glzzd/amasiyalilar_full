@@ -6,7 +6,7 @@ import allAuthors from '../../mockDatas/allAuthors.json'
 const AllAuthorsPage = () => {
   const authors = useMemo(() => {
     return Array.isArray(allAuthors) ? allAuthors : []
-  }, [allAuthors])
+  }, [])
   const [query, setQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6

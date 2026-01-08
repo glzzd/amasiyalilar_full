@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "name": "Amasiya",
+    "slug": "amasiya",
+    "image": "https://placehold.co/800x500/png?text=Amasiya",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Amasiya+1",
+      "https://placehold.co/800x500/png?text=Amasiya+2"
+    ],
+    "description": "Qərbi Azərbaycanın şimalında yerləşən, tarixi kəndləri və zəngin folkloru ilə tanınan rayon.",
+    "area": "650 km²",
+    "population": "Tarixən 15,000+",
+    "stats": {
+      "elevation": "1400 m",
+      "villagesCount": 32
+    },
+    "center": "Amasiya qəsəbəsi",
+    "founded": "XVIII əsr",
+    "geography": "Dağətəyi landşaft, sərt kontinental iqlim; taxılçılıq və heyvandarlığa əlverişli.",
+    "economy": "Ənənəvi kənd təsərrüfatı, arıçılıq və yerli ticarət.",
+    "culture": "Aşıq sənəti və bayatı ənənəsi güclüdür; el şənlikləri ilə tanınır.",
+    "neighbors": ["Göyçə", "Zəngibasar"],
+    "villages": ["Ağkənd", "Qarakilsə", "Qızılqaya", "Düzkənd"],
+    "landmarks": [
+      {
+        "title": "Amasiya Qədim Mescidi",
+        "image": "https://placehold.co/600x400/png?text=Amasiya+Mescid",
+        "period": "XIX əsr",
+        "location": "Amasiya"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Göyçə",
+    "slug": "goyce",
+    "image": "https://placehold.co/800x500/png?text=G%C3%B6y%C3%A7%C9%99",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=G%C3%B6y%C3%A7%C9%99+G%C3%B6l%C3%BC",
+      "https://placehold.co/800x500/png?text=G%C3%B6y%C3%A7%C9%99+Da%C4%9Flar%C4%B1"
+    ],
+    "description": "Eyni adlı göl ilə məşhur, uzun illər Azərbaycan türklərinin məskəni olmuş bölgə.",
+    "area": "1,200 km²",
+    "population": "Tarixən 60,000+",
+    "stats": {
+      "elevation": "1900 m",
+      "villagesCount": 54
+    },
+    "center": "Çaykənd",
+    "founded": "XVI əsr",
+    "geography": "Yüksək dağlıq, soyuq iqlim; Göyçə gölü ətrafı balıqçılıq və maldarlıq üçün əlverişli.",
+    "economy": "Balıqçılıq, maldarlıq və yerli sənətkarlıq.",
+    "culture": "Aşıq ənənəsi və xalq nəğmələri ilə tanınır; yaylaq mədəniyyəti güclüdür.",
+    "neighbors": ["Amasiya", "Şörəyel"],
+    "villages": ["İmranlı", "Qızılkənd", "Qaraçəkmə", "Qarabağlar"],
+    "landmarks": [
+      {
+        "title": "Göyçə Körpüsü",
+        "image": "https://placehold.co/600x400/png?text=G%C3%B6y%C3%A7%C9%99+K%C3%B6rp%C3%BCs%C3%BC",
+        "period": "XIX əsr",
+        "location": "Göyçə"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Zəngibasar",
+    "slug": "zengibasar",
+    "image": "https://placehold.co/800x500/png?text=Z%C9%99ngibasar",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Z%C9%99ngibasar+1",
+      "https://placehold.co/800x500/png?text=Z%C9%99ngibasar+2"
+    ],
+    "description": "Məscid və karvansarayları ilə seçilən, tarixi ticarət yolları üzərində yerləşən rayon.",
+    "area": "720 km²",
+    "population": "Tarixən 25,000+",
+    "stats": {
+      "elevation": "1200 m",
+      "villagesCount": 28
+    },
+    "center": "Qarakilsə",
+    "founded": "XVII əsr",
+    "geography": "Düzənlik və dağətəyi ərazilər; isti-yağışlı iqlim.",
+    "economy": "Ticarət yollarına bağlı bazar mədəniyyəti, ipəkçilik və sənətkarlıq.",
+    "culture": "Karvansaray mədəniyyəti, dini-tarixi abidələri ilə seçilir.",
+    "neighbors": ["Vedibasar", "Qarnibasar"],
+    "villages": ["Sarıtəpə", "Qızılqula", "Əyricə"],
+    "landmarks": [
+      {
+        "title": "Zəngibasar Məscidi",
+        "image": "https://placehold.co/600x400/png?text=Z%C9%99ngibasar+M%C9%99scidi",
+        "period": "XIX əsr",
+        "location": "Zəngibasar"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Vedibasar",
+    "slug": "vedibasar",
+    "image": "https://placehold.co/800x500/png?text=Vedibasar",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Vedibasar+1",
+      "https://placehold.co/800x500/png?text=Vedibasar+2"
+    ],
+    "description": "Dağətəyi ərazilər, məhsuldar torpaqlar və qədim yaşayış məntəqələri ilə tanınır.",
+    "area": "540 km²",
+    "population": "Tarixən 18,000+",
+    "stats": {
+      "elevation": "1350 m",
+      "villagesCount": 26
+    },
+    "center": "Vedibasar",
+    "founded": "XVII əsr",
+    "geography": "Dağətəyi zonalar, su mənbələri ilə rəngarəng flora-fauna.",
+    "economy": "Taxılçılıq, meyvəçilik və heyvandarlıq.",
+    "culture": "El sənətləri, məscid memarlığı və yerli folklor nümunələri.",
+    "neighbors": ["Zəngibasar", "Qarnibasar"],
+    "villages": ["Qarakənd", "Dəvəli", "Alagöz"],
+    "landmarks": [
+      {
+        "title": "Vedibasar Karvansarayı",
+        "image": "https://placehold.co/600x400/png?text=Vedibasar+Karvansaray%C4%B1",
+        "period": "XVIII əsr",
+        "location": "Vedibasar"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Qarnibasar",
+    "slug": "qarnibasar",
+    "image": "https://placehold.co/800x500/png?text=Qarnibasar",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Qarnibasar+1",
+      "https://placehold.co/800x500/png?text=Qarnibasar+2"
+    ],
+    "description": "Tarixi abidələr, ibadətgahlar və zəngin mədəniyyət izləri ilə yadda qalan rayon.",
+    "area": "480 km²",
+    "population": "Tarixən 14,000+",
+    "stats": {
+      "elevation": "1100 m",
+      "villagesCount": 22
+    },
+    "center": "Qarnibasar",
+    "founded": "XVIII əsr",
+    "geography": "Düzənlik sahələr, qismən dağətəyi; yarı-kontinental iqlim.",
+    "economy": "Maldarlıq və bazar ticarəti.",
+    "culture": "Məscid memarlığı, el nəğmələri və mərasim ənənələri.",
+    "neighbors": ["Vedibasar", "Zəngibasar"],
+    "villages": ["Bayramlı", "Qızılqaya", "Sarıcalı"],
+    "landmarks": [
+      {
+        "title": "Qarnibasar Mescidi",
+        "image": "https://placehold.co/600x400/png?text=Qarnibasar+Mescidi",
+        "period": "XIX əsr",
+        "location": "Qarnibasar"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Şörəyel",
+    "slug": "shoreyel-rayon",
+    "image": "https://placehold.co/800x500/png?text=%C5%9E%C3%B6r%C9%99yel",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=%C5%9E%C3%B6r%C9%99yel+1",
+      "https://placehold.co/800x500/png?text=%C5%9E%C3%B6r%C9%99yel+2"
+    ],
+    "description": "Qars vilayəti ilə həmsərhəd bölgə, strateji mövqeyi və tarixi irsi ilə tanınır.",
+    "area": "950 km²",
+    "population": "Tarixən 25,000+",
+    "stats": {
+      "elevation": "1500-2000 m",
+      "villagesCount": 38
+    },
+    "center": "Şörəyel",
+    "founded": "XVI əsr",
+    "geography": "Düzənlik və dağətəyi ərazilər; sərt iqlim; məhsuldar torpaqlar.",
+    "economy": "Taxılçılıq, heyvandarlıq və ticarət.",
+    "culture": "Qədim memarlıq abidələri, karvansaraylar və aşıq folkloru.",
+    "neighbors": ["Göyçə", "Amasiya"],
+    "villages": ["Ağin", "Düzkənd", "Mollaqışlaq", "Bayan"],
+    "landmarks": [
+      {
+        "title": "Şörəyel Qalası",
+        "image": "https://placehold.co/600x400/png?text=%C5%9E%C3%B6r%C9%99yel+Qalas%C4%B1",
+        "period": "Orta əsrlər",
+        "location": "Şörəyel"
+      }
+    ]
+  }
+]

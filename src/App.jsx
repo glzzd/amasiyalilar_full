@@ -19,6 +19,11 @@ import AllLocusPage from './pages/Locus/AllLocusPage'
 import AboutPage from './pages/About'
 import AllVillagesPage from './pages/Locus/Villages/AllVillagesPage'
 import VillageDetailsPage from './pages/Locus/Villages/VillageDetailsPage'
+import AllDistrictsPage from './pages/WesternAzerbaijan/AllDistrictsPage'
+import DistrictDetailsPage from './pages/WesternAzerbaijan/DistrictDetailsPage'
+import AllCountiesPage from './pages/WesternAzerbaijan/AllCountiesPage'
+import CountyDetailsPage from './pages/WesternAzerbaijan/CountyDetailsPage'
+import CityDetailsPage from './pages/WesternAzerbaijan/CityDetailsPage'
 
 
 function App() {
@@ -44,6 +49,11 @@ function App() {
           <Route path="locus/:slug" element={<LocusDetailsPage />} />
           <Route path="locus/villages" element={<AllVillagesPage />} />
           <Route path="locus/villages/:slug" element={<VillageDetailsPage />} />
+          <Route path="western-azerbaijan/city-and-districts/districts" element={<AllDistrictsPage />} />
+          <Route path="western-azerbaijan/city-and-districts/districts/:slug" element={<DistrictDetailsPage />} />
+          <Route path="western-azerbaijan/city-and-districts/counties" element={<AllCountiesPage />} />
+          <Route path="western-azerbaijan/city-and-districts/counties/:slug" element={<CountyDetailsPage />} />
+          <Route path="western-azerbaijan/city" element={<CityDetailsPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>

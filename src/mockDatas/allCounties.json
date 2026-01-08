@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "name": "Ağbaba Mahalı",
+    "slug": "agbaba",
+    "image": "https://placehold.co/800x500/png?text=A%C4%9Fbaba+Mahali",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=A%C4%9Fbaba+1",
+      "https://placehold.co/800x500/png?text=A%C4%9Fbaba+2"
+    ],
+    "description": "Dağlıq landşaftı, sərin iqlimi və folklor ənənələri ilə tanınan tarixi mahal.",
+    "stats": {
+      "area": "820 km²",
+      "population": "Tarixən 20,000+",
+      "elevation": "1600 m",
+      "villagesCount": 35
+    },
+    "center": "Ağbaba",
+    "founded": "XVII əsr",
+    "geography": "Yüksək dağlıq, yaylaq mədəniyyəti güclü; çay vadiləri və meşəlik sahələr.",
+    "economy": "Maldarlıq, arıçılıq və yerli sənətkarlıq.",
+    "culture": "Aşıq sənəti, el şənlikləri və mərasim ənənələri.",
+    "neighbors": ["Şörəyel Mahalı", "Göyçə"],
+    "villages": ["Qızılkənd", "Bayramlı", "Düzkənd", "Qarabağlar"],
+    "landmarks": [
+      {
+        "title": "Ağbaba Karvansarayı",
+        "image": "https://placehold.co/600x400/png?text=A%C4%9Fbaba+Karvansaray%C4%B1",
+        "period": "XVIII əsr",
+        "location": "Ağbaba"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Şörəyel Mahalı",
+    "slug": "shoreyel",
+    "image": "https://placehold.co/800x500/png?text=%C5%9E%C3%B6r%C9%99yel+Mahali",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=%C5%9E%C3%B6r%C9%99yel+1",
+      "https://placehold.co/800x500/png?text=%C5%9E%C3%B6r%C9%99yel+2"
+    ],
+    "description": "Memarlıq abidələri, məscidlər və karvansaraylar ilə zəngin, strateji keçid bölgəsi.",
+    "stats": {
+      "area": "950 km²",
+      "population": "Tarixən 25,000+",
+      "elevation": "1500-2000 m",
+      "villagesCount": 38
+    },
+    "center": "Şörəyel",
+    "founded": "XVI əsr",
+    "geography": "Düzənlik və dağətəyi ərazilər; məhsuldar torpaqlar.",
+    "economy": "Taxılçılıq, heyvandarlıq və ticarət.",
+    "culture": "Qədim memarlıq, aşıq folkloru, karvansaray mədəniyyəti.",
+    "neighbors": ["Ağbaba Mahalı", "Göyçə"],
+    "villages": ["Ağin", "Düzkənd", "Mollaqışlaq", "Bayan"],
+    "landmarks": [
+      {
+        "title": "Şörəyel Qalası",
+        "image": "https://placehold.co/600x400/png?text=%C5%9E%C3%B6r%C9%99yel+Qalas%C4%B1",
+        "period": "Orta əsrlər",
+        "location": "Şörəyel"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Zod Mahalı",
+    "slug": "zod",
+    "image": "https://placehold.co/800x500/png?text=Zod+Mahali",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Zod+1",
+      "https://placehold.co/800x500/png?text=Zod+2"
+    ],
+    "description": "Mədənçilik izləri, dağlıq coğrafiya və qədim yaşayış yeri.",
+    "stats": {
+      "area": "600 km²",
+      "population": "Tarixən 12,000+",
+      "elevation": "1800 m",
+      "villagesCount": 20
+    },
+    "center": "Zod",
+    "founded": "XVII əsr",
+    "geography": "Dağlıq-çətin keçidli ərazilər, mədən yataqları.",
+    "economy": "Mədənçilik, maldarlıq.",
+    "culture": "Yerli el nəğmələri və mərasimlər.",
+    "neighbors": ["Göyçə", "Ağbaba Mahalı"],
+    "villages": ["Qızılbulaq", "Qaraqaya", "Çaylı"],
+    "landmarks": [
+      {
+        "title": "Zod Tarixi Mədən Sahəsi",
+        "image": "https://placehold.co/600x400/png?text=Zod+M%C9%99d%C9%99n",
+        "period": "XIX əsr",
+        "location": "Zod"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Gərni Mahalı",
+    "slug": "gerni",
+    "image": "https://placehold.co/800x500/png?text=G%C9%99rni+Mahali",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=G%C9%99rni+1",
+      "https://placehold.co/800x500/png?text=G%C9%99rni+2"
+    ],
+    "description": "Çay vadisi boyunca yerləşən, meyvəçilik və suvarma mədəniyyəti güclü olan mahal.",
+    "stats": {
+      "area": "520 km²",
+      "population": "Tarixən 16,000+",
+      "elevation": "1200 m",
+      "villagesCount": 24
+    },
+    "center": "Gərni",
+    "founded": "XVII əsr",
+    "geography": "Çay vadisi, suvarılan sahələr.",
+    "economy": "Meyvəçilik, bostançılıq, ticarət.",
+    "culture": "Kənd təsərrüfatı ənənələri, bazar mədəniyyəti.",
+    "neighbors": ["Vedibasar", "Zəngibasar"],
+    "villages": ["Çaykənd", "Bağçacıq", "Dəvəli"],
+    "landmarks": [
+      {
+        "title": "Gərni Tağ İçməli",
+        "image": "https://placehold.co/600x400/png?text=G%C9%99rni+Ta%C4%9F",
+        "period": "XIX əsr",
+        "location": "Gərni"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Qaraqoyunlu Mahalı",
+    "slug": "qaraqoyunlu",
+    "image": "https://placehold.co/800x500/png?text=Qaraqoyunlu+Mahali",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Qaraqoyunlu+1",
+      "https://placehold.co/800x500/png?text=Qaraqoyunlu+2"
+    ],
+    "description": "Tarixi tayfa izləri, maldarlıq və karvansaray yolları ilə seçilən mahal.",
+    "stats": {
+      "area": "700 km²",
+      "population": "Tarixən 22,000+",
+      "elevation": "1300 m",
+      "villagesCount": 30
+    },
+    "center": "Qaraqoyunlu",
+    "founded": "XV əsr",
+    "geography": "Düzənlik və dağətəyi sahələr.",
+    "economy": "Maldarlıq, ipəkçilik, yerli ticarət.",
+    "culture": "Karvansaray mədəniyyəti, el ənənələri.",
+    "neighbors": ["Zəngibasar", "Vedibasar"],
+    "villages": ["Sarıtəpə", "Qızılqula", "Əyricə"],
+    "landmarks": [
+      {
+        "title": "Qaraqoyunlu Karvansarayı",
+        "image": "https://placehold.co/600x400/png?text=Qaraqoyunlu+Karvansaray%C4%B1",
+        "period": "XVIII əsr",
+        "location": "Qaraqoyunlu"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Zəngəzur Mahalı",
+    "slug": "zengezur",
+    "image": "https://placehold.co/800x500/png?text=Z%C9%99ng%C9%99zur+Mahali",
+    "gallery": [
+      "https://placehold.co/800x500/png?text=Z%C9%99ng%C9%99zur+1",
+      "https://placehold.co/800x500/png?text=Z%C9%99ng%C9%99zur+2"
+    ],
+    "description": "Qədim dağ keçidləri, qalalar və strateji yolların kəsişdiyi mahal.",
+    "stats": {
+      "area": "980 km²",
+      "population": "Tarixən 28,000+",
+      "elevation": "2000+ m",
+      "villagesCount": 40
+    },
+    "center": "Zəngəzur",
+    "founded": "Orta əsrlər",
+    "geography": "Yüksək dağlar, sərt iqlim, dar keçidlər.",
+    "economy": "Maldarlıq, dağ ticarəti.",
+    "culture": "Qalalar, dastanlar və aşıq ənənəsi.",
+    "neighbors": ["Göyçə", "Şörəyel Mahalı"],
+    "villages": ["Qaradağ", "Zəngilan", "Qarasu"],
+    "landmarks": [
+      {
+        "title": "Zəngəzur Qalası",
+        "image": "https://placehold.co/600x400/png?text=Z%C9%99ng%C9%99zur+Qalas%C4%B1",
+        "period": "Orta əsrlər",
+        "location": "Zəngəzur"
+      }
+    ]
+  }
+]

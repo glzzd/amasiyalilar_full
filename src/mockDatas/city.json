@@ -1,0 +1,40 @@
+{
+  "name": "İrəvan Şəhəri",
+  "slug": "irevan",
+  "image": "https://placehold.co/1200x700/png?text=%C4%B0r%C9%99van+%C5%9F%C9%99h%C9%99ri",
+  "description": "Qərbi Azərbaycanın tarixi şəhərlərindən biri. Şəhər mədəniyyət, sənətkarlıq və ticari ənənələri ilə seçilir.",
+  "stats": {
+    "area": "227 km²",
+    "population": "Tarixən 100,000+",
+    "elevation": "900 m"
+  },
+  "founded": "VIII əsr",
+  "geography": "Düzənlik və alçaq dağ silsilələri arasında yerləşir, kontinental iqlim xüsusiyyətləri müşahidə olunur.",
+  "economy": "Sənətkarlıq, ticarət və yerli bazarlar; tarixən ipək yolu üzərində strateji mövqe.",
+  "culture": "Məscidlər, qalalar, karvansaralar və klassik memarlıq nümunələri ilə zəngin mədəni irs.",
+  "gallery": [
+    "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+1",
+    "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+2",
+    "https://placehold.co/800x500/png?text=%C4%B0r%C9%99van+3"
+  ],
+  "landmarks": [
+    {
+      "title": "İrəvan Qalası",
+      "image": "https://placehold.co/600x400/png?text=%C4%B0r%C9%99van+Qalas%C4%B1",
+      "period": "Orta əsrlər",
+      "location": "Mərkəz"
+    },
+    {
+      "title": "Məscid və Karvansara Kompleksi",
+      "image": "https://placehold.co/600x400/png?text=Karvansara+Kompleksi",
+      "period": "XVII–XVIII əsrlər",
+      "location": "Tarixi məhəllə"
+    }
+  ],
+  "districts": [
+    "Şəhər Mərkəzi",
+    "Tarixi Məhəllə",
+    "Sənətkarlıq Kvartalı",
+    "Ticarət Bazarı ətrafı"
+  ]
+}

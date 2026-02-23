@@ -29,6 +29,13 @@ import AllAuthorsPage from './pages/WesternAzerbaijan/AllAuthorsPage'
 import AuthorDetailsPage from './pages/WesternAzerbaijan/AuthorDetailsPage'
 import AllMonumentsPage from './pages/WesternAzerbaijan/AllMonumentsPage'
 import MonumentDetailsPage from './pages/WesternAzerbaijan/MonumentDetailsPage'
+import LibraryPage from './pages/WesternAzerbaijan/LibraryPage'
+import BookDetailsPage from './pages/WesternAzerbaijan/BookDetailsPage'
+import WesternAboutPage from './pages/WesternAzerbaijan/AboutPage'
+import AllIntellectualsPage from './pages/WesternAzerbaijan/AllIntellectualsPage'
+import IntellectualDetails from './pages/WesternAzerbaijan/IntellectualDetails'
+import AllOfficersPage from './pages/Amasiya/AllOfficersPage'
+import OfficerDetailsPage from './pages/Amasiya/OfficerDetailsPage'
 
 
 function App() {
@@ -64,6 +71,13 @@ function App() {
           <Route path="western-azerbaijan/authors/:slug" element={<AuthorDetailsPage />} />
           <Route path="western-azerbaijan/monuments" element={<AllMonumentsPage />} />
           <Route path="western-azerbaijan/monuments/:slug" element={<MonumentDetailsPage />} />
+          <Route path="western-azerbaijan/library" element={<LibraryPage />} />
+          <Route path="western-azerbaijan/library/:slug" element={<BookDetailsPage />} />
+          <Route path="western-azerbaijan/about" element={<WesternAboutPage />} />
+          <Route path="western-azerbaijan/intellectuals" element={<AllIntellectualsPage />} />
+          <Route path="western-azerbaijan/intellectuals/:slug" element={<IntellectualDetails />} />
+          <Route path="officers" element={<AllOfficersPage />} />
+          <Route path="officers/:slug" element={<OfficerDetailsPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>

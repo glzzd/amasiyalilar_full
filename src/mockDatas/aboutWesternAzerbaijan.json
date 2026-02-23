@@ -1,0 +1,49 @@
+{
+  "title": "Qərbi Azərbaycan",
+  "subtitle": "Tarix, mədəniyyət və yaddaşın coğrafiyası",
+  "photos": [
+    "https://placehold.co/1200x600/jpg?text=Q%C9%99rbi+Az%C9%99rbaycan",
+    "https://placehold.co/1200x600/jpg?text=%C4%B0r%C9%99van+Qalasi",
+    "https://placehold.co/1200x600/jpg?text=G%C3%B6y%C3%A7%C9%99+G%C3%B6l%C3%BC"
+  ],
+  "overview": [
+    "Qərbi Azərbaycan — Azərbaycan xalqının tarixi məskunlaşma ərazisi, İrəvan xanlığından Dərələyəz, Göyçə və Zəngəzur bölgələrinə qədər uzanan böyük bir coğrafi-mədəni məkandır.",
+    "Bu ərazi yüzilliklər boyu şəhər mədəniyyətinin, karvansaraların, qalaların, məscidlərin, körpülərin, sənət və ədəbiyyatın beşiyi olmuş, müxtəlif dövrlərdə sosial-siyasi dəyişikliklərin təsirinə məruz qalmışdır.",
+    "Qədim abidələr, folklor qatları, ədəbiyyat, musiqi və memarlıq nümunələri Qərbi Azərbaycan irsinin əsas sütunlarını təşkil edir."
+  ],
+  "stats": {
+    "historicalArea": "Təxmini 30–40 min km²",
+    "regionsCount": 4,
+    "keyRegions": ["İrəvan", "Göyçə", "Zəngəzur", "Dərələyəz", "Şörəyel"],
+    "culturalSites": 200,
+    "languages": ["Azərbaycan dili", "Türk dilləri", "Farsca və Rusca təsirlər"],
+    "notableMonuments": ["Sərdar sarayı", "İrəvan Qalası", "Zəngəzur karvansaraları", "Göyçə məscidləri"]
+  },
+  "timeline": [
+    { "year": "XVIII əsr", "event": "İrəvan xanlığının siyasi və mədəni yüksəlişi" },
+    { "year": "XIX əsr", "event": "Qalalar, karvansaralar, körpülər və məscidlər şəbəkəsinin genişlənməsi" },
+    { "year": "XX əsr əvvəli", "event": "Şəhər mədəniyyəti və ədəbiyyatda modern üslubların inkişafı" },
+    { "year": "XX əsr ortaları", "event": "Sosial-siyasi dəyişikliklər, köçlər və irsin qorunması üçün fəaliyyətlər" }
+  ],
+  "culture": {
+    "literature": [
+      "İrəvan məktəbi: şəhər poetikası və klassik üslub",
+      "Göyçə ədəbiyyatı: təbiət poetikası və romantik motivlər",
+      "Zəngəzur poemaları: epik struktur və dağ simvolikası"
+    ],
+    "music": [
+      "Aşıq sənəti və muğam ənənələrinin bölgələrdə yayılması",
+      "Xalq mahnıları: Göyçə və Zəngəzur motivləri"
+    ],
+    "architecture": [
+      "Qalalar və sərdar sarayları",
+      "Karvansara və bazar arteriyaları",
+      "Məscid, körpü və su qurğuları"
+    ]
+  },
+  "references": [
+    { "label": "İrəvan xanlığı arxiv qeydləri", "url": "https://example.com/irevan-archive" },
+    { "label": "Zəngəzur karvansaraları kataloqu", "url": "https://example.com/zengezur-karvansara" },
+    { "label": "Göyçə folklor toplusu", "url": "https://example.com/goyce-folklor" }
+  ]
+}

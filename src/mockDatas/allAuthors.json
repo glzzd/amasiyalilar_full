@@ -11,7 +11,8 @@
     "description": "Qərbi Azərbaycan şairi, klassik üslubla xalq ruhunu birləşdirən əsərləri ilə tanınır.",
     "works": ["Dağların Səsi", "Karvansara Hatirələri", "İrəvan Qəzəlləri"],
     "stats": { "worksCount": 30 },
-    "tags": ["İrəvan", "klassik"]
+    "tags": ["İrəvan", "klassik"],
+    "region": "Amasiya"
   },
   {
     "id": "auth-0002",
@@ -25,7 +26,8 @@
     "description": "Göyçə bölgəsinin şairəsi, təbiət və insan mövzularını zərif üslubla işləyib.",
     "works": ["Göyçə Gecələri", "Sahildə Söhbət", "Yol Üstü Şeirlər"],
     "stats": { "worksCount": 22 },
-    "tags": ["Göyçə", "romantik"]
+    "tags": ["Göyçə", "romantik"],
+    "region": "Amasiya"
   },
   {
     "id": "auth-0003",
@@ -39,7 +41,8 @@
     "description": "Dağlar və keçidlər mövzusunda epik əsərləri ilə məşhur olmuş şair.",
     "works": ["Zəngəzur Poeması", "Qala Rüzgarı", "Keçidlər"],
     "stats": { "worksCount": 28 },
-    "tags": ["Zəngəzur", "epik"]
+    "tags": ["Zəngəzur", "epik"],
+    "region": "Amasiya"
   },
   {
     "id": "auth-0004",
@@ -67,7 +70,8 @@
     "description": "Şörəyelin mədəni irsini sənədli və publisistik üslubda işləmiş müəllif.",
     "works": ["Şörəyel Yazıları", "Folklor Notları", "Sözün Yolu"],
     "stats": { "worksCount": 25 },
-    "tags": ["Şörəyel", "publisistika"]
+    "tags": ["Şörəyel", "publisistika"],
+    "region": "Amasiya"
   },
   {
     "id": "auth-0006",

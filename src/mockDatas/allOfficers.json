@@ -1,0 +1,125 @@
+[
+  {
+    "id": "off-001",
+    "name": "Cəfər Vəlibəyov",
+    "slug": "cefer-velibeyov",
+    "image": "https://placehold.co/600x400/png?text=C%C9%99f%C9%99r+V%C9%99lib%C9%99yov",
+    "birthplace": "Amasiya",
+    "born": "1907",
+    "died": "1981",
+    "profession": "Dövlət xadimi, Jurnalist",
+    "description": "Amasiya rayonunun qurucularından biri, uzun müddət rəhbər vəzifələrdə çalışmış ictimai-siyasi xadim.",
+    "biography": "Cəfər Mehdi oğlu Vəlibəyov 1907-ci ildə anadan olmuşdur. 1930-1936-cı illərdə Amasiya Rayon Partiya Komitəsinin birinci katibi vəzifəsində çalışmışdır. Rayonun sosial-iqtisadi inkişafında müstəsna xidmətləri olmuşdur. Daha sonra İrəvanda nəşr olunan 'Sovet Ermənistanı' qəzetinin redaktoru, Ermənistan SSR Ali Soveti Rəyasət Heyəti sədrinin müavini kimi məsul vəzifələrdə işləmişdir. 1949-cu ildə repressiyaya məruz qalaraq Sibirə sürgün edilmiş, 1954-cü ildə bəraət almışdır.",
+    "education": ["Zaqafqaziya Kommunist Universiteti"],
+    "positions": [
+      "Amasiya Rayon Partiya Komitəsinin birinci katibi (1930-1936)",
+      "'Sovet Ermənistanı' qəzetinin redaktoru (1938-1947)",
+      "Ermənistan SSR Ali Soveti Rəyasət Heyəti sədrinin müavini"
+    ],
+    "achievements": ["Ermənistan SSR-in Əməkdar mədəniyyət işçisi", "Qırmızı Əmək Bayrağı ordeni"],
+    "interesting_facts": ["1949-cu ildə 150 min azərbaycanlının deportasiyasına etiraz etdiyi üçün repressiyaya məruz qalmışdır."],
+    "region": "Amasiya"
+  },
+  {
+    "id": "off-002",
+    "name": "Həbib Həsənov",
+    "slug": "hebib-hesenov",
+    "image": "https://placehold.co/600x400/png?text=H%C9%99bib+H%C9%99s%C9%99nov",
+    "birthplace": "Amasiya, Ağzıbir kəndi",
+    "born": "1922",
+    "died": "2004",
+    "profession": "Dövlət xadimi",
+    "description": "Ermənistan SSR-də yüksək dövlət vəzifələrində çalışmış görkəmli azərbaycanlı xadim.",
+    "biography": "Həbib Rəhim oğlu Həsənov 1922-ci ildə Amasiya rayonunun Ağzıbir kəndində anadan olmuşdur. Əmək fəaliyyətinə müəllim kimi başlamış, sonradan partiya işinə keçmişdir. 1956-1960-cı illərdə Amasiya Rayon Partiya Komitəsinin birinci katibi işləmişdir. Uzun illər Ermənistan SSR Meşə Təsərrüfatı naziri vəzifəsində çalışmışdır. Azərbaycanlıların hüquqlarının qorunmasında fəal iştirak etmişdir.",
+    "education": ["İrəvan Dövlət Pedaqoji İnstitutu", "Moskva Ali Partiya Məktəbi"],
+    "positions": [
+      "Amasiya Rayon Partiya Komitəsinin birinci katibi (1956-1960)",
+      "Ermənistan SSR Meşə Təsərrüfatı naziri",
+      "Ermənistan SSR Ali Sovetinin deputatı"
+    ],
+    "achievements": ["Lenin ordeni", "Qırmızı Əmək Bayrağı ordeni", "Ermənistan SSR Əməkdar təbiəti mühafizə işçisi"],
+    "interesting_facts": ["Ermənistan SSR-də nazir vəzifəsində işləyən azsaylı azərbaycanlılardan biri olmuşdur."],
+    "region": "Amasiya"
+  },
+  {
+    "id": "off-003",
+    "name": "Məhərrəm Bayramov",
+    "slug": "meherrem-bayramov",
+    "image": "https://placehold.co/600x400/png?text=M%C9%99h%C9%99rr%C9%99m+Bayramov",
+    "birthplace": "İrəvan, Aşağı Necili",
+    "born": "1928",
+    "died": "1984",
+    "profession": "Yazıçı, Jurnalist, Dövlət xadimi",
+    "description": "Tanınmış jurnalist və ictimai xadim, Amasiya rayonunun rəhbəri.",
+    "biography": "Məhərrəm Bağır oğlu Bayramov 1928-ci ildə anadan olmuşdur. Jurnalist kimi fəaliyyətə başlamış, 'Sovet Ermənistanı' qəzetində müxtəlif vəzifələrdə çalışmışdır. 1969-1974-cü illərdə Amasiya Rayon Partiya Komitəsinin birinci katibi olmuşdur. Daha sonra 'Sovet Ermənistanı' qəzetinin baş redaktoru vəzifəsində işləmişdir. Ermənistan SSR Ali Sovetinin deputatı seçilmişdir. 1984-cü ildə İrəvanda vəfat etmişdir.",
+    "education": ["Azərbaycan Dövlət Universiteti (Jurnalistika)"],
+    "positions": [
+      "Amasiya Rayon Partiya Komitəsinin birinci katibi (1969-1974)",
+      "'Sovet Ermənistanı' qəzetinin baş redaktoru (1974-1984)",
+      "Ermənistan Jurnalistlər İttifaqı sədrinin müavini"
+    ],
+    "achievements": ["Ermənistan SSR Əməkdar mədəniyyət işçisi", "Qızıl Qələm mükafatı"],
+    "interesting_facts": ["Amasiyada rəhbərliyi dövründə rayonun kənd təsərrüfatı yüksək inkişaf etmişdir."],
+    "region": "Amasiya"
+  },
+  {
+    "id": "off-004",
+    "name": "Cahangir Əliyev",
+    "slug": "cahangir-eliyev",
+    "image": "https://placehold.co/600x400/png?text=Cahangir+%C6%8Fliyev",
+    "birthplace": "Amasiya, Düzkənd",
+    "born": "1931",
+    "died": "2010",
+    "profession": "Partiya və dövlət xadimi",
+    "description": "Amasiya rayonuna ən uzun müddət rəhbərlik etmiş şəxslərdən biri.",
+    "biography": "Cahangir Həsənəli oğlu Əliyev 1931-ci ildə Amasiya rayonunun Düzkənd kəndində anadan olmuşdur. Kənd təsərrüfatı mütəxəssisi kimi fəaliyyətə başlamışdır. 1965-1969-cu illərdə Amasiya Rayon İcraiyyə Komitəsinin sədri, 1974-1981-ci illərdə isə Rayon Partiya Komitəsinin birinci katibi vəzifələrində çalışmışdır. Rayonun abadlaşdırılmasında və infrastrukturunun yenilənməsində böyük xidmətləri olmuşdur.",
+    "education": ["İrəvan Zo baytarlıq İnstitutu"],
+    "positions": [
+      "Amasiya Rayon İcraiyyə Komitəsinin sədri (1965-1969)",
+      "Amasiya Rayon Partiya Komitəsinin birinci katibi (1974-1981)",
+      "Ermənistan SSR Ali Sovetinin deputatı"
+    ],
+    "achievements": ["Oktyabr İnqilabı ordeni", "Şərəf Nişanı ordeni"],
+    "interesting_facts": ["Onun rəhbərliyi dövründə Amasiya rayon mərkəzi şəhər tipli qəsəbə statusu almışdır."],
+    "region": "Amasiya"
+  },
+  {
+    "id": "off-005",
+    "name": "Zərbəli Qurbanov",
+    "slug": "zerbeli-qurbanov",
+    "image": "https://placehold.co/600x400/png?text=Z%C9%99rb%C9%99li+Qurbanov",
+    "birthplace": "Basarkeçər, Nərimanlı",
+    "born": "1932",
+    "died": "2003",
+    "profession": "Dövlət xadimi, Jurnalist",
+    "description": "Amasiya rayonunun sonuncu azərbaycanlı rəhbərlərindən biri, ictimai xadim.",
+    "biography": "Zərbəli Qasım oğlu Qurbanov 1932-ci ildə Basarkeçər rayonunun Nərimanlı kəndində anadan olmuşdur. Jurnalist fəaliyyəti ilə tanınmış, 'Sovet Ermənistanı' qəzetində şöbə müdiri, redaktor müavini işləmişdir. 1981-1985-ci illərdə Amasiya Rayon Partiya Komitəsinin birinci katibi vəzifəsində çalışmışdır. 1985-ci ildən sonra 'Sovet Ermənistanı' qəzetinin redaktoru olmuşdur. 1988-ci ildə deportasiya zamanı xalqın təhlükəsizliyinin təmin olunmasında səy göstərmişdir.",
+    "education": ["Azərbaycan Dövlət Universiteti"],
+    "positions": [
+      "Amasiya Rayon Partiya Komitəsinin birinci katibi (1981-1985)",
+      "'Sovet Ermənistanı' qəzetinin redaktoru (1985-1988)"
+    ],
+    "achievements": ["Ermənistan SSR Ali Sovetinin Rəyasət Heyətinin Fəxri Fərmanı"],
+    "interesting_facts": ["Zərbəli Qurbanov həm də bədii yaradıcılıqla məşğul olmuş, hekayə və oçerklər yazmışdır."],
+    "region": "Amasiya"
+  },
+  {
+    "id": "off-006",
+    "name": "İldırım Bağırov",
+    "slug": "ildirim-bagirov",
+    "image": "https://placehold.co/600x400/png?text=%C4%B0ld%C4%B1r%C4%B1m+Ba%C4%9F%C4%B1rov",
+    "birthplace": "Amasiya",
+    "born": "1938",
+    "died": "2015",
+    "profession": "Partiya xadimi",
+    "description": "Amasiya rayonunun son dövr rəhbərlərindən.",
+    "biography": "İldırım Bağırov Amasiya rayonunda anadan olmuşdur. Rayonun ictimai-siyasi həyatında fəal iştirak etmişdir. 1985-1988-ci illərdə, ən çətin dövrlərdə Amasiya Rayon Partiya Komitəsinin birinci katibi vəzifəsində çalışmışdır. Erməni millətçilərinin təzyiqlərinə baxmayaraq, azərbaycanlı əhalinin hüquqlarını qorumağa çalışmışdır.",
+    "education": ["Ali Partiya Məktəbi"],
+    "positions": [
+      "Amasiya Rayon Partiya Komitəsinin birinci katibi (1985-1988)"
+    ],
+    "achievements": [],
+    "interesting_facts": ["1988-ci il hadisələri zamanı əhalinin köçürülməsini təşkil etmişdir."],
+    "region": "Amasiya"
+  }
+]

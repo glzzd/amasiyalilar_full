@@ -1,0 +1,164 @@
+[
+  {
+    "id": "ath-001",
+    "name": "Ramin Əliyev",
+    "slug": "ramin-eliyev",
+    "image": "https://placehold.co/600x400/png?text=Ramin+%C6%8Fliyev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1975",
+    "died": "",
+    "sport": "Güləş",
+    "discipline": "Sərbəst güləş",
+    "description": "Amasiya mənşəli sərbəst güləşçi, milli komandada çıxış etmiş idmançı.",
+    "biography": "Ramin Əliyev Amasiya rayonunda anadan olmuş və gənc yaşlarından güləşlə məşğul olmağa başlamışdır. Deportasiyadan sonra ailəsi ilə birlikdə Azərbaycana köçmüş, burada usta məşqçilərdən dərs almışdır. Gənclər arasında respublika birinciliklərində fərqlənmiş, daha sonra böyüklər arasında Azərbaycan çempionu olmuşdur. Milli komandanın tərkibində müxtəlif beynəlxalq turnirlərdə Amasiya adını layiqincə təmsil etmişdir.",
+    "clubs": [
+      "Amasiya uşaq-gənclər idman məktəbi",
+      "Bakı güləş klubu"
+    ],
+    "achievements": [
+      "Azərbaycan çempionu (sərbəst güləş, 74 kq)",
+      "Beynəlxalq turnirin qalibi (Tiflis açıq birinciliyi)",
+      "Milli komandanın üzvü kimi bir neçə beynəlxalq turnirdə medalçı"
+    ],
+    "interesting_facts": [
+      "Məşqçilik fəaliyyətinə başlayaraq Amasiya mənşəli gənc güləşçilərlə xüsusi işləyir.",
+      "Deportasiya tarixini idmançı gənclər arasında təbliğ edən çıxışlar edir."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "ath-002",
+    "name": "Aygün Məmmədova",
+    "slug": "aygun-memmedova",
+    "image": "https://placehold.co/600x400/png?text=Ayg%C3%BCn+M%C9%99mm%C9%99dova",
+    "birthplace": "Amasiya rayonu",
+    "born": "1982",
+    "died": "",
+    "sport": "Voleybol",
+    "discipline": "Qapalı məkan voleybolu",
+    "description": "Amasiya mənşəli voleybolçu, ölkə çempionatında çıxış etmiş kapitanlardan biri.",
+    "biography": "Aygün Məmmədova Amasiya köklü ailədə Bakıda böyümüşdür. Məktəb illərindən voleybola maraq göstərmiş, idman məktəbində peşəkar hazırlıq keçmişdir. Yüksək boyu və liderlik keyfiyyətləri sayəsində tezliklə komanda kapitanlığına yüksəlmişdir. Azərbaycan Super Liqasındakı klubların tərkibində illərlə çıxış etmiş, komandasına neçə-neçə medal qazandırmışdır.",
+    "clubs": [
+      "Bakı uşaq-gənclər idman məktəbi",
+      "Bakı qadın voleybol klubu"
+    ],
+    "achievements": [
+      "Azərbaycan çempionatında çoxsaylı gümüş və bürünc medallar",
+      "Komanda kapitanı kimi Super Liqada çıxış",
+      "Gənc voleybolçular üçün keçirilən düşərgələrdə könüllü təlimçi"
+    ],
+    "interesting_facts": [
+      "Hər müsahibəsində Amasiya köklərindən qürurla danışır.",
+      "Qızların idmana cəlbi mövzusunda sosial layihələrdə iştirak edir."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "ath-003",
+    "name": "Elçin Hüseynov",
+    "slug": "elcin-huseynov",
+    "image": "https://placehold.co/600x400/png?text=El%C3%A7in+H%C3%BCseynov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1978",
+    "died": "",
+    "sport": "Futbol",
+    "discipline": "Mərkəz müdafiəçisi",
+    "description": "Amasiya əsilli futbolçu, ölkə çempionatının bir neçə klubunda çıxış etmiş müdafiəçi.",
+    "biography": "Elçin Hüseynov deportasiyadan sonra ailəsi ilə birlikdə Azərbaycanda məskunlaşmış Amasiya köklü ailədə doğulmuşdur. Uşaqlıqdan futbol oynamağa başlamış, əvvəlcə məhəllə komandalarında, daha sonra isə uşaq futbol məktəbində fərqlənmişdir. Peşəkar karyerası ərzində ölkə çempionatında bir neçə klubun şərəfini qorumuş, sabit oyunu ilə məşqçilərin etimadını qazanmışdır.",
+    "clubs": [
+      "Bakı uşaq futbol məktəbi",
+      "Bir neçə I divizion və Premyer Liqa klubu"
+    ],
+    "achievements": [
+      "Klubu ilə birgə I divizionda çempionluq",
+      "Bir neçə mövsüm komanda kapitanlığı",
+      "Gənc müdafiəçilər üçün fərdi məşqlər proqramının müəllifi"
+    ],
+    "interesting_facts": [
+      "Amasiya deportasiyası ilə bağlı xeyriyyə oyunlarının təşkilində iştirak etmişdir.",
+      "Məşqçi karyerasına başlayaraq müdafiəçilərin hazırlığı üzrə ixtisaslaşmışdır."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "ath-004",
+    "name": "Samir Quliyev",
+    "slug": "samir-quliyev",
+    "image": "https://placehold.co/600x400/png?text=Samir+Quliyev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1985",
+    "died": "",
+    "sport": "Cüdo",
+    "discipline": "81 kq çəki dərəcəsi",
+    "description": "Cüdo üzrə respublika və beynəlxalq turnirlərin qalibi, Amasiya mənşəli idmançı.",
+    "biography": "Samir Quliyev Amasiya köklü ailənin övladıdır. Cüdoya uşaq yaşlarından başlamış, nizam-intizamı və səbrliyi ilə seçilmişdir. Gənclər arasında keçirilən yarışlardan başlayaraq bir çox medal qazanmış, daha sonra böyüklər arasında da uğurlarını davam etdirmişdir. O, həm də cüdonu təkcə idman deyil, həyat fəlsəfəsi kimi qəbul edən idmançılardandır.",
+    "clubs": [
+      "Bakı cüdo məktəbi",
+      "Milli komandanın məşq mərkəzi"
+    ],
+    "achievements": [
+      "Azərbaycan birinciliyinin dəfələrlə medalçısı",
+      "Beynəlxalq turnirlərin qalibi və mükafatçısı",
+      "Gənc cüdoçuların fərdi hazırlığında iştirak"
+    ],
+    "interesting_facts": [
+      "Məşqlərdən sonra gənclərlə motivasiya söhbətləri aparır.",
+      "Cüdo etikası və deportasiya xatirəsi mövzularını tez-tez birləşdirir."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "ath-005",
+    "name": "Zülfiyyə Qasımova",
+    "slug": "zulfiye-qasimova",
+    "image": "https://placehold.co/600x400/png?text=Z%C3%BClfiyy%C9%99+Qas%C4%B1mova",
+    "birthplace": "Amasiya rayonu",
+    "born": "1990",
+    "died": "",
+    "sport": "Yüngül atletika",
+    "discipline": "Orta məsafəyə qaçış",
+    "description": "Yüngül atletika üzrə orta məsafə qaçışçısı, respublika yarışlarının qalibi.",
+    "biography": "Zülfiyyə Qasımova Amasiya köklü ailədə dünyaya gəlmiş, uşaqlıqdan qaçışda xüsusi istedadı ilə seçilmişdir. Məktəbdə keçirilən yarışlardan başlayaraq daim birincilik uğrunda mübarizə aparmış, daha sonra peşəkar atletika klubuna dəvət almışdır. O, 800 və 1500 metr məsafələrdə bir çox respublika yarışlarının qalibi olmuşdur.",
+    "clubs": [
+      "Bakı atletika klubu"
+    ],
+    "achievements": [
+      "Yüngül atletika üzrə respublika çempionatında birinciliklər",
+      "Gənc atletlər üçün qaçış üzrə seminarlar",
+      "Qadınların idmana cəlb olunması ilə bağlı layihələrdə iştirak"
+    ],
+    "interesting_facts": [
+      "Deportasiya mövzusunda keçirilən xatirə qaçışlarında fəal iştirak edir.",
+      "Amasiya adını daşıyan xeyriyyə qaçışlarının təşəbbüskarlarından biridir."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "ath-006",
+    "name": "Vaqif Abdullayev",
+    "slug": "vaqif-abdullayev",
+    "image": "https://placehold.co/600x400/png?text=Vaqif+Abdullayev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1968",
+    "died": "",
+    "sport": "Şahmat",
+    "discipline": "Şahmatçı, məşqçi",
+    "description": "Amasiya mənşəli şahmatçı və məşqçi, uşaq şahmat məktəbinin yaradıcılarından biri.",
+    "biography": "Vaqif Abdullayev şahmata məktəb illərində maraq göstərmiş, müxtəlif rayon və respublika turnirlərində çıxış etmişdir. O, daha çox məşqçi kimi tanınmış, uşaqlar üçün şahmat dərnəkləri təşkil etmişdir. Şagirdlərinin bir qismi respublika və beynəlxalq yarışlarda uğur qazanmış, Azərbaycan şahmat məktəbinin inkişafına töhfə vermişdir.",
+    "clubs": [
+      "Bakı şahmat klubu",
+      "Uşaq şahmat məktəbi"
+    ],
+    "achievements": [
+      "Uşaq və yeniyetmələr arasında bir neçə respublika çempionunun məşqçisi",
+      "Şahmat üzrə metodik vəsaitlərin müəllifi",
+      "Şahmatın Amasiya köklü ailələr arasında təbliği"
+    ],
+    "interesting_facts": [
+      "Şahmat dərslərində tez-tez Amasiya tarixindən nümunələr gətirir.",
+      "Məcburi köçkün uşaqlar üçün pulsuz şahmat dərsləri layihələrində iştirak edib."
+    ],
+    "region": "Amasiya"
+  }
+]
+

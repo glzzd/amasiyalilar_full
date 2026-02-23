@@ -1,0 +1,222 @@
+[
+  {
+    "id": "abr-0001",
+    "name": "Eldar Məmmədov",
+    "slug": "eldar-memmedov",
+    "image": "https://placehold.co/800x800/png?text=Eldar+Memmedov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1983",
+    "died": "",
+    "country": "Türkiyə",
+    "city": "İstanbul",
+    "profession": "Memar",
+    "organization": "İstanbul Şəhər Layihələndirmə Bürosu",
+    "description": "İstanbulda ictimai binaların və yaşayış komplekslərinin layihələndirilməsində iştirak edən Amasiyalı memar.",
+    "biography": "Eldar Məmmədov Amasiyada anadan olmuş, Bakıdakı memarlıq universitetini bitirdikdən sonra təcrübə üçün Türkiyəyə yollanmışdır. Bir neçə il fərqli şirkətlərdə çalışdıqdan sonra İstanbul Şəhər Layihələndirmə Bürosunda memar kimi işə qəbul olunmuşdur. O, həm müasir, həm də ənənəvi memarlıq elementlərini birləşdirən layihələri ilə tanınır.",
+    "abroad_since": "2008",
+    "achievements": [
+      "İstanbulda bir neçə sosial mənzil layihəsinin baş memarı olub",
+      "Amasiyada memarlıq təhsili alan gənclərə onlayn mentorluq edir"
+    ],
+    "region": "Amasiya",
+    "tags": ["memarlıq", "türkiyə", "diaspor"]
+  },
+  {
+    "id": "abr-0002",
+    "name": "Nərmin Qasımova",
+    "slug": "nermin-qasimova",
+    "image": "https://placehold.co/800x800/png?text=Nermin+Qasimova",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1990",
+    "died": "",
+    "country": "Almaniya",
+    "city": "Berlin",
+    "profession": "Tibb bacısı",
+    "organization": "Berlin Universitet Klinikasının kardiologiya şöbəsi",
+    "description": "Almaniyada tibb sahəsində çalışan və beynəlxalq tibbi komandalarda iştirak edən Amasiyalı tibb bacısı.",
+    "biography": "Nərmin Qasımova Amasiyada orta məktəbi bitirdikdən sonra tibb təhsilini davam etdirmək üçün Almaniyaya köçmüşdür. O, həm təcili yardım, həm də kardiologiya sahəsində ixtisaslaşıb və hazırda Berlin Universitet Klinikasında çalışır. Boş vaxtlarında azərbaycanlı tələbələrə alman dilində tibbi terminologiya ilə bağlı dərslər keçir.",
+    "abroad_since": "2012",
+    "achievements": [
+      "Beynəlxalq tibb konfranslarında Azərbaycan səhiyyəsi haqqında çıxışlar edib",
+      "Pandemiya dövründə könüllü olaraq əlavə növbələrdə çalışaraq xüsusi təşəkkür məktubu alıb"
+    ],
+    "region": "Amasiya",
+    "tags": ["tibb", "almaniya", "diaspor"]
+  },
+  {
+    "id": "abr-0003",
+    "name": "Rəşad Əliyev",
+    "slug": "resad-eliyev",
+    "image": "https://placehold.co/800x800/png?text=Resad+Eliyev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1985",
+    "died": "",
+    "country": "ABŞ",
+    "city": "San-Fransisko",
+    "profession": "Proqramçı",
+    "organization": "Texnoloji startap",
+    "description": "Silisium Vadisində fəaliyyət göstərən texnoloji startapın həmtəsisçisi olan proqramçı.",
+    "biography": "Rəşad Əliyev Amasiyada orta məktəbi bitirdikdən sonra informatika üzrə təhsil almış və müxtəlif beynəlxalq proqramlaşdırma müsabiqələrində iştirak etmişdir. O, ABŞ-a magistr təhsili üçün köçmüş, daha sonra isə bir neçə startapda çalışaraq öz komandası ilə birlikdə yeni layihə yaratmışdır.",
+    "abroad_since": "2010",
+    "achievements": [
+      "Məlumat təhlükəsizliyi sahəsində patentləşdirilmiş həll üzərində çalışıb",
+      "Amasiyadan olan gənclər üçün onlayn proqramlaşdırma kursları təşkil edib"
+    ],
+    "region": "Amasiya",
+    "tags": ["it", "abş", "startap"]
+  },
+  {
+    "id": "abr-0004",
+    "name": "Aysel Hüseynli",
+    "slug": "aysel-huseynli",
+    "image": "https://placehold.co/800x800/png?text=Aysel+Huseynli",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1992",
+    "died": "",
+    "country": "Böyük Britaniya",
+    "city": "London",
+    "profession": "Maliyyə analitiki",
+    "organization": "London İnvestisiya Fondu",
+    "description": "Beynəlxalq investisiya fondunda risk analizi və maliyyə planlaşdırılması üzrə çalışan mütəxəssis.",
+    "biography": "Aysel Hüseynli iqtisadiyyat üzrə təhsil aldıqdan sonra müxtəlif bank və maliyyə qurumlarında təcrübə keçmişdir. Təqaüd proqramı sayəsində Londonda magistratura oxumuş və daha sonra investisiya fonduna işə qəbul olunmuşdur. O, inkişaf etməkdə olan bazarlara investisiyalar üzrə araşdırmalar aparır.",
+    "abroad_since": "2014",
+    "achievements": [
+      "Maliyyə risklərinin qiymətləndirilməsi üzrə bir neçə analitik hesabatın həmmüəllifi olub",
+      "Azərbaycan haqqında təqdimatlarla xaricdə ölkənin tanıdılmasına töhfə verib"
+    ],
+    "region": "Amasiya",
+    "tags": ["maliyyə", "london", "analitika"]
+  },
+  {
+    "id": "abr-0005",
+    "name": "Rüfət Quliyev",
+    "slug": "rufet-quliyev",
+    "image": "https://placehold.co/800x800/png?text=Rufet+Quliyev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1978",
+    "died": "",
+    "country": "Rusiya",
+    "city": "Moskva",
+    "profession": "Mühəndis",
+    "organization": "Enerji şirkəti",
+    "description": "Enerji infrastruktur layihələrində çalışan və böyük layihələrin icrasında iştirak edən mühəndis.",
+    "biography": "Rüfət Quliyev mühəndislik təhsilini başa vurduqdan sonra müxtəlif enerji layihələrində işləmişdir. O, Rusiyada enerji ötürmə xətləri və yarımstansiyaların yenilənməsi layihələrində mühəndis qrupunun tərkibində fəaliyyət göstərir.",
+    "abroad_since": "2005",
+    "achievements": [
+      "Bir neçə böyük enerji layihəsinin həyata keçirilməsində əsas komanda üzvü olub",
+      "Gənc mühəndislər üçün texniki seminarlar təşkil edib"
+    ],
+    "region": "Amasiya",
+    "tags": ["mühəndislik", "enerji", "rusiya"]
+  },
+  {
+    "id": "abr-0006",
+    "name": "Lalə Əliyeva",
+    "slug": "lale-eliyeva",
+    "image": "https://placehold.co/800x800/png?text=Lale+Eliyeva",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1988",
+    "died": "",
+    "country": "Kanada",
+    "city": "Toronto",
+    "profession": "Tədqiqatçı",
+    "organization": "Universitet tədqiqat mərkəzi",
+    "description": "Sosial elmlər sahəsində tədqiqat aparan və məqalələri beynəlxalq jurnallarda dərc olunan alim.",
+    "biography": "Lalə Əliyeva sosial elmlər üzrə bakalavr və magistr təhsili aldıqdan sonra Kanadada doktorantura təhsilinə başlamışdır. Onun tədqiqatları miqrasiya, diaspor və multikulturalizm mövzularına fokuslanır.",
+    "abroad_since": "2013",
+    "achievements": [
+      "Miqrasiya və diaspor mövzusunda bir neçə elmi məqalə dərc etdirib",
+      "Amasiya diaspor təşkilatları ilə əməkdaşlıq layihələri hazırlayıb"
+    ],
+    "region": "Amasiya",
+    "tags": ["tədqiqat", "kanada", "diaspor"]
+  },
+  {
+    "id": "abr-0007",
+    "name": "Kamran Rzayev",
+    "slug": "kamran-rzayev",
+    "image": "https://placehold.co/800x800/png?text=Kamran+Rzayev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1981",
+    "died": "",
+    "country": "Birləşmiş Ərəb Əmirlikləri",
+    "city": "Dubay",
+    "profession": "Biznes inkişaf meneceri",
+    "organization": "Beynəlxalq ticarət şirkəti",
+    "description": "Yaxın Şərq bazarında müxtəlif ölkələr arasında ticarət əlaqələrinin qurulmasında çalışan menecer.",
+    "biography": "Kamran Rzayev biznes idarəçiliyi üzrə təhsil aldıqdan sonra Dubaya köçərək beynəlxalq ticarət şirkətində işə başlamışdır. O, Cənubi Qafqaz və Yaxın Şərq arasında ticarət əlaqələrinin genişlənməsində rol oynayır.",
+    "abroad_since": "2011",
+    "achievements": [
+      "Bir neçə ölkə arasında yeni ticarət marşrutlarının formalaşmasına töhfə verib",
+      "Amasiyadan ixrac olunan məhsulların təqdimatı üçün sərgilər təşkil edib"
+    ],
+    "region": "Amasiya",
+    "tags": ["biznes", "ticarət", "dubay"]
+  },
+  {
+    "id": "abr-0008",
+    "name": "Günel Məmmədli",
+    "slug": "gunel-memmedli",
+    "image": "https://placehold.co/800x800/png?text=Gunel+Memmedli",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1993",
+    "died": "",
+    "country": "Fransa",
+    "city": "Paris",
+    "profession": "Dizayner",
+    "organization": "Moda studiyası",
+    "description": "Moda və qrafik dizayn sahəsində çalışan, beynəlxalq sərgilərdə iştirak edən dizayner.",
+    "biography": "Günel Məmmədli dizayn təhsilini bitirdikdən sonra Parisə köçmüş və müxtəlif moda evlərində təcrübə keçmişdir. Daha sonra öz kiçik studiyasını açaraq həm geyim, həm də qrafik dizayn layihələri üzərində işləməyə başlamışdır.",
+    "abroad_since": "2016",
+    "achievements": [
+      "Bir neçə beynəlxalq moda sərgisində kolleksiyalarını təqdim edib",
+      "Amasiyaya aid vizual motivləri öz işlərində istifadə etməklə diyarın tanıdılmasına töhfə verir"
+    ],
+    "region": "Amasiya",
+    "tags": ["dizayn", "fransa", "mədəniyyət"]
+  },
+  {
+    "id": "abr-0009",
+    "name": "Tural Əhmədov",
+    "slug": "tural-ehmedov",
+    "image": "https://placehold.co/800x800/png?text=Tural+Ehmedov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1987",
+    "died": "",
+    "country": "İsveçrə",
+    "city": "Cenevrə",
+    "profession": "Beynəlxalq hüquq üzrə məsləhətçi",
+    "organization": "Hüquq şirkəti",
+    "description": "Beynəlxalq hüquq və insan haqları sahəsində çalışan hüquqşünas.",
+    "biography": "Tural Əhmədov hüquq təhsilini Bakıda tamamladıqdan sonra İsveçrədə magistratura üzrə təqaüd qazanmışdır. O, hazırda Cenevrədə beynəlxalq hüquq şirkətində çalışır və insan haqları, müqavilə hüququ sahələrində fəaliyyət göstərir.",
+    "abroad_since": "2014",
+    "achievements": [
+      "Beynəlxalq təşkilatlar üçün hüquqi rəylər hazırlayıb",
+      "Azərbaycan diaspor təşkilatlarına hüquqi məsələlərdə könüllü dəstək göstərib"
+    ],
+    "region": "Amasiya",
+    "tags": ["hüquq", "isveçrə", "insan-haqları"]
+  },
+  {
+    "id": "abr-0010",
+    "name": "Sevinc Həsənova",
+    "slug": "sevinc-hesenova",
+    "image": "https://placehold.co/800x800/png?text=Sevinc+Hesenova",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1995",
+    "died": "",
+    "country": "Hollandiya",
+    "city": "Amsterdam",
+    "profession": "Məlumat analitiki",
+    "organization": "Texnoloji şirkət",
+    "description": "Data analitika və süni intellekt layihələrində çalışan Amasiyalı mütəxəssis.",
+    "biography": "Sevinc Həsənova riyaziyyat və informatika üzrə təhsil almış, daha sonra data elmi sahəsinə yönəlmişdir. O, Amsterdamda yerləşən texnoloji şirkətdə məlumat analizi, modelləşdirmə və süni intellekt tətbiqləri üzərində çalışır.",
+    "abroad_since": "2018",
+    "achievements": [
+      "Böyük həcmli məlumatların analizi üzrə bir neçə layihənin əsas icraçısı olub",
+      "Amasiyalı tələbələr üçün onlayn data analitika seminarları təşkil edib"
+    ],
+    "region": "Amasiya",
+    "tags": ["data-analitika", "süni-intellekt", "hollandiya"]
+  }
+]

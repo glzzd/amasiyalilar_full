@@ -36,6 +36,22 @@ import AllIntellectualsPage from './pages/WesternAzerbaijan/AllIntellectualsPage
 import IntellectualDetails from './pages/WesternAzerbaijan/IntellectualDetails'
 import AllOfficersPage from './pages/Amasiya/AllOfficersPage'
 import OfficerDetailsPage from './pages/Amasiya/OfficerDetailsPage'
+import AmasiyaAllAuthorsPage from './pages/Amasiya/AllAuthorsPage'
+import AmasiyaAuthorDetailsPage from './pages/Amasiya/AuthorDetailsPage'
+import AllDoctorsAndTeachers from './pages/Amasiya/AllDoctorsAndTeachersPage'
+import DoctorAndTecherDetailsPage from './pages/Amasiya/DoctorAndTecherDetailsPage'
+import AllAthletesPage from './pages/Amasiya/AllAthletesPage'
+import AthletDetailsPage from './pages/Amasiya/AthletDetailsPage'
+import AllVideosPage from './pages/Amasiya/AllVideosPage'
+import AllMusicsPage from './pages/Amasiya/AllMusicsPage'
+import MusicDetailsPage from './pages/Amasiya/MusicDetailsPage'
+import VideoDetailsPage from './pages/Amasiya/VideoDetailsPage'
+import AllBusinessPage from './pages/Amasiya/AllBusinessPage'
+import BusinessDetailsPage from './pages/Amasiya/BusinessDetailsPage'
+import AllAbroadPage from './pages/Amasiya/AllAbroadPage'
+import AbroadDetailsPage from './pages/Amasiya/AbroadDetailsPage'
+import AdminLoginPage from './pages/(admin)/LoginPage'
+import ContactPage from './pages/Contact'
 
 
 function App() {
@@ -76,12 +92,28 @@ function App() {
           <Route path="western-azerbaijan/about" element={<WesternAboutPage />} />
           <Route path="western-azerbaijan/intellectuals" element={<AllIntellectualsPage />} />
           <Route path="western-azerbaijan/intellectuals/:slug" element={<IntellectualDetails />} />
-          <Route path="officers" element={<AllOfficersPage />} />
-          <Route path="officers/:slug" element={<OfficerDetailsPage />} />
+          <Route path="amasiyalilar/officers" element={<AllOfficersPage />} />
+          <Route path="amasiyalilar/officers/:slug" element={<OfficerDetailsPage />} />
+          <Route path="amasiyalilar/authors/" element={<AmasiyaAllAuthorsPage />} />
+          <Route path="amasiyalilar/authors/:slug" element={<AmasiyaAuthorDetailsPage />} />
+          <Route path="amasiyalilar/doctors-and-teachers" element={<AllDoctorsAndTeachers />} />
+          <Route path="amasiyalilar/doctors-and-teachers/:slug" element={<DoctorAndTecherDetailsPage />} />
+          <Route path="amasiyalilar/athletes" element={<AllAthletesPage />} />
+          <Route path="amasiyalilar/athletes/:slug" element={<AthletDetailsPage />} />
+          <Route path="amasiyalilar/videos" element={<AllVideosPage />} />
+          <Route path="amasiyalilar/musics" element={<AllMusicsPage />} />
+          <Route path="amasiyalilar/musics/:slug" element={<MusicDetailsPage />} />
+          <Route path="amasiyalilar/videos/:id" element={<VideoDetailsPage />} />
+          <Route path="amasiyalilar/business" element={<AllBusinessPage />} />
+          <Route path="amasiyalilar/business/:slug" element={<BusinessDetailsPage />} />
+          <Route path="amasiyalilar/abroad" element={<AllAbroadPage />} />
+          <Route path="amasiyalilar/abroad/:slug" element={<AbroadDetailsPage />} />
+          <Route path="contact" element={<ContactPage />} />
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>
           <Route index element={<div className="py-6">Yönetim Paneli</div>} />
+          <Route path="login" element={<AdminLoginPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

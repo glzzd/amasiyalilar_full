@@ -1,0 +1,198 @@
+[
+  {
+    "id": "dt-001",
+    "name": "Musa Abbasov",
+    "slug": "musa-abbasov",
+    "image": "https://placehold.co/600x400/png?text=Musa+Abbasov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1955",
+    "died": "",
+    "profession": "Həkim anestezioloq-reanimatoloq",
+    "category": "doctor",
+    "description": "Tanınmış anestezioloq-reanimatoloq, Amasiya rayonundan çıxmış görkəmli tibb xadimi.",
+    "biography": "Musa Abbasov Amasiya rayonunda anadan olmuş, orta təhsilini burada başa vurduqdan sonra Azərbaycan Tibb İnstitutuna daxil olmuşdur. Uzun illər reanimasiya və intensiv terapiya sahəsində çalışmış, minlərlə xəstənin həyatının xilas edilməsində iştirak etmişdir. Peşəkar fəaliyyəti ilə yanaşı, gənc həkimlərin hazırlanmasına da xüsusi önəm vermiş, bir çox həkim-residentlərin elmi rəhbəri olmuşdur.",
+    "education": [
+      "Amasiya rayon orta məktəbi",
+      "Azərbaycan Dövlət Tibb İnstitutu (Müalicə-profilaktika fakültəsi)",
+      "Klinik reanimatologiya üzrə ixtisasartırma kursları (Moskva)"
+    ],
+    "specializations": [
+      "Anesteziologiya",
+      "Reanimatologiya",
+      "İntensiv terapiya"
+    ],
+    "achievements": [
+      "Tibb üzrə fəlsəfə doktoru",
+      "Onlarla elmi məqalənin müəllifi",
+      "Gənc həkimlərin hazırlanmasında xidmətlərinə görə fəxri fərmanlar"
+    ],
+    "interesting_facts": [
+      "Çətin reanimasiya hallarına görə tez-tez digər klinikalara dəvət olunmuşdur.",
+      "Tələbələri arasında \"Musanın məktəbi\" ifadəsi formalaşmışdır."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "dt-002",
+    "name": "Şəmsi Qoca",
+    "slug": "semsi-qoca",
+    "image": "https://placehold.co/600x400/png?text=%C5%9E%C9%99msi+Qoca",
+    "birthplace": "Amasiya rayonu",
+    "born": "1940",
+    "died": "2016",
+    "profession": "Müəllim, Pedaqoq, Şair-publisist",
+    "category": "teacher",
+    "description": "Amasiyada on illərlə çalışmış müəllim, pedaqoq və şair-publisist.",
+    "biography": "Şəmsi Qoca Amasiya rayonunda anadan olmuş, universiteti bitirdikdən sonra ömrünün əksər hissəsini müəllimlik peşəsinə həsr etmişdir. Azərbaycan dili və ədəbiyyat müəllimi kimi yüzlərlə şagird yetişdirmiş, publisistik yazılarında Amasiya və Qərbi Azərbaycan mövzularına üstünlük vermişdir. O, həm də Amasiya ədəbi mühitinin tanınmış simalarından biri olmuşdur.",
+    "education": [
+      "Amasiya rayon orta məktəbi",
+      "Azərbaycan Dövlət Pedaqoji İnstitutu (Filologiya fakültəsi)"
+    ],
+    "subjects": [
+      "Azərbaycan dili",
+      "Azərbaycan ədəbiyyatı",
+      "Ədəbiyyat nəzəriyyəsi"
+    ],
+    "achievements": [
+      "Azərbaycan Respublikasının Əməkdar müəllimi",
+      "Müxtəlif illərdə 'İlin müəllimi' fəxri adları",
+      "Məktəbdənkənar ədəbi dərnəklərin təşkilatçısı"
+    ],
+    "interesting_facts": [
+      "Bir çox şagirdi sonradan tanınmış alim və yazıçı olmuşdur.",
+      "Amasiya mövzusunda şeirləri mətbuatda dərc edilmişdir."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "dt-003",
+    "name": "Nazim Şəmilov",
+    "slug": "nazim-semilov",
+    "image": "https://placehold.co/600x400/png?text=Nazim+%C5%9E%C9%99milov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1948",
+    "died": "",
+    "profession": "Kimya elmləri doktoru, Professor",
+    "category": "teacher",
+    "description": "Amasiya rayonundan çıxmış kimyaçı alim, uzun illər universitet müəllimi kimi fəaliyyət göstərmişdir.",
+    "biography": "Nazim Şəmilov Amasiya rayonunda anadan olmuş, orta təhsilini rayonda aldıqdan sonra Bakı Dövlət Universitetinin kimya fakültəsinə daxil olmuşdur. Elmi fəaliyyətini üzvi kimya və polimerlər sahəsində davam etdirmiş, doktorluq dissertasiyası müdafiə etmişdir. Uzun illər BDU-da müəllimlik etmiş, yüzlərlə tələbənin elmi rəhbəri olmuşdur.",
+    "education": [
+      "Amasiya rayon orta məktəbi",
+      "Bakı Dövlət Universiteti (Kimya fakültəsi)",
+      "Elmlər Akademiyasında aspirantura"
+    ],
+    "subjects": [
+      "Üzvi kimya",
+      "Polimerlər kimyası",
+      "Kimyəvi texnologiya əsasları"
+    ],
+    "achievements": [
+      "Kimya elmləri doktoru",
+      "Onlarla elmi məqalə və dərs vəsaitinin müəllifi",
+      "Elmi-texniki nailiyyətlərə görə dövlət mükafatları"
+    ],
+    "interesting_facts": [
+      "Tələbələr arasında sərt, amma ədalətli müəllim kimi tanınır.",
+      "Amasiya mövzusunda esselər yazaraq tələbələrini də bu mövzuya həssas yanaşmağa çağırmışdır."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "dt-004",
+    "name": "Şahbəndər Hacıyev",
+    "slug": "sahbender-haciyev",
+    "image": "https://placehold.co/600x400/png?text=%C5%9Eahb%C9%99nd%C9%99r+Hac%C4%B1yev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1939",
+    "died": "2009",
+    "profession": "Tarix müəllimi, Ziyalı",
+    "category": "teacher",
+    "description": "Amasiya rayonunda uzun illər tarix müəllimi işləmiş, yerli tarix və etnoqrafiyanı şagirdlərinə sevdirən ziyalı.",
+    "biography": "Şahbəndər Hacıyev Amasiya rayonunda anadan olmuş və demək olar ki, bütün pedaqoji fəaliyyətini bu rayonda davam etdirmişdir. O, Amasiyanın və ümumilikdə Qərbi Azərbaycanın tarixini dərslərində xüsusi vurğulamış, şagirdlərə tarixi yaddaşın qorunmasının vacibliyini aşılamışdır. Məktəbdə tarix muzeyi guşəsinin yaradılmasına təşəbbüs göstərmiş, toplanmış materiallar əsasında şagirdlərlə tədqiqat işi aparmışdır.",
+    "education": [
+      "Amasiya rayon orta məktəbi",
+      "Azərbaycan Dövlət Pedaqoji İnstitutu (Tarix fakültəsi)"
+    ],
+    "subjects": [
+      "Ümumi tarix",
+      "Azərbaycan tarixi",
+      "Qərbi Azərbaycan tarixi üzrə fakültativ dərslər"
+    ],
+    "achievements": [
+      "Məktəbdaxili \"Ən nümunəvi müəllim\" mükafatları",
+      "Şagirdlərinin respublika fənn olimpiadalarında uğurları",
+      "Məktəbdə tarix muzeyi guşəsinin yaradılması"
+    ],
+    "interesting_facts": [
+      "Amasiya kənd və kəndlilərindən topladığı xatirələri illərlə şəxsi arxivində saxlamışdır.",
+      "Dərslərini tez-tez rayonun müxtəlif tarixi yerlərində keçirmişdir."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "dt-005",
+    "name": "Afaq Məmmədova",
+    "slug": "afaq-memmedova",
+    "image": "https://placehold.co/600x400/png?text=Afaq+M%C9%99mm%C9%99dova",
+    "birthplace": "Amasiya rayonu, kənd müəllimi ailəsi",
+    "born": "1965",
+    "died": "",
+    "profession": "Biologiya müəllimi, Məktəb direktoru",
+    "category": "teacher",
+    "description": "Amasiyada məktəb direktoru və biologiya müəllimi kimi tanınmış pedaqoq.",
+    "biography": "Afaq Məmmədova Amasiyada müəllim ailəsində doğulmuşdur. Universiteti bitirdikdən sonra doğma rayona qayıdaraq biologiya müəllimi kimi işə başlamış, daha sonra məktəb direktoru təyin edilmişdir. Tədris prosesində praktiki biologiya dərslərinə üstünlük vermiş, şagirdlərlə təbiət qoynunda dərslər təşkil etmişdir. Onun rəhbərlik etdiyi məktəb bir neçə dəfə nümunəvi təhsil ocağı kimi mükafatlandırılmışdır.",
+    "education": [
+      "Amasiya rayon orta məktəbi",
+      "Azərbaycan Dövlət Pedaqoji Universiteti (Biologiya fakültəsi)",
+      "Təhsil İdarəçiliyi üzrə kurslar"
+    ],
+    "subjects": [
+      "Biologiya",
+      "Ekologiya",
+      "Təbiətin mühafizəsi"
+    ],
+    "achievements": [
+      "Təhsil Nazirliyinin fəxri fərmanları",
+      "Məktəbin maddi-texniki bazasının yaxşılaşdırılması",
+      "Şagirdlərinin respublika səviyyəli layihə müsabiqələrində uğurları"
+    ],
+    "interesting_facts": [
+      "Şagirdləri ilə birlikdə Amasiya təbiəti haqqında foto-sərgilər təşkil etmişdir.",
+      "Rayonda qızların təhsilə cəlb olunması təşəbbüslərinə dəstək vermişdir."
+    ],
+    "region": "Amasiya"
+  },
+  {
+    "id": "dt-006",
+    "name": "Rövşən Qasımov",
+    "slug": "rovsen-qasimov",
+    "image": "https://placehold.co/600x400/png?text=R%C3%B6v%C5%9F%C9%99n+Qas%C4%B1mov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1970",
+    "died": "",
+    "profession": "Cərrah, tibb müəssisəsi rəhbəri",
+    "category": "doctor",
+    "description": "Amasiya mənşəli cərrah, region xəstəxanasında rəhbər vəzifədə çalışmış tibb işçisi.",
+    "biography": "Rövşən Qasımov Amasiya rayonunda doğulmuş, tibb təhsilini Bakıda almışdır. Cərrah kimi fəaliyyətə başladıqdan sonra müxtəlif bölgələrdə çalışmış, sonradan rayon xəstəxanasına rəhbərlik etmişdir. Onun dövründə cərrahi xidmətlərin keyfiyyəti yüksəlmiş, bir sıra yeni əməliyyat metodları tətbiq olunmuşdur.",
+    "education": [
+      "Amasiya rayon orta məktəbi",
+      "Azərbaycan Tibb Universiteti (Cərrahiyyə ixtisası)",
+      "Xaricdə cərrahiyyə üzrə ixtisasartırma kursları"
+    ],
+    "specializations": [
+      "Ümumi cərrahiyyə",
+      "Travmatologiya"
+    ],
+    "achievements": [
+      "Regional xəstəxananın modernləşdirilməsində rolu",
+      "Onlarla uğurlu ağır əməliyyat",
+      "Gənc cərrahların hazırlanmasında xidmətləri"
+    ],
+    "interesting_facts": [
+      "Pasiyentləri ilə ünsiyyətdə mehribanlığı ilə seçilir.",
+      "Rayon miqyasında maarifləndirici tibbi seminarlar təşkil etmişdir."
+    ],
+    "region": "Amasiya"
+  }
+]
+

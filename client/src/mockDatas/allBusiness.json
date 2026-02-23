@@ -1,0 +1,186 @@
+[
+  {
+    "id": "bus-0001",
+    "name": "Elçin Əliyev",
+    "slug": "elcin-eliyev",
+    "image": "https://placehold.co/800x800/png?text=Elcin+Eliyev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1972",
+    "died": "",
+    "sector": "Tikinti və daşınmaz əmlak",
+    "company": "Amasiya İnşaat Qrupu",
+    "positions": [
+      "Amasiya İnşaat Qrupu – təsisçi və idarə heyətinin sədri",
+      "Amasiya Sahibkarlar Assosiasiyası – idarə heyətinin üzvü"
+    ],
+    "description": "Amasiya və ətraf rayonlarda infrastruktur layihələri ilə tanınan iş adamı.",
+    "biography": "Elçin Əliyev Amasiya rayonunda anadan olmuş, ixtisasca mühəndisdir. Universiteti bitirdikdən sonra tikinti sektorunda fəaliyyətə başlamış və qısa müddətdə öz şirkətini qurmuşdur. Onun rəhbərliyi altında Amasiyada bir çox yaşayış binaları, məktəb və sosial obyektlər inşa edilmişdir.",
+    "achievements": [
+      "Amasiyada 500-dən çox ailə üçün yeni yaşayış kompleksləri inşa etdirib",
+      "Gənc mühəndislər üçün təqaüd proqramı təsis edib"
+    ],
+    "region": "Amasiya",
+    "tags": ["tikinti", "sahibkar", "infrastruktur"]
+  },
+  {
+    "id": "bus-0002",
+    "name": "Nigar Məmmədova",
+    "slug": "nigar-memmedova",
+    "image": "https://placehold.co/800x800/png?text=Nigar+Memmedova",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1980",
+    "died": "",
+    "sector": "Təhsil və kurs mərkəzləri",
+    "company": "Amasiya Tədris Mərkəzi",
+    "positions": [
+      "Amasiya Tədris Mərkəzi – təsisçi və direktor",
+      "Regional Təhsil İnkişaf Fondu – həmtəsisçi"
+    ],
+    "description": "Amasiyada xüsusi hazırlıq və repetitorluq mərkəzləri şəbəkəsinin qurucusu.",
+    "biography": "Nigar Məmmədova müəllim ailəsində böyümüş, ali təhsilini pedaqogika üzrə almışdır. Bir müddət məktəbdə müəllim işlədikdən sonra özəl təhsil sektorunda fəaliyyətə başlayıb. Onun yaratdığı mərkəzlər yüzlərlə gəncin ali məktəblərə qəbulunda mühüm rol oynayıb.",
+    "achievements": [
+      "Amasiyada 3 filialı olan tədris mərkəzləri şəbəkəsi yaradıb",
+      "Onlarla sosial layihə vasitəsilə aztəminatlı ailələrin övladlarına pulsuz hazırlıq imkanı verib"
+    ],
+    "region": "Amasiya",
+    "tags": ["təhsil", "gənclər", "sosial-layihə"]
+  },
+  {
+    "id": "bus-0003",
+    "name": "Rauf Qasımov",
+    "slug": "rauf-qasimov",
+    "image": "https://placehold.co/800x800/png?text=Rauf+Qasimov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1968",
+    "died": "",
+    "sector": "Kənd təsərrüfatı və logistika",
+    "company": "Amasiya AgroLogistics",
+    "positions": [
+      "Amasiya AgroLogistics – baş direktor",
+      "Aqrar İnkişaf Şurası – üzv"
+    ],
+    "description": "Amasiya kənd təsərrüfatı məhsullarının emalı və logistikası sahəsində ixtisaslaşmış sahibkar.",
+    "biography": "Rauf Qasımov kənd təsərrüfatı sahəsində uzun illər çalışmış və Amasiya fermerlərinin məhsullarını birbaşa bazara çıxarmaq üçün logistika mərkəzləri yaratmışdır. Onun təşəbbüsü ilə soyuducu anbarlar və çeşidləmə xətləri qurulub.",
+    "achievements": [
+      "Onlarla yerli fermerlə uzunmüddətli əməkdaşlıq müqavilələri bağlayıb",
+      "Məhsul itkilərini azaldan müasir anbar sistemləri tətbiq edib"
+    ],
+    "region": "Amasiya",
+    "tags": ["kənd-təsərrüfatı", "logistika", "fermer"]
+  },
+  {
+    "id": "bus-0004",
+    "name": "Səbinə Rzayeva",
+    "slug": "sebine-rzayeva",
+    "image": "https://placehold.co/800x800/png?text=Sebine+Rzayeva",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1985",
+    "died": "",
+    "sector": "İT və rəqəmsal xidmətlər",
+    "company": "Amasiya Digital Studio",
+    "positions": [
+      "Amasiya Digital Studio – təsisçi",
+      "Startap Mentorluq Proqramı – könüllü mentor"
+    ],
+    "description": "Amasiyada kiçik bizneslər üçün rəqəmsal marketinq və veb həllər təqdim edən startapın rəhbəri.",
+    "biography": "Səbinə Rzayeva kompüter elmləri üzrə təhsil aldıqdan sonra paytaxtda bir neçə İT şirkətdə çalışıb. Daha sonra Amasiyaya qayıdaraq yerli bizneslərin rəqəmsallaşmasına dəstək üçün öz studiyasını açıb.",
+    "achievements": [
+      "Onlarla yerli müəssisənin vebsayt və onlayn satış sistemlərini qurub",
+      "Amasiyada gənclər üçün pulsuz rəqəmsal bacarıqlar təlimləri təşkil edib"
+    ],
+    "region": "Amasiya",
+    "tags": ["it", "startap", "rəqəmsal-marketinq"]
+  },
+  {
+    "id": "bus-0005",
+    "name": "Kamran Hüseynov",
+    "slug": "kamran-huseynov",
+    "image": "https://placehold.co/800x800/png?text=Kamran+Huseynov",
+    "birthplace": "Amasiya rayonu",
+    "born": "1975",
+    "died": "",
+    "sector": "İaşə və turizm",
+    "company": "Amasiya Park Otel",
+    "positions": [
+      "Amasiya Park Otel – təsisçi və direktor",
+      "Regional Turizm Assosiasiyası – üzv"
+    ],
+    "description": "Amasiyada turizm potensialının inkişafına çalışan otel və iaşə şəbəkəsinin rəhbəri.",
+    "biography": "Kamran Hüseynov gənclik illərində turizm sahəsində təcrübə toplamış, daha sonra Amasiyada öz otelini və restoran biznesini qurmuşdur. O, həm yerli, həm də xarici turistlər üçün müxtəlif tur paketləri təşkil edir.",
+    "achievements": [
+      "Amasiyada ilk boutique otel konseptini tətbiq edib",
+      "Şəhərin turizm bələdçiləri üçün təlim proqramları maliyyələşdirib"
+    ],
+    "region": "Amasiya",
+    "tags": ["turizm", "otel", "iaşə"]
+  },
+  {
+    "id": "bus-0006",
+    "name": "Rəna Axundova",
+    "slug": "rena-axundova",
+    "image": "https://placehold.co/800x800/png?text=Rena+Axundova",
+    "birthplace": "Amasiya şəhəri",
+    "born": "1978",
+    "died": "",
+    "sector": "Pərakəndə satış və tekstil",
+    "company": "Amasiya Moda Mərkəzi",
+    "positions": [
+      "Amasiya Moda Mərkəzi – təsisçi",
+      "Qadın Sahibkarlar Şəbəkəsi – üzv"
+    ],
+    "description": "Tekstil və geyim sahəsində öz markasını formalaşdırmış Amasiyalı qadın sahibkar.",
+    "biography": "Rəna Axundova uzun illər geyim mağazalarında çalışdıqdan sonra öz brendini yaratmağa qərar verib. O, yerli dizaynerlərlə əməkdaşlıq edərək həm Amasiyada, həm də digər şəhərlərdə mağazalar açıb.",
+    "achievements": [
+      "Amasiyada regional geyim brendinin tanınmasına nail olub",
+      "Qadınların məşğulluğunu artıran bir neçə layihəyə dəstək verib"
+    ],
+    "region": "Amasiya",
+    "tags": ["tekstıl", "pərakəndə", "qadın-sahibkar"]
+  },
+  {
+    "id": "bus-0007",
+    "name": "Orxan Vəliyev",
+    "slug": "orxan-veliyev",
+    "image": "https://placehold.co/800x800/png?text=Orxan+Veliyev",
+    "birthplace": "Amasiya rayonu",
+    "born": "1983",
+    "died": "",
+    "sector": "Nəqliyyat və servis",
+    "company": "Amasiya Trans Servis",
+    "positions": [
+      "Amasiya Trans Servis – direktor",
+      "Regional Logistika Şurası – üzv"
+    ],
+    "description": "Şəhərdaxili və şəhərlərarası sərnişin və yükdaşıma xidmətləri göstərən şirkətin rəhbəri.",
+    "biography": "Orxan Vəliyev nəqliyyat sektorunda müxtəlif vəzifələrdə çalışdıqdan sonra Amasiyada öz nəqliyyat şirkətini qurmuşdur. O, xidmət keyfiyyətinin yüksəldilməsi və təhlükəsizliyin artırılması üçün yeni nəqliyyat vasitələrinə investisiya yatırıb.",
+    "achievements": [
+      "Amasiya-Bakı marşrutu üzrə müntəzəm və rahat sərnişin xidməti təşkil edib",
+      "Şirkət parkını müasir və ekoloji standartlara cavab verən avtobuslarla yeniləyib"
+    ],
+    "region": "Amasiya",
+    "tags": ["nəqliyyat", "xidmət", "logistika"]
+  },
+  {
+    "id": "bus-0008",
+    "name": "Lalə Səmədova",
+    "slug": "lale-semedova",
+    "image": "https://placehold.co/800x800/png?text=Lale+Semedova",
+    "birthplace": "Amasiya rayonu",
+    "born": "1990",
+    "died": "",
+    "sector": "İnnovasiya və startaplar",
+    "company": "Amasiya Innovation Hub",
+    "positions": [
+      "Amasiya Innovation Hub – təsisçi",
+      "Gənc Startapçılar Klubu – rəhbər"
+    ],
+    "description": "Amasiyada startap ekosisteminin formalaşmasına çalışan gənc iş adamı.",
+    "biography": "Lalə Səmədova bir neçə beynəlxalq startap proqramında iştirak etdikdən sonra Amasiyaya qayıdaraq gənclər üçün innovasiya mərkəzi açıb. Burada müxtəlif hackathonlar, təlimlər və mentorluq proqramları təşkil olunur.",
+    "achievements": [
+      "Onlarla gəncin startap ideyasının ilkin mərhələ dəstəyini təşkil edib",
+      "Amasiyada ilk startap akselerasiya proqramını həyata keçirib"
+    ],
+    "region": "Amasiya",
+    "tags": ["startap", "innovasiya", "gənclər"]
+  }
+]

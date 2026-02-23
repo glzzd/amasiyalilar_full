@@ -1,0 +1,51 @@
+{
+  "title": "Bizimlə əlaqə",
+  "subtitle": "Amasiyalılar haqqında layihə ilə bağlı ideya, təklif və ya əlavə məlumatınız varsa, bizimlə əlaqə saxlaya bilərsiniz.",
+  "address": {
+    "line1": "Amasiya Mədəniyyət və İnformasiya Mərkəzi",
+    "street": "Nizami küçəsi 12",
+    "city": "Amasiya",
+    "country": "Azərbaycan",
+    "postalCode": "AZ0000"
+  },
+  "phones": [
+    {
+      "label": "Ofis",
+      "number": "+994 12 000 00 00"
+    },
+    {
+      "label": "Mobil / WhatsApp",
+      "number": "+994 50 000 00 00"
+    }
+  ],
+  "emails": [
+    {
+      "label": "Ümumi sorğular",
+      "address": "info@amasiyalilar.az"
+    },
+    {
+      "label": "Məzmun əlavə etmək üçün",
+      "address": "content@amasiyalilar.az"
+    }
+  ],
+  "social": {
+    "facebook": "https://facebook.com/amasiyalilar",
+    "instagram": "https://instagram.com/amasiyalilar",
+    "youtube": "https://youtube.com/@amasiyalilar"
+  },
+  "working_hours": [
+    {
+      "days": "B.e. – Cümə",
+      "hours": "09:00 – 18:00"
+    },
+    {
+      "days": "Şənbə",
+      "hours": "10:00 – 14:00"
+    }
+  ],
+  "map": {
+    "lat": 40.000000,
+    "lng": 45.000000,
+    "note": "Ünvan təxmini olaraq göstərilmişdir."
+  }
+}

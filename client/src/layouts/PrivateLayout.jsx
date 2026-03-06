@@ -1,63 +1,11 @@
 import React from 'react'
 import { Outlet, Navigate, useLocation } from 'react-router-dom'
-
-const AuthContext = React.createContext(null)
-
-const useAuth = () => React.useContext(AuthContext)
-
-const AuthProvider = ({ children }) => {
-  const [user, setUser] = React.useState(null)
-  const [loading, setLoading] = React.useState(true)
-
-  React.useEffect(() => {
-    const stored = window.localStorage.getItem('admin_auth')
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored)
-        if (parsed && parsed.email) {
-          setUser(parsed)
-        }
-      } catch {
-        window.localStorage.removeItem('admin_auth')
-      }
-    }
-    setLoading(false)
-  }, [])
-
-  const login = async (email, password) => {
-    const trimmedEmail = email.trim().toLowerCase()
-    const validEmail = 'admin@amasiyalilar.az'
-    const validPassword = 'admin123'
-
-    if (trimmedEmail === validEmail && password === validPassword) {
-      const nextUser = { email: validEmail }
-      setUser(nextUser)
-      window.localStorage.setItem('admin_auth', JSON.stringify(nextUser))
-      return { success: true }
-    }
-
-    throw new Error('Yanlış e-poçt və ya şifrə')
-  }
-
-  const logout = () => {
-    setUser(null)
-    window.localStorage.removeItem('admin_auth')
-  }
-
-  const value = {
-    user,
-    isAuthenticated: !!user,
-    login,
-    logout,
-    loading
-  }
-
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
-}
+import AdminSidebar from '../pages/(admin)/components/AdminSidebar'
+import { AdminAuthProvider } from '../pages/(admin)/contexts/AdminAuthContext'
+import { useAdminAuth } from '../pages/(admin)/contexts/useAdminAuth'
 
 const PrivateShell = () => {
-  const auth = useAuth()
-  const { isAuthenticated, loading } = auth
+  const { isAuthenticated, loading, user, logout } = useAdminAuth()
   const location = useLocation()
 
   const isLoginRoute = location.pathname === '/admin/login'
@@ -77,12 +25,35 @@ const PrivateShell = () => {
   return (
     <div className="min-h-dvh bg-slate-950 text-white">
       <header className="border-b border-slate-800">
-        <div className="container mx-auto px-4 h-12 flex items-center">
+        <div className="container mx-auto px-4 h-12 flex items-center gap-4">
           <span className="text-sm font-semibold">Admin Panel</span>
+          {isAuthenticated && (
+            <div className="ml-auto flex items-center gap-3">
+              {user?.email && (
+                <span className="text-xs text-slate-300">{user.email}</span>
+              )}
+              <button
+                type="button"
+                onClick={logout}
+                className="text-xs px-3 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-100 transition-colors"
+              >
+                Çıxış
+              </button>
+            </div>
+          )}
         </div>
       </header>
       <main className="container mx-auto px-4 py-4">
-        <Outlet context={auth} />
+        {isAuthenticated && !isLoginRoute ? (
+          <div className="flex gap-4">
+            <AdminSidebar />
+            <div className="flex-1 min-w-0">
+              <Outlet />
+            </div>
+          </div>
+        ) : (
+          <Outlet />
+        )}
       </main>
     </div>
   )
@@ -90,9 +61,9 @@ const PrivateShell = () => {
 
 const PrivateLayout = () => {
   return (
-    <AuthProvider>
+    <AdminAuthProvider>
       <PrivateShell />
-    </AuthProvider>
+    </AdminAuthProvider>
   )
 }
 

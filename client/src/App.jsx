@@ -31,7 +31,7 @@ import AllMonumentsPage from './pages/WesternAzerbaijan/AllMonumentsPage'
 import MonumentDetailsPage from './pages/WesternAzerbaijan/MonumentDetailsPage'
 import LibraryPage from './pages/WesternAzerbaijan/LibraryPage'
 import BookDetailsPage from './pages/WesternAzerbaijan/BookDetailsPage'
-import WesternAboutPage from './pages/WesternAzerbaijan/AboutPage'
+import WesternAboutPage from './pages/WesternAzerbaijan/About'
 import AllIntellectualsPage from './pages/WesternAzerbaijan/AllIntellectualsPage'
 import IntellectualDetails from './pages/WesternAzerbaijan/IntellectualDetails'
 import AllOfficersPage from './pages/Amasiya/AllOfficersPage'
@@ -51,7 +51,11 @@ import BusinessDetailsPage from './pages/Amasiya/BusinessDetailsPage'
 import AllAbroadPage from './pages/Amasiya/AllAbroadPage'
 import AbroadDetailsPage from './pages/Amasiya/AbroadDetailsPage'
 import AdminLoginPage from './pages/(admin)/LoginPage'
+import AdminDashboardPage from './pages/(admin)/DashboardPage'
+import AdminCollectionPage from './pages/(admin)/AdminCollectionPage'
 import ContactPage from './pages/Contact'
+import AdminAboutPage from './pages/(admin)/pages/About'
+import AdminAboutWestAzerbaijanPage from './pages/(admin)/pages/WesternAzerbaijan/About'
 
 
 function App() {
@@ -112,8 +116,11 @@ function App() {
         </Route>
 
         <Route path="/admin" element={<PrivateLayout />}>
-          <Route index element={<div className="py-6">Yönetim Paneli</div>} />
+          <Route index element={<AdminDashboardPage />} />
           <Route path="login" element={<AdminLoginPage />} />
+          <Route path="content/about-us" element={<AdminAboutPage />} />
+          <Route path="content/about-west-azerbaijan" element={<AdminAboutWestAzerbaijanPage />} />
+          <Route path="content/:collectionId" element={<AdminCollectionPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

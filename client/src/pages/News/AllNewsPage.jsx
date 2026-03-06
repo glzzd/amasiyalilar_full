@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import NewsCard from "../../components/shared/NewsCard";
-import allNewsData from "../../mockDatas/allNews.json";
 import {
   Search,
   TrendingUp,
@@ -12,36 +11,64 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { cn, formatDate } from "@/lib/utils";
+import { fetchConfirmedNews } from "./services/newsService";
 
 const AllNewsPage = () => {
-  // States
   const [sortOrder, setSortOrder] = useState("newest"); // 'newest', 'oldest', 'popular'
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+  const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   const itemsPerPage = 9;
 
-  
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadNews = async () => {
+      try {
+        const data = await fetchConfirmedNews();
+        if (isMounted) {
+          setNews(data);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(err.message || "Xəbərlər yüklənərkən xəta baş verdi");
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false);
+        }
+      }
+    };
+
+    loadNews();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   // Derived Data: Categories with counts
   const categories = useMemo(() => {
-    const counts = { All: allNewsData.length };
-    allNewsData.forEach((news) => {
-      counts[news.category] = (counts[news.category] || 0) + 1;
+    const counts = { All: news.length };
+    news.forEach((item) => {
+      counts[item.category] = (counts[item.category] || 0) + 1;
     });
     return Object.entries(counts).map(([name, count]) => ({ name, count }));
-  }, []);
+  }, [news]);
 
   // Derived Data: Popular News (Top 5)
   const popularNews = useMemo(() => {
-    return [...allNewsData]
+    return [...news]
       .sort((a, b) => (b.views || 0) - (a.views || 0))
       .slice(0, 5);
-  }, []);
+  }, [news]);
 
   // Filtered & Sorted News
   const filteredNews = useMemo(() => {
-    let result = [...allNewsData];
+    let result = [...news];
 
     // Filter by Category
     if (selectedCategory !== "All") {
@@ -68,7 +95,7 @@ const AllNewsPage = () => {
     }
 
     return result;
-  }, [sortOrder, searchQuery, selectedCategory]);
+  }, [news, sortOrder, searchQuery, selectedCategory]);
 
   // Pagination Logic
   const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
@@ -110,6 +137,16 @@ const AllNewsPage = () => {
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Main Content Area (Left) */}
           <div className="lg:w-8/12 xl:w-9/12">
+            {loading && (
+              <div className="mb-6 bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-sm text-gray-600">
+                Xəbərlər yüklənir...
+              </div>
+            )}
+            {error && !loading && (
+              <div className="mb-6 bg-red-50 border border-red-200 text-red-700 text-sm p-4 rounded-xl">
+                {error}
+              </div>
+            )}
             {/* Toolbar: Sort & Result Count */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4 bg-white p-4 rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-2 text-gray-600">

@@ -39,9 +39,11 @@
     "content": "Amasyada keçirilən Beynəlxalq Turizm Festivalı çərçivəsində konsertlər, sərgilər və yerli mətbəx günləri təşkil olunacaq.",
     "image": "https://placehold.co/600x400/png?text=Festival",
     "category": "Tədbir",
-    "author": { "name": "Zeynəb Kaya", "image": "https://placehold.co/100x100/png?text=ZK" },
+    "createdBy": { "name": "Zeynəb Kaya", "image": "https://placehold.co/100x100/png?text=ZK" },
     "createdAt": "2024-04-27T16:20:00.000Z",
-    "views": 3986
+    "views": 3986,
+    "isConfirmed":false,
+    "confirmedBy":null
   },
   {
     "_id": "az-0005",

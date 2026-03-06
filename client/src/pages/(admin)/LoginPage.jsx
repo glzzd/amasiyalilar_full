@@ -1,8 +1,7 @@
 import React from 'react'
-import { useNavigate, useOutletContext } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Lock, Mail } from 'lucide-react'
-
-const useAdminAuth = () => useOutletContext()
+import { useAdminAuth } from './contexts/useAdminAuth'
 
 const AdminLoginPage = () => {
   const { login, isAuthenticated } = useAdminAuth()
@@ -93,7 +92,7 @@ const AdminLoginPage = () => {
           </button>
 
           <p className="text-[11px] text-slate-500 mt-2">
-            Test üçün nümunə giriş: <span className="font-mono">admin@amasiyalilar.az</span> /
+            Test üçün nümunə giriş: <span className="font-mono">superadmin@amasiyalilar.az</span> /
             <span className="font-mono ml-1">admin123</span>
           </p>
         </form>

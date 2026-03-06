@@ -1,24 +1,53 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import NewsCard from '../../components/shared/NewsCard'
-import allNewsData from '../../mockDatas/allNews.json'
 import { Search, TrendingUp, Calendar, Filter, ChevronLeft, ChevronRight, User } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { fetchConfirmedNewsByAuthor } from './services/newsService'
 
 const AuthorNewsPage = () => {
   const { authorName } = useParams()
-  const decodedAuthorName = decodeURIComponent(authorName)
+  const authorId = decodeURIComponent(authorName)
 
   // States
-  const [sortOrder, setSortOrder] = useState('newest') // 'newest', 'oldest', 'popular'
+  const [sortOrder, setSortOrder] = useState('newest')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 9
+  const [news, setNews] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    let isMounted = true
+
+    const loadNews = async () => {
+      try {
+        const data = await fetchConfirmedNewsByAuthor(authorId)
+        if (isMounted) {
+          setNews(data)
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(err.message || 'Xəbərlər yüklənərkən xəta baş verdi')
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false)
+        }
+      }
+    }
+
+    loadNews()
+
+    return () => {
+      isMounted = false
+    }
+  }, [authorId])
 
   
 
-  // Filtered & Sorted News for this Author
   const filteredNews = useMemo(() => {
-    let result = allNewsData.filter(news => news.author?.name === decodedAuthorName);
+    let result = [...news];
 
     // Sort
     if (sortOrder === 'newest') {
@@ -30,7 +59,7 @@ const AuthorNewsPage = () => {
     }
 
     return result;
-  }, [sortOrder, decodedAuthorName]);
+  }, [news, sortOrder]);
 
   // Pagination Logic
   const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
@@ -51,12 +80,26 @@ const AuthorNewsPage = () => {
     }
   };
 
-  // Get author info from the first news item (assuming all news by same author have same author info)
-  // Or find it from allNewsData
   const authorInfo = useMemo(() => {
-    const news = allNewsData.find(n => n.author?.name === decodedAuthorName);
-    return news?.author || { name: decodedAuthorName, image: null };
-  }, [decodedAuthorName]);
+    const first = news[0]
+    if (!first) return { name: authorId, image: null }
+
+    if (first.createdBy) {
+      return {
+        name: first.createdBy.name,
+        image: first.createdBy.image || null
+      }
+    }
+
+    if (first.author) {
+      return {
+        name: first.author.name,
+        image: first.author.image || null
+      }
+    }
+
+    return { name: authorId, image: null }
+  }, [news, authorId]);
 
   return (
     <div className="bg-gray-50 min-h-screen font-sans">
@@ -96,6 +139,16 @@ const AuthorNewsPage = () => {
           
           {/* Main Content Area */}
           <div className="w-full">
+            {loading && (
+              <div className="mb-6 bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-sm text-gray-600">
+                Xəbərlər yüklənir...
+              </div>
+            )}
+            {error && !loading && (
+              <div className="mb-6 bg-red-50 border border-red-200 text-red-700 text-sm p-4 rounded-xl">
+                {error}
+              </div>
+            )}
             
             {/* Toolbar: Sort & Result Count */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4 bg-white p-4 rounded-xl shadow-sm border border-gray-100">

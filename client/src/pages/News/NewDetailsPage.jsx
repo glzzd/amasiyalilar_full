@@ -1,24 +1,126 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar, Eye, Share2, Facebook, Twitter, Linkedin, Clock } from 'lucide-react'
-import allNewsData from '../../mockDatas/allNews.json'
 import { formatDate } from '@/lib/utils'
+import { fetchConfirmedNews, fetchNewsById } from './services/newsService'
 
 const NewDetailsPage = () => {
   const { slug } = useParams()
+  const [news, setNews] = useState(null)
+  const [relatedNews, setRelatedNews] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
-  // Find the news item
-  const news = useMemo(() => {
-    return allNewsData.find(item => item.slug === slug)
+  useEffect(() => {
+    let isMounted = true
+
+    const loadNews = async () => {
+      try {
+        const [detailData, listData] = await Promise.all([
+          fetchNewsById(slug),
+          fetchConfirmedNews()
+        ])
+
+        if (!isMounted) return
+
+        const detail =
+          (detailData && detailData.data) ||
+          (detailData && detailData.news) ||
+          detailData
+
+        setNews(detail || null)
+
+        if (Array.isArray(listData) && detail) {
+          const related = listData
+            .filter(
+              (item) =>
+                item.category === detail.category && item._id !== detail._id
+            )
+            .slice(0, 3)
+          setRelatedNews(related)
+        } else {
+          setRelatedNews([])
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(err.message || 'Xəbər yüklənərkən xəta baş verdi')
+        }
+      } finally {
+        if (isMounted) {
+          setLoading(false)
+        }
+      }
+    }
+
+    loadNews()
+
+    return () => {
+      isMounted = false
+    }
   }, [slug])
 
-  // Get related news (same category, excluding current)
-  const relatedNews = useMemo(() => {
-    if (!news) return []
-    return allNewsData
-      .filter(item => item.category === news.category && item._id !== news._id)
-      .slice(0, 3)
+  const imageUrl = useMemo(() => {
+    if (!news || !news.image) return ''
+    if (typeof news.image !== 'string') return ''
+    let value = news.image.trim()
+    if (value.startsWith('`') && value.endsWith('`')) {
+      value = value.slice(1, -1).trim()
+    }
+    return value
   }, [news])
+
+  const createdByName = useMemo(() => {
+    if (!news) return 'Admin'
+    if (news.createdBy) {
+      const parts = [news.createdBy.name, news.createdBy.surname].filter(Boolean)
+      if (parts.length) return parts.join(' ')
+    }
+    if (news.author?.name) return news.author.name
+    return 'Admin'
+  }, [news])
+
+  const createdByImage = news?.createdBy?.image || news?.author?.image || ''
+
+  const authorId = useMemo(() => {
+    if (!news) return null
+    const createdBy = news.createdBy
+
+    if (news.createdById) return news.createdById
+    if (typeof createdBy?.userId === 'string') return createdBy.userId
+    if (createdBy?.userId?.$oid) return createdBy.userId.$oid
+    if (createdBy?.id) return createdBy.id
+    if (createdBy?._id) return createdBy._id
+    if (news.authorId) return news.authorId
+    if (news.author?.id) return news.author.id
+    if (news.author?._id) return news.author._id
+
+    return null
+  }, [news])
+
+  const contentParagraphs = useMemo(() => {
+    if (!news || !news.content || typeof news.content !== 'string') return []
+    return news.content.split('\n\n')
+  }, [news])
+
+  if (loading) {
+    return (
+      <div className="container mx-auto px-4 py-20 text-center">
+        <p className="text-gray-600">Xəbər yüklənir...</p>
+      </div>
+    )
+  }
+
+  if (error && !news) {
+    return (
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Xəta</h2>
+        <p className="text-gray-500 mt-2">{error}</p>
+        <Link to="/news" className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          Bütün Xəbərlərə Qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!news) {
     return (
@@ -45,7 +147,7 @@ const NewDetailsPage = () => {
             {/* Featured Image */}
             <div className="relative aspect-video w-full">
               <img 
-                src={news.image} 
+                src={imageUrl} 
                 alt={news.title} 
                 className="w-full h-full object-cover"
               />
@@ -65,9 +167,11 @@ const NewDetailsPage = () => {
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-100">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
-                    <img src={news.author?.image} alt={news.author?.name} className="w-full h-full object-cover" />
+                    {createdByImage ? (
+                      <img src={createdByImage} alt={createdByName} className="w-full h-full object-cover" />
+                    ) : null}
                   </div>
-                  <span className="font-medium text-gray-900">{news.author?.name}</span>
+                  <span className="font-medium text-gray-900">{createdByName}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <Calendar className="w-4 h-4" />
@@ -77,32 +181,23 @@ const NewDetailsPage = () => {
                   <Eye className="w-4 h-4" />
                   <span>{news.views?.toLocaleString()} oxunma</span>
                 </div>
-                <div className="flex items-center gap-1.5 ml-auto">
-                   <Clock className="w-4 h-4" />
-                   <span>3 dəq oxuma</span>
-                </div>
+               
               </div>
 
               {/* Content */}
               <div className="prose prose-lg max-w-none text-gray-700">
-                <p className="lead text-xl text-gray-600 mb-6 font-medium">
-                  {news.content} {/* Mock data has short content, normally this would be a summary or first paragraph */}
-                </p>
-                {/* Simulated long content for demo purposes since mock data is short */}
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                </p>
-                <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Ətraflı Məlumat</h3>
-                <p>
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
+                {contentParagraphs.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className={
+                      index === 0
+                        ? 'lead text-xl text-gray-600 mb-6 font-medium'
+                        : undefined
+                    }
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               </div>
 
               {/* Tags & Share */}
@@ -139,19 +234,23 @@ const NewDetailsPage = () => {
              {/* Author Card */}
              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
                 <div className="w-24 h-24 mx-auto bg-gray-200 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md">
-                    <img src={news.author?.image} alt={news.author?.name} className="w-full h-full object-cover" />
+                    {createdByImage ? (
+                      <img src={createdByImage} alt={createdByName} className="w-full h-full object-cover" />
+                    ) : null}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">{news.author?.name}</h3>
-                <p className="text-sm text-gray-500 mb-4">Baş Redaktor</p>
+                <h3 className="text-lg font-bold text-gray-900">{createdByName}</h3>
+                <p className="text-sm text-gray-500 mb-4">Xəbər müəllifi</p>
                 <p className="text-sm text-gray-600 mb-6">
                     Təcrübəli jurnalist və yazar. Amasya və bölgə xəbərləri üzrə mütəxəssis.
                 </p>
-                <Link 
-                  to={`/author/${encodeURIComponent(news.author?.name)}`}
-                  className="block w-full py-2.5 border border-blue-600 text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-colors"
-                >
-                    Müəllifin bütün paylaşımları
-                </Link>
+                {authorId && (
+                  <Link 
+                    to={`/author/${encodeURIComponent(authorId)}`}
+                    className="block w-full py-2.5 border border-blue-600 text-blue-600 font-medium rounded-xl hover:bg-blue-50 transition-colors"
+                  >
+                      Müəllifin bütün paylaşımları
+                  </Link>
+                )}
              </div>
 
              {/* Related News */}

@@ -112,7 +112,7 @@ const LatestNewsHeader = () => {
             <a href="#" aria-label="YouTube" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               <Youtube size={16} />
             </a>
-            <a href="/admin" aria-label="Giriş" className="text-slate-300 hover:text-white transition-colors">
+            <a href={import.meta.env.VITE_ADMIN_PANEL_URL} aria-label="Giriş" className="text-slate-300 hover:text-white transition-colors">  
               <UserCircle size={18} />
             </a>
           </div>

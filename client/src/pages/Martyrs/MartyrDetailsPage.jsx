@@ -1,22 +1,66 @@
-import React, { useMemo, useEffect } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Calendar, Award, MapPin, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import allMartyrs from '../../mockDatas/allMartyrs.json'
+import { Calendar, Award, MapPin, Share2, Facebook, Twitter, Linkedin, Loader2 } from 'lucide-react'
 import { formatDate } from '@/lib/utils'
 import OtherMartyrsSlider from '../../components/shared/OtherMartyrsSlider'
+import { fetchMartyrs } from './martyrsService'
 
 const MartyrDetailsPage = () => {
   const { slug } = useParams()
+  const [martyrs, setMartyrs] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   // Scroll to top when slug changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug])
 
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchMartyrs({ limit: 1000 })
+        if (!isMounted) return
+        setMartyrs(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Şəhid məlumatı yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   // Find the martyr
   const martyr = useMemo(() => {
-    return allMartyrs.find(item => item.slug === slug)
-  }, [slug])
+    return martyrs.find(item => item.slug === slug)
+  }, [martyrs, slug])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <Loader2 className="w-10 h-10 animate-spin text-red-600" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Xəta baş verdi</h2>
+        <p className="text-gray-500 mt-2">{error}</p>
+        <Link to="/martyrs" className="inline-block mt-4 px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+          Şəhidlər Siyahısına Qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!martyr) {
     return (
@@ -96,7 +140,7 @@ const MartyrDetailsPage = () => {
                 </div>
 
                 {/* Share Section */}
-                <div className="mt-12 pt-8 border-t border-gray-100 flex items-center justify-between">
+                {/* <div className="mt-12 pt-8 border-t border-gray-100 flex items-center justify-between">
                     <span className="font-medium text-gray-900">Xatirəni Paylaş:</span>
                     <div className="flex gap-3">
                         <button className="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors">
@@ -112,7 +156,7 @@ const MartyrDetailsPage = () => {
                             <Share2 className="w-5 h-5" />
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Sidebar (Right) */}

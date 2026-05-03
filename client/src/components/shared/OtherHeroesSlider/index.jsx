@@ -1,15 +1,35 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import allHeroes from '../../../mockDatas/allHeroes.json'
+import { fetchHeroes } from '../../../pages/Heroes/heroesService'
 
 const OtherHeroesSlider = ({ currentSlug }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [heroes, setHeroes] = useState([])
 
   const others = useMemo(() => {
-    return allHeroes.filter(h => h.slug !== currentSlug)
-  }, [currentSlug])
+    return heroes.filter(h => h.slug !== currentSlug)
+  }, [currentSlug, heroes])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchHeroes({ limit: 1000 })
+        if (!isMounted) return
+        setHeroes(Array.isArray(list) ? list : [])
+      } catch {
+        if (isMounted) setHeroes([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Responsive items per view
   const [itemsPerView, setItemsPerView] = useState(3)

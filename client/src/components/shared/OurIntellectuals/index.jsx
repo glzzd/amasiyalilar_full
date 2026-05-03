@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import data from '../../../mockDatas/ourIntellectuals.json'
+import { fetchIntellectuals } from '@/pages/WesternAzerbaijan/services'
 
 const OurIntellectuals = () => {
-  const items = useMemo(() => (Array.isArray(data) ? data : []), [])
+  const [items, setItems] = useState([])
   const [pageSize, setPageSize] = useState(2)
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 768px)')
@@ -13,13 +13,48 @@ const OurIntellectuals = () => {
     return () => mq.removeEventListener('change', apply)
   }, [])
 
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchIntellectuals({ limit: 12 })
+        if (!isMounted) return
+        setItems(Array.isArray(list) ? list : [])
+      } catch {
+        if (isMounted) setItems([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const normalizedItems = useMemo(() => {
+    const arr = Array.isArray(items) ? items : []
+    return arr
+      .map((item) => ({
+        id: item._id || item.id || item.slug,
+        name: item.name,
+        title: item.title || item.profession,
+        bio: item.bio || item.description,
+        image: item.image,
+        sharedBy: item.sharedBy,
+        sharedByImage: item.sharedByImage,
+        createdAt: item.createdAt
+      }))
+      .filter((item) => item.id && item.name)
+  }, [items])
+
   const pages = useMemo(() => {
     const out = []
-    for (let i = 0; i < items.length; i += pageSize) {
-      out.push(items.slice(i, i + pageSize))
+    for (let i = 0; i < normalizedItems.length; i += pageSize) {
+      out.push(normalizedItems.slice(i, i + pageSize))
     }
     return out
-  }, [items, pageSize])
+  }, [normalizedItems, pageSize])
 
   const [page, setPage] = useState(0)
   const safePage = Math.min(Math.max(0, pages.length - 1), page)
@@ -36,7 +71,7 @@ const OurIntellectuals = () => {
     return () => clearInterval(id)
   }, [safePage, pages.length])
 
-  if (items.length === 0) return null
+  if (normalizedItems.length === 0) return null
 
   return (
     <section>
@@ -85,10 +120,14 @@ const OurIntellectuals = () => {
                       <div className="text-slate-900 dark:text-slate-100 font-semibold text-xs md:text-sm">{item.name}</div>
                       <div className="text-slate-600 dark:text-slate-300 text-[10px] md:text-[11px]">{item.title}</div>
                       <div className="text-slate-700 dark:text-slate-300 text-[11px] md:text-xs mt-2 line-clamp-3">{item.bio}</div>
-                      <div className="flex items-center gap-2 mt-2">
-                        <img src={item.sharedByImage} alt={item.sharedBy} className="w-4 h-4 md:w-5 md:h-5 rounded-full object-cover" />
-                        <div className="text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400">Paylaşan: {item.sharedBy}</div>
-                      </div>
+                      {item.sharedBy ? (
+                        <div className="flex items-center gap-2 mt-2">
+                          {item.sharedByImage ? (
+                            <img src={item.sharedByImage} alt={item.sharedBy} className="w-4 h-4 md:w-5 md:h-5 rounded-full object-cover" />
+                          ) : null}
+                          <div className="text-[10px] md:text-[11px] text-slate-500 dark:text-slate-400">Paylaşan: {item.sharedBy}</div>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 ))}

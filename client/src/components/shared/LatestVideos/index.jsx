@@ -1,16 +1,54 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import videosData from '../../../mockDatas/allVideos.json'
 import { Play } from 'lucide-react'
 import { formatDate } from '@/lib/utils'
+import { fetchDocumentaries } from '@/pages/Documentaries/documentariesService'
 
 const LatestVideos = () => {
-  const videos = useMemo(() => {
-    const arr = Array.isArray(videosData) ? videosData.filter(v => v && v.id && v.thumbnail) : []
-    return arr.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+  const [videos, setVideos] = useState([])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchDocumentaries({ limit: 20 })
+        if (!isMounted) return
+        const mapped = Array.isArray(list)
+          ? list
+              .filter((d) => d && (d._id || d.id || d.slug) && d.thumbnail)
+              .map((d) => ({
+                id: d._id || d.id || d.slug,
+                title: d.title,
+                thumbnail: d.thumbnail,
+                duration: d.duration,
+                publishedAt: d.publishedAt || d.publishDate || d.createdAt,
+                videoUrl: d.videoUrl,
+                slug: d.slug
+              }))
+          : []
+        setVideos(mapped)
+      } catch {
+        if (isMounted) setVideos([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
   }, [])
 
-  const [activeId, setActiveId] = useState(() => (videos[0]?.id ?? null))
-  const list = useMemo(() => videos.slice(0, 5), [videos])
+  const sortedVideos = useMemo(() => {
+    return [...videos].sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+  }, [videos])
+
+  const [activeId, setActiveId] = useState(null)
+  const list = useMemo(() => sortedVideos.slice(0, 5), [sortedVideos])
+  useEffect(() => {
+    if (!activeId && list.length > 0) {
+      setActiveId(list[0].id)
+    }
+  }, [activeId, list])
   useEffect(() => {
     if (list.length === 0) return
     const id = setInterval(() => {
@@ -21,9 +59,9 @@ const LatestVideos = () => {
     return () => clearInterval(id)
   }, [activeId, list])
 
-  const active = useMemo(() => videos.find(v => v.id === activeId) || null, [videos, activeId])
+  const active = useMemo(() => sortedVideos.find(v => v.id === activeId) || null, [sortedVideos, activeId])
 
-  if (videos.length === 0) return null
+  if (sortedVideos.length === 0) return null
 
   return (
     <section className="rounded-md bg-[#0e172c] text-white p-4 md:p-5">

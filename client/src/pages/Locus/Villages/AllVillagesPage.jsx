@@ -1,23 +1,47 @@
-import React, { useMemo, useState } from 'react'
-import { MapPin, Search, Landmark, ChevronLeft, ChevronRight } from 'lucide-react'
+import React, { useEffect, useMemo, useState } from 'react'
+import { MapPin, Search, Landmark, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Breadcrumb from '../../../components/shared/Breadcrumb'
-import allVillages from '../../../mockDatas/allVillages.json'
 import { cn } from '@/lib/utils'
+import { fetchVillages } from '../locusService'
 
 const AllVillagesPage = () => {
   const [query, setQuery] = useState('')
   const [mahalFilter, setMahalFilter] = useState('all')
   const [currentPage, setCurrentPage] = useState(1)
+  const [villages, setVillages] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const itemsPerPage = 9
 
-  const mahals = useMemo(() => {
-    const set = new Set(allVillages.map(v => v.mahal))
-    return ['all', ...Array.from(set)]
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchVillages({ limit: 1000 })
+        if (!isMounted) return
+        setVillages(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Kəndlər yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
   }, [])
 
+  const mahals = useMemo(() => {
+    const set = new Set(villages.map(v => v.mahal))
+    return ['all', ...Array.from(set)]
+  }, [villages])
+
   const filtered = useMemo(() => {
-    return allVillages.filter(v => {
+    return villages.filter(v => {
       const matchesText =
         v.name.toLowerCase().includes(query.toLowerCase()) ||
         v.mahal.toLowerCase().includes(query.toLowerCase()) ||
@@ -25,7 +49,7 @@ const AllVillagesPage = () => {
       const matchesMahal = mahalFilter === 'all' ? true : v.mahal === mahalFilter
       return matchesText && matchesMahal
     })
-  }, [query, mahalFilter])
+  }, [query, mahalFilter, villages])
 
   const totalPages = Math.ceil(filtered.length / itemsPerPage)
 
@@ -87,7 +111,17 @@ const AllVillagesPage = () => {
           </div>
         </div>
 
-        {currentVillages.length > 0 ? (
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-10 h-10 animate-spin text-green-600" />
+          </div>
+        ) : error ? (
+          <div className="text-center py-20">
+            <h3 className="text-xl font-bold text-gray-900">Xəta baş verdi</h3>
+            <p className="text-gray-500 mt-2">{error}</p>
+          </div>
+        ) : (
+        currentVillages.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentVillages.map((v) => (
               <div key={v.id} className="group rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-lg transition-shadow">
@@ -138,6 +172,7 @@ const AllVillagesPage = () => {
             <h3 className="text-xl font-bold text-gray-900">Nəticə tapılmadı</h3>
             <p className="text-gray-500 mt-2">Axtarışınıza uyğun kənd tapılmadı.</p>
           </div>
+        )
         )}
 
         {filtered.length > itemsPerPage && (

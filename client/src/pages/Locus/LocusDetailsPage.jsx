@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { 
   MapPin, 
@@ -10,20 +10,65 @@ import {
   LocateFixed,
   Wind,
   Sun,
-  Share2
+  Share2,
+  Loader2
 } from 'lucide-react'
-import allLocus from '../../mockDatas/allLocus.json'
+import { fetchLocus } from './locusService'
 
 const LocusDetailsPage = () => {
   const { slug } = useParams()
+  const [locusList, setLocusList] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug])
 
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchLocus({ limit: 1000 })
+        if (!isMounted) return
+        setLocusList(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Məlumat yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   const locus = useMemo(() => {
-    return allLocus.find(item => item.slug === slug)
-  }, [slug])
+    return locusList.find(item => item.slug === slug)
+  }, [locusList, slug])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <Loader2 className="w-10 h-10 animate-spin text-green-600" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900">
+        <h2 className="text-3xl font-bold mb-4">Xəta baş verdi</h2>
+        <p className="text-gray-500 mb-6">{error}</p>
+        <Link to="/locus" className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all flex items-center gap-2">
+          <ArrowLeft size={20} /> Mahallar Siyahısına Qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!locus) {
     return (

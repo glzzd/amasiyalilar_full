@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
+import footerLogo from '../../../assets/panel.png'
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div>
            <div className='w-full md:flex-1'>
-        <img src="https://placehold.co/240x48/png?text=AmasiyalılarLogo" alt="logo" className="max-w-full h-auto md:w-[300px] md:h-[60px]" />
+        <img src={footerLogo} alt="logo" className="max-w-full h-auto md:w-[300px] md:h-[60px]" />
       </div>
             <p className="mt-2 text-white/80 text-sm">
               Qərbi Azərbaycan Türklərinin və Qərbi Azərbaycanda yaşayan insanların mədəni irsini, ənənələrini və gündəmini paylaşan platforma.
@@ -24,20 +25,20 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="inline-flex items-center gap-2 text-white/90 hover:text-red-400 transition-colors text-sm">
+                <Link to="/news" className="inline-flex items-center gap-2 text-white/90 hover:text-red-400 transition-colors text-sm">
                   <ChevronRight size={16} /> Xəbərlər
                 </Link>
               </li>
               <li>
-                <Link to="/intellectuals" className="inline-flex items-center gap-2 text-white/90 hover:text-red-400 transition-colors text-sm">
+                <Link to="/western-azerbaijan/intellectuals" className="inline-flex items-center gap-2 text-white/90 hover:text-red-400 transition-colors text-sm">
                   <ChevronRight size={16} /> Ziyalılar
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/contact" className="inline-flex items-center gap-2 text-white/90 hover:text-red-400 transition-colors text-sm">
                   <ChevronRight size={16} /> Əlaqə
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div>

@@ -1,15 +1,35 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import allVeterans from '../../../mockDatas/allVeterans.json'
+import { fetchVeterans } from '../../../pages/Veterans/veteransService'
 
 const OtherVeteransSlider = ({ currentSlug }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [veterans, setVeterans] = useState([])
 
   const others = useMemo(() => {
-    return allVeterans.filter(v => v.slug !== currentSlug)
-  }, [currentSlug])
+    return veterans.filter(v => v.slug !== currentSlug)
+  }, [currentSlug, veterans])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchVeterans({ limit: 1000 })
+        if (!isMounted) return
+        setVeterans(Array.isArray(list) ? list : [])
+      } catch {
+        if (isMounted) setVeterans([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Responsive items per view
   // Mobile: 1, Tablet: 2, Desktop: 3

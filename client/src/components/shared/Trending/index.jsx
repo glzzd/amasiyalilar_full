@@ -1,13 +1,34 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import allNews from '../../../mockDatas/allNews.json'
+import { fetchConfirmedNews } from '@/pages/News/services/newsService'
 
 const TrendingNews = () => {
-  const sortedByViews = useMemo(() => {
-    const arr = Array.isArray(allNews) ? allNews.filter(n => typeof n.views === 'number') : []
-    return arr.sort((a, b) => (b.views || 0) - (a.views || 0))
+  const [news, setNews] = useState([])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchConfirmedNews()
+        if (!isMounted) return
+        setNews(Array.isArray(list) ? list : [])
+      } catch {
+        if (isMounted) setNews([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
   }, [])
+
+  const sortedByViews = useMemo(() => {
+    const arr = Array.isArray(news) ? news.filter(n => typeof n?.views === 'number') : []
+    return arr.sort((a, b) => (b.views || 0) - (a.views || 0))
+  }, [news])
 
   const pageSize = 4
   const pages = useMemo(() => {
@@ -25,7 +46,7 @@ const TrendingNews = () => {
   const goPrev = () => setPage(p => Math.max(0, p - 1))
   const goNext = () => setPage(p => Math.min(pages.length - 1, p + 1))
 
-  React.useEffect(() => {
+  useEffect(() => {
     setPage(p => Math.min(Math.max(0, pages.length - 1), p))
   }, [pages.length])
 
@@ -67,8 +88,8 @@ const TrendingNews = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 min-w-0 w-full">
                 {group.map(item => (
                   <Link
-                    key={item._id}
-                    to={item.slug ? `/news/${item.slug}` : '#'}
+                    key={item._id || item.id || item.slug}
+                    to={item?._id ? `/news/${item._id}` : '#'}
                     className="group relative block overflow-hidden rounded-md min-w-0"
                   >
                     <img

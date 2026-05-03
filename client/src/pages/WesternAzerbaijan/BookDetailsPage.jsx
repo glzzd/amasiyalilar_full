@@ -1,23 +1,67 @@
-import React, { useEffect, useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, BookOpen, Calendar, Tag, Feather, ExternalLink, Hash, Layers } from 'lucide-react'
-import library from '../../mockDatas/library.json'
+import { ArrowLeft, BookOpen, Calendar, Tag, Feather, ExternalLink, Hash, Layers, Loader2 } from 'lucide-react'
+import { fetchLibrary } from './services'
 
 const BookDetailsPage = () => {
   const { slug } = useParams()
+  const [library, setLibrary] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug])
 
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchLibrary({ limit: 1000 })
+        if (!isMounted) return
+        setLibrary(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Kitab məlumatı yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   const book = useMemo(() => {
-    return Array.isArray(library) ? library.find(b => b.slug === slug) : null
-  }, [slug])
+    return library.find(b => b.slug === slug) || null
+  }, [library, slug])
 
   const sameAuthorBooks = useMemo(() => {
     if (!book) return []
     return library.filter(b => b.authorId === book.authorId && b.slug !== book.slug).slice(0, 6)
   }, [book])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <Loader2 className="w-10 h-10 animate-spin text-blue-600" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Xəta baş verdi</h2>
+        <p className="text-gray-500 mt-2">{error}</p>
+        <Link to="/western-azerbaijan/library" className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          Siyahıya Qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!book) {
     return (

@@ -195,13 +195,13 @@ const WesternAzerbaijanAbout = () => {
     <div className="max-w-5xl mx-auto pb-10">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Qərbi Azərbaycan - Haqqında</h1>
-          <p className="text-gray-500 text-sm mt-1">Qərbi Azərbaycan haqqında məlumatları idarə edin</p>
+          <h1 className="text-2xl font-bold text-white">Qərbi Azərbaycan - Haqqında</h1>
+          <p className="text-slate-400 text-sm mt-1">Qərbi Azərbaycan haqqında məlumatları idarə edin</p>
         </div>
         <button
           onClick={handleSubmit}
           disabled={saving}
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm"
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
           Yadda Saxla
@@ -210,7 +210,7 @@ const WesternAzerbaijanAbout = () => {
 
       {message.text && (
         <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
-          message.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'
+          message.type === 'success' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-red-500/10 text-red-400 border border-red-500/20'
         }`}>
           {message.type === 'success' ? <CheckCircle2 className="w-5 h-5" /> : <AlertCircle className="w-5 h-5" />}
           {message.text}
@@ -219,39 +219,39 @@ const WesternAzerbaijanAbout = () => {
 
       <div className="space-y-6">
         {/* Main Info */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Əsas Məlumatlar</h2>
+        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+          <h2 className="text-lg font-semibold text-white mb-4">Əsas Məlumatlar</h2>
           <div className="grid gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Başlıq</label>
+              <label className="block text-sm font-medium text-slate-400 mb-1">Başlıq</label>
               <input
                 type="text"
                 name="title"
                 value={formData.title}
                 onChange={(e) => handleInputChange(e, 'main')}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Alt Başlıq</label>
+              <label className="block text-sm font-medium text-slate-400 mb-1">Alt Başlıq</label>
               <input
                 type="text"
                 name="subtitle"
                 value={formData.subtitle}
                 onChange={(e) => handleInputChange(e, 'main')}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
               />
             </div>
           </div>
         </div>
 
         {/* Overview */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">Ümumi Baxış (Paraqraflar)</h2>
+            <h2 className="text-lg font-semibold text-white">Ümumi Baxış (Paraqraflar)</h2>
             <button
               onClick={() => addItem('overview')}
-              className="text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"
+              className="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1"
             >
               <Plus className="w-4 h-4" /> Əlavə et
             </button>
@@ -264,46 +264,46 @@ const WesternAzerbaijanAbout = () => {
                   onChange={(e) => handleInputChange(e, 'overview', index)}
                   rows={3}
                   placeholder="Paraqraf mətni..."
-                  className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
                 />
                 <button
                   onClick={() => removeItem('overview', index)}
-                  className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors h-fit"
+                  className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors h-fit"
                 >
                   <Trash2 className="w-5 h-5" />
                 </button>
               </div>
             ))}
             {formData.overview.length === 0 && (
-              <p className="text-sm text-gray-500 text-center py-4">Hələ heç bir məlumat əlavə edilməyib</p>
+              <p className="text-sm text-slate-500 text-center py-4">Hələ heç bir məlumat əlavə edilməyib</p>
             )}
           </div>
         </div>
 
         {/* Photos */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">Fotoşəkillər</h2>
+            <h2 className="text-lg font-semibold text-white">Fotoşəkillər</h2>
             <button
               onClick={() => addItem('photos')}
-              className="text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"
+              className="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1"
             >
               <Plus className="w-4 h-4" /> Əlavə et
             </button>
           </div>
           <div className="space-y-3">
             {formData.photos.map((photo, index) => (
-              <div key={index} className="flex gap-4 items-start bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <div className="w-32 h-20 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0 border border-gray-200 relative group">
+              <div key={index} className="flex gap-4 items-start bg-slate-950 p-4 rounded-lg border border-slate-800">
+                <div className="w-32 h-20 bg-slate-900 rounded-lg overflow-hidden flex-shrink-0 border border-slate-800 relative group">
                   {photo ? (
                     <img src={photo} alt={`Photo ${index + 1}`} className="w-full h-full object-cover" />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-400">
+                    <div className="w-full h-full flex items-center justify-center text-slate-600">
                       <Upload className="w-6 h-6" />
                     </div>
                   )}
                   {uploading[`photos-${index}`] && (
-                    <div className="absolute inset-0 bg-white/50 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                       <Loader2 className="w-6 h-6 animate-spin text-blue-500" />
                     </div>
                   )}
@@ -316,11 +316,11 @@ const WesternAzerbaijanAbout = () => {
                       value={photo}
                       onChange={(e) => handleInputChange(e, 'photos', index)}
                       placeholder="Şəkil URL və ya yükləyin"
-                      className="flex-1 bg-white border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 text-sm focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 text-sm"
                     />
                     <button
                       onClick={() => removeItem('photos', index)}
-                      className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                      className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
                     >
                       <Trash2 className="w-5 h-5" />
                     </button>
@@ -339,8 +339,8 @@ const WesternAzerbaijanAbout = () => {
                       htmlFor={`photo-upload-${index}`}
                       className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm cursor-pointer transition-colors ${
                         uploading[`photos-${index}`]
-                          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                          : 'bg-blue-50 text-blue-600 hover:bg-blue-100'
+                          ? 'bg-slate-800 text-slate-500 cursor-not-allowed'
+                          : 'bg-blue-600/10 text-blue-400 hover:bg-blue-600/20'
                       }`}
                     >
                       <Upload className="w-4 h-4" />
@@ -351,44 +351,44 @@ const WesternAzerbaijanAbout = () => {
               </div>
             ))}
             {formData.photos.length === 0 && (
-              <p className="text-sm text-gray-500 text-center py-4">Hələ heç bir şəkil əlavə edilməyib</p>
+              <p className="text-sm text-slate-500 text-center py-4">Hələ heç bir şəkil əlavə edilməyib</p>
             )}
           </div>
         </div>
 
         {/* Stats */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Statistikalar</h2>
+        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+          <h2 className="text-lg font-semibold text-white mb-4">Statistikalar</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Tarixi Ərazi (km²)</label>
+              <label className="block text-sm font-medium text-slate-400 mb-1">Tarixi Ərazi (km²)</label>
               <input
                 type="text"
                 name="historicalArea"
                 value={formData.stats.historicalArea}
                 onChange={(e) => handleInputChange(e, 'stats')}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Bölgə Sayı</label>
+              <label className="block text-sm font-medium text-slate-400 mb-1">Bölgə Sayı</label>
               <input
                 type="number"
                 name="regionsCount"
                 value={formData.stats.regionsCount}
                 onChange={(e) => handleInputChange(e, 'stats')}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Mədəni Abidə Sayı</label>
+              <label className="block text-sm font-medium text-slate-400 mb-1">Mədəni Abidə Sayı</label>
               <input
                 type="number"
                 name="culturalSites"
                 value={formData.stats.culturalSites}
                 onChange={(e) => handleInputChange(e, 'stats')}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
               />
             </div>
           </div>
@@ -397,8 +397,8 @@ const WesternAzerbaijanAbout = () => {
             {/* Key Regions */}
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">Əsas Bölgələr</label>
-                <button onClick={() => addItem('stats', 'keyRegions')} className="text-xs text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"><Plus className="w-3 h-3"/> Əlavə et</button>
+                <label className="block text-sm font-medium text-slate-400">Əsas Bölgələr</label>
+                <button onClick={() => addItem('stats', 'keyRegions')} className="text-xs text-blue-400 flex items-center gap-1"><Plus className="w-3 h-3"/> Əlavə et</button>
               </div>
               <div className="space-y-2">
                 {formData.stats.keyRegions.map((item, index) => (
@@ -407,9 +407,9 @@ const WesternAzerbaijanAbout = () => {
                       type="text"
                       value={item}
                       onChange={(e) => handleInputChange(e, 'stats', index, 'keyRegions')}
-                      className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-blue-500"
                     />
-                    <button onClick={() => removeItem('stats', index, 'keyRegions')} className="text-red-500 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => removeItem('stats', index, 'keyRegions')} className="text-red-400"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 ))}
               </div>
@@ -418,8 +418,8 @@ const WesternAzerbaijanAbout = () => {
             {/* Languages */}
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">Dillər</label>
-                <button onClick={() => addItem('stats', 'languages')} className="text-xs text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"><Plus className="w-3 h-3"/> Əlavə et</button>
+                <label className="block text-sm font-medium text-slate-400">Dillər</label>
+                <button onClick={() => addItem('stats', 'languages')} className="text-xs text-blue-400 flex items-center gap-1"><Plus className="w-3 h-3"/> Əlavə et</button>
               </div>
               <div className="space-y-2">
                 {formData.stats.languages.map((item, index) => (
@@ -428,9 +428,9 @@ const WesternAzerbaijanAbout = () => {
                       type="text"
                       value={item}
                       onChange={(e) => handleInputChange(e, 'stats', index, 'languages')}
-                      className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-blue-500"
                     />
-                    <button onClick={() => removeItem('stats', index, 'languages')} className="text-red-500 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => removeItem('stats', index, 'languages')} className="text-red-400"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 ))}
               </div>
@@ -439,8 +439,8 @@ const WesternAzerbaijanAbout = () => {
             {/* Notable Monuments */}
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">Məşhur Abidələr</label>
-                <button onClick={() => addItem('stats', 'notableMonuments')} className="text-xs text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"><Plus className="w-3 h-3"/> Əlavə et</button>
+                <label className="block text-sm font-medium text-slate-400">Məşhur Abidələr</label>
+                <button onClick={() => addItem('stats', 'notableMonuments')} className="text-xs text-blue-400 flex items-center gap-1"><Plus className="w-3 h-3"/> Əlavə et</button>
               </div>
               <div className="space-y-2">
                 {formData.stats.notableMonuments.map((item, index) => (
@@ -449,9 +449,9 @@ const WesternAzerbaijanAbout = () => {
                       type="text"
                       value={item}
                       onChange={(e) => handleInputChange(e, 'stats', index, 'notableMonuments')}
-                      className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-blue-500"
                     />
-                    <button onClick={() => removeItem('stats', index, 'notableMonuments')} className="text-red-500 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => removeItem('stats', index, 'notableMonuments')} className="text-red-400"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 ))}
               </div>
@@ -460,57 +460,53 @@ const WesternAzerbaijanAbout = () => {
         </div>
 
         {/* Timeline */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">Tarixçə (Timeline)</h2>
+            <h2 className="text-lg font-semibold text-white">Tarixçə (Timeline)</h2>
             <button
               onClick={() => addItem('timeline')}
-              className="text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"
+              className="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1"
             >
               <Plus className="w-4 h-4" /> Əlavə et
             </button>
           </div>
           <div className="space-y-3">
             {formData.timeline.map((item, index) => (
-              <div key={index} className="flex gap-4">
+              <div key={index} className="flex gap-2">
                 <input
                   type="text"
                   value={item.year}
                   onChange={(e) => handleInputChange(e, 'timeline', index, 'year')}
-                  placeholder="İl"
-                  className="w-32 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  placeholder="İl / Dövr"
+                  className="w-1/3 bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
                 />
                 <input
                   type="text"
                   value={item.event}
                   onChange={(e) => handleInputChange(e, 'timeline', index, 'event')}
                   placeholder="Hadisə"
-                  className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
                 />
                 <button
                   onClick={() => removeItem('timeline', index)}
-                  className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                  className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
                 >
                   <Trash2 className="w-5 h-5" />
                 </button>
               </div>
             ))}
-            {formData.timeline.length === 0 && (
-              <p className="text-sm text-gray-500 text-center py-4">Hələ heç bir tarixçə əlavə edilməyib</p>
-            )}
           </div>
         </div>
 
         {/* Culture */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Mədəniyyət</h2>
-          
-          <div className="space-y-6">
+        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+          <h2 className="text-lg font-semibold text-white mb-4">Mədəniyyət</h2>
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Literature */}
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">Ədəbiyyat</label>
-                <button onClick={() => addItem('culture', null, 'literature')} className="text-xs text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"><Plus className="w-3 h-3"/> Əlavə et</button>
+                <label className="block text-sm font-medium text-slate-400">Ədəbiyyat</label>
+                <button onClick={() => addItem('culture', null, 'literature')} className="text-xs text-blue-400 flex items-center gap-1"><Plus className="w-3 h-3"/> Əlavə et</button>
               </div>
               <div className="space-y-2">
                 {formData.culture.literature.map((item, index) => (
@@ -519,9 +515,9 @@ const WesternAzerbaijanAbout = () => {
                       type="text"
                       value={item}
                       onChange={(e) => handleInputChange(e, 'culture', index, null, 'literature')}
-                      className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-blue-500"
                     />
-                    <button onClick={() => removeItem('culture', index, null, 'literature')} className="text-red-500 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => removeItem('culture', index, null, 'literature')} className="text-red-400"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 ))}
               </div>
@@ -530,8 +526,8 @@ const WesternAzerbaijanAbout = () => {
             {/* Music */}
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">Musiqi</label>
-                <button onClick={() => addItem('culture', null, 'music')} className="text-xs text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"><Plus className="w-3 h-3"/> Əlavə et</button>
+                <label className="block text-sm font-medium text-slate-400">Musiqi</label>
+                <button onClick={() => addItem('culture', null, 'music')} className="text-xs text-blue-400 flex items-center gap-1"><Plus className="w-3 h-3"/> Əlavə et</button>
               </div>
               <div className="space-y-2">
                 {formData.culture.music.map((item, index) => (
@@ -540,9 +536,9 @@ const WesternAzerbaijanAbout = () => {
                       type="text"
                       value={item}
                       onChange={(e) => handleInputChange(e, 'culture', index, null, 'music')}
-                      className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-blue-500"
                     />
-                    <button onClick={() => removeItem('culture', index, null, 'music')} className="text-red-500 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => removeItem('culture', index, null, 'music')} className="text-red-400"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 ))}
               </div>
@@ -551,8 +547,8 @@ const WesternAzerbaijanAbout = () => {
             {/* Architecture */}
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label className="block text-sm font-medium text-gray-700">Memarlıq</label>
-                <button onClick={() => addItem('culture', null, 'architecture')} className="text-xs text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"><Plus className="w-3 h-3"/> Əlavə et</button>
+                <label className="block text-sm font-medium text-slate-400">Memarlıq</label>
+                <button onClick={() => addItem('culture', null, 'architecture')} className="text-xs text-blue-400 flex items-center gap-1"><Plus className="w-3 h-3"/> Əlavə et</button>
               </div>
               <div className="space-y-2">
                 {formData.culture.architecture.map((item, index) => (
@@ -561,9 +557,9 @@ const WesternAzerbaijanAbout = () => {
                       type="text"
                       value={item}
                       onChange={(e) => handleInputChange(e, 'culture', index, null, 'architecture')}
-                      className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-gray-900 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-blue-500"
                     />
-                    <button onClick={() => removeItem('culture', index, null, 'architecture')} className="text-red-500 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
+                    <button onClick={() => removeItem('culture', index, null, 'architecture')} className="text-red-400"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 ))}
               </div>
@@ -572,44 +568,41 @@ const WesternAzerbaijanAbout = () => {
         </div>
 
         {/* References */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+        <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">İstinadlar</h2>
+            <h2 className="text-lg font-semibold text-white">İstinadlar</h2>
             <button
               onClick={() => addItem('references')}
-              className="text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1 font-medium"
+              className="text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1"
             >
               <Plus className="w-4 h-4" /> Əlavə et
             </button>
           </div>
           <div className="space-y-3">
             {formData.references.map((item, index) => (
-              <div key={index} className="flex gap-4">
+              <div key={index} className="flex gap-2">
                 <input
                   type="text"
                   value={item.label}
                   onChange={(e) => handleInputChange(e, 'references', index, 'label')}
-                  placeholder="Ad"
-                  className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  placeholder="Etiket"
+                  className="w-1/3 bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
                 />
                 <input
                   type="text"
                   value={item.url}
                   onChange={(e) => handleInputChange(e, 'references', index, 'url')}
                   placeholder="URL"
-                  className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="flex-1 bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500"
                 />
                 <button
                   onClick={() => removeItem('references', index)}
-                  className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                  className="p-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors"
                 >
                   <Trash2 className="w-5 h-5" />
                 </button>
               </div>
             ))}
-            {formData.references.length === 0 && (
-              <p className="text-sm text-gray-500 text-center py-4">Hələ heç bir istinad əlavə edilməyib</p>
-            )}
           </div>
         </div>
       </div>

@@ -1,22 +1,45 @@
-import React, { useState, useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, Calendar, Award, MapPin, ChevronLeft, ChevronRight } from 'lucide-react'
-import allMartyrs from '../../mockDatas/allMartyrs.json'
+import { Search, Calendar, Award, MapPin, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react'
 import { cn, formatDate } from '@/lib/utils'
+import { fetchMartyrs } from './martyrsService'
 
 const AllMartyrsPage = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
+  const [martyrs, setMartyrs] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const itemsPerPage = 9
   
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchMartyrs({ limit: 1000 })
+        if (!isMounted) return
+        setMartyrs(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Şəhidlər yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const filteredMartyrs = useMemo(() => {
-    return allMartyrs.filter(martyr => 
+    return martyrs.filter(martyr => 
       martyr.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
       martyr.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
       martyr.rank.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  }, [searchQuery])
+  }, [martyrs, searchQuery])
 
   // Pagination Logic
   const totalPages = Math.ceil(filteredMartyrs.length / itemsPerPage)
@@ -67,7 +90,17 @@ const AllMartyrsPage = () => {
 
       {/* Martyrs Grid */}
       <div className="container mx-auto px-4 py-16">
-        {currentMartyrs.length > 0 ? (
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-10 h-10 animate-spin text-red-600" />
+          </div>
+        ) : error ? (
+          <div className="text-center py-20">
+            <h3 className="text-xl font-bold text-gray-900">Xəta baş verdi</h3>
+            <p className="text-gray-500 mt-2">{error}</p>
+          </div>
+        ) : (
+        currentMartyrs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentMartyrs.map((martyr) => (
               <div key={martyr.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
@@ -128,6 +161,7 @@ const AllMartyrsPage = () => {
             <h3 className="text-xl font-bold text-gray-900">Nəticə tapılmadı</h3>
             <p className="text-gray-500 mt-2">Axtarışınıza uyğun məlumat tapılmadı.</p>
           </div>
+        )
         )}
 
         {/* Pagination */}

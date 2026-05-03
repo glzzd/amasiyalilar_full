@@ -97,34 +97,16 @@ const adminMenu = [
         icon: 'newspaper'
       },
       {
-        id: 'admin-martyrs',
-        label: 'Şəhidlər (allMartyrs.json)',
-        path: '/admin/content/martyrs',
-        icon: 'medal'
-      },
-      {
-        id: 'admin-heroes',
-        label: 'Qəhrəmanlar (allHeroes.json)',
-        path: '/admin/content/heroes',
-        icon: 'star'
-      },
-      {
-        id: 'admin-veterans',
-        label: 'Qazilər (allVeterans.json)',
-        path: '/admin/content/veterans',
-        icon: 'shield'
+        id: 'admin-documentaries',
+        label: 'Sənədli filmlər',
+        path: '/admin/content/documentaries',
+        icon: 'film'
       },
       {
         id: 'admin-videos',
         label: 'Videolar (allVideos.json)',
         path: '/admin/content/videos',
         icon: 'video'
-      },
-      {
-        id: 'admin-documentaries',
-        label: 'Sənədli filmlər (allDocumentaries.json)',
-        path: '/admin/content/documentaries',
-        icon: 'film'
       },
       {
         id: 'admin-musics',
@@ -135,8 +117,32 @@ const adminMenu = [
     ]
   },
   {
-    id: 'admin-section-locus',
-    label: 'Yerlər və abidələr',
+    id: 'admin-section-heroes',
+    label: 'Qəhrəmanlar',
+    children: [
+      {
+        id: 'admin-martyrs',
+        label: 'Şəhidlər (allMartyrs.json)',
+        path: '/admin/content/martyrs',
+        icon: 'shield'
+      },
+      {
+        id: 'admin-veterans',
+        label: 'Qazilər (allVeterans.json)',
+        path: '/admin/content/veterans',
+        icon: 'medal'
+      },
+      {
+        id: 'admin-heroes',
+        label: 'Unudulmaz qəhrəmanlar',
+        path: '/admin/content/heroes',
+        icon: 'star'
+      }
+    ]
+  },
+  {
+    id: 'admin-section-west',
+    label: 'Qərbi Azərbaycan',
     children: [
       {
         id: 'admin-districts',
@@ -271,23 +277,21 @@ const AdminSidebar = () => {
                     className={({ isActive: linkActive }) => {
                       const active = isActive || linkActive
                       return [
-                        'flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-all duration-200',
+                        'flex items-center gap-2 rounded-md px-2 py-1.5 text-xs transition-colors',
                         active
-                          ? 'bg-blue-50 text-blue-700 font-medium shadow-sm ring-1 ring-blue-100'
-                          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                          ? 'bg-slate-800 text-slate-50'
+                          : 'text-slate-300 hover:bg-slate-800/60 hover:text-white'
                       ].join(' ')
                     }}
                   >
                     {iconElement && (
-                      <span className={`w-4 h-4 transition-colors ${isActive ? 'text-blue-600' : 'text-gray-400 group-hover:text-gray-500'}`}>
-                        {iconElement}
-                      </span>
+                      <span className="w-4 h-4 text-slate-400 group-hover:text-slate-200">{iconElement}</span>
                     )}
                     <span className="truncate">{item.label}</span>
                   </NavLink>
                 ) : (
-                  <div className="flex items-center gap-2 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-gray-500 mt-4 mb-1">
-                    {iconElement && <span className="w-4 h-4 text-gray-400">{iconElement}</span>}
+                  <div className="flex items-center gap-2 px-2 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-slate-400">
+                    {iconElement && <span className="w-4 h-4 text-slate-500">{iconElement}</span>}
                     <span className="truncate">{item.label}</span>
                   </div>
                 )}
@@ -304,15 +308,21 @@ const AdminSidebar = () => {
   }
 
   return (
-    <div className="w-full bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-      <div className="p-4 bg-gray-50 border-b border-gray-100">
-        <h2 className="text-sm font-semibold text-gray-700">Naviqasiya</h2>
-        <p className="text-xs text-gray-500 mt-1">İdarəetmə paneli menyusu</p>
+    <aside className="w-60 shrink-0 border-r border-slate-800 bg-slate-950/60">
+      <div className="py-3 px-2">
+        <div className="mb-3 px-2">
+          <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+            Sayt Menyusu
+          </div>
+          <div className="text-[11px] text-slate-500">
+            allMenu.json faylındakı bütün əsas bölmələr
+          </div>
+        </div>
+        <nav className="space-y-2 text-xs text-slate-300">
+          {renderItems(menuItems)}
+        </nav>
       </div>
-      <nav className="p-3 max-h-[calc(100vh-12rem)] overflow-y-auto custom-scrollbar">
-        {renderItems(menuItems)}
-      </nav>
-    </div>
+    </aside>
   )
 }
 

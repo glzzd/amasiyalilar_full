@@ -1,15 +1,35 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import allMartyrs from '../../../mockDatas/allMartyrs.json'
+import { fetchMartyrs } from '../../../pages/Martyrs/martyrsService'
 
 const OtherMartyrsSlider = ({ currentSlug }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [martyrs, setMartyrs] = useState([])
 
   const others = useMemo(() => {
-    return allMartyrs.filter(m => m.slug !== currentSlug)
-  }, [currentSlug])
+    return martyrs.filter(m => m.slug !== currentSlug)
+  }, [currentSlug, martyrs])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchMartyrs({ limit: 1000 })
+        if (!isMounted) return
+        setMartyrs(Array.isArray(list) ? list : [])
+      } catch {
+        if (isMounted) setMartyrs([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Responsive items per view
   // We'll use CSS media queries to determine width, but for index calculation we need to know

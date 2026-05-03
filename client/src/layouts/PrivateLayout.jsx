@@ -12,8 +12,8 @@ const PrivateShell = () => {
 
   if (loading) {
     return (
-      <div className="min-h-dvh bg-gray-50 text-gray-900 flex items-center justify-center">
-        <div className="text-sm text-gray-500">Yüklənir...</div>
+      <div className="min-h-dvh bg-slate-950 text-white flex items-center justify-center">
+        <div className="text-sm text-slate-300">Yüklənir...</div>
       </div>
     )
   }
@@ -23,25 +23,19 @@ const PrivateShell = () => {
   }
 
   return (
-    <div className="min-h-dvh bg-gray-50 text-gray-900">
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-30">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-             <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Admin Panel</span>
-          </div>
-          
+    <div className="min-h-dvh bg-slate-950 text-white">
+      <header className="border-b border-slate-800">
+        <div className="container mx-auto px-4 h-12 flex items-center gap-4">
+          <span className="text-sm font-semibold">Admin Panel</span>
           {isAuthenticated && (
-            <div className="flex items-center gap-4">
+            <div className="ml-auto flex items-center gap-3">
               {user?.email && (
-                <div className="hidden sm:flex flex-col items-end">
-                  <span className="text-sm font-medium text-gray-700">Admin</span>
-                  <span className="text-xs text-gray-500">{user.email}</span>
-                </div>
+                <span className="text-xs text-slate-300">{user.email}</span>
               )}
               <button
                 type="button"
                 onClick={logout}
-                className="text-sm px-4 py-2 rounded-lg bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 hover:text-red-600 transition-all shadow-sm hover:shadow"
+                className="text-xs px-3 py-1.5 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-100 transition-colors"
               >
                 Çıxış
               </button>
@@ -49,12 +43,10 @@ const PrivateShell = () => {
           )}
         </div>
       </header>
-      <main className="container mx-auto px-4 py-6">
+      <main className="container mx-auto px-4 py-4">
         {isAuthenticated && !isLoginRoute ? (
-          <div className="flex flex-col lg:flex-row gap-6">
-            <aside className="w-full lg:w-64 flex-shrink-0">
-               <AdminSidebar />
-            </aside>
+          <div className="flex gap-4">
+            <AdminSidebar />
             <div className="flex-1 min-w-0">
               <Outlet />
             </div>

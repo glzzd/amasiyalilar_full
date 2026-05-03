@@ -321,7 +321,7 @@ const AllNewsPage = () => {
                 {popularNews.map((news, index) => (
                   <Link
                     key={news._id}
-                    to={`/news/${news.slug}`}
+                    to={`/news/${news._id}`}
                     className="group flex gap-4 items-start"
                   >
                     <div className="relative w-20 h-20 rounded-lg overflow-hidden shrink-0">

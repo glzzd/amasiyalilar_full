@@ -1,22 +1,113 @@
-import React, { useMemo, useEffect } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, Tag } from 'lucide-react'
-import allDocumentaries from '../../mockDatas/allDocumentaries.json'
+import { Calendar, Clock, Share2, Facebook, Twitter, Linkedin, Tag, Loader2 } from 'lucide-react'
 import { formatDate } from '@/lib/utils'
 import OtherDocumentariesSlider from '../../components/shared/OtherDocumentariesSlider'
+import { fetchDocumentaries } from './documentariesService'
 
 const DocumentaryDetailsPage = () => {
   const { slug } = useParams()
+  const [documentaries, setDocumentaries] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  const toEmbeddableUrl = (input) => {
+    if (!input || typeof input !== 'string') return ''
+    const raw = input.trim()
+    if (!raw) return ''
+
+    if (raw.includes('youtube.com/embed/') || raw.includes('youtube-nocookie.com/embed/')) {
+      return raw
+    }
+
+    try {
+      const url = new URL(raw)
+      const host = url.hostname.replace(/^www\./, '')
+
+      if (host === 'youtu.be') {
+        const id = url.pathname.split('/').filter(Boolean)[0]
+        return id ? `https://www.youtube.com/embed/${id}` : ''
+      }
+
+      if (host.endsWith('youtube.com')) {
+        if (url.pathname === '/watch') {
+          const id = url.searchParams.get('v')
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+        if (url.pathname.startsWith('/shorts/')) {
+          const id = url.pathname.split('/').filter(Boolean)[1]
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+        if (url.pathname.startsWith('/live/')) {
+          const id = url.pathname.split('/').filter(Boolean)[1]
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+        if (url.pathname.startsWith('/embed/')) {
+          const id = url.pathname.split('/').filter(Boolean)[1]
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+      }
+
+      return raw
+    } catch {
+      return raw
+    }
+  }
 
   // Scroll to top when slug changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug])
 
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchDocumentaries({ limit: 1000 })
+        if (!isMounted) return
+        setDocumentaries(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Sənədli film məlumatı yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   // Find the documentary
   const doc = useMemo(() => {
-    return allDocumentaries.find(item => item.slug === slug)
-  }, [slug])
+    return documentaries.find(item => item.slug === slug)
+  }, [documentaries, slug])
+
+  const iframeSrc = useMemo(() => {
+    return toEmbeddableUrl(doc?.videoUrl)
+  }, [doc?.videoUrl])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <Loader2 className="w-10 h-10 animate-spin text-purple-600" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Xəta baş verdi</h2>
+        <p className="text-gray-500 mt-2">{error}</p>
+        <Link to="/documentaries" className="inline-block mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+          Siyahıya Qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!doc) {
     return (
@@ -38,14 +129,27 @@ const DocumentaryDetailsPage = () => {
         <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
                 <div className="aspect-video w-full bg-gray-900 rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-                    <iframe 
-                        className="w-full h-full"
-                        src={doc.videoUrl} 
-                        title={doc.title}
-                        frameBorder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowFullScreen
-                    ></iframe>
+                    {iframeSrc ? (
+                      <iframe 
+                          className="w-full h-full"
+                          src={iframeSrc} 
+                          title={doc.title}
+                          frameBorder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          allowFullScreen
+                      ></iframe>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-white/80 px-6 text-center">
+                        <a
+                          href={doc.videoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          Videonu aç
+                        </a>
+                      </div>
+                    )}
                 </div>
             </div>
         </div>
@@ -90,7 +194,7 @@ const DocumentaryDetailsPage = () => {
                     </div>
 
                     {/* Share Section */}
-                    <div className="mt-10 pt-8 border-t border-gray-100 flex items-center justify-between">
+                    {/* <div className="mt-10 pt-8 border-t border-gray-100 flex items-center justify-between">
                         <span className="font-medium text-gray-900">Filmi Paylaş:</span>
                         <div className="flex gap-3">
                             <button className="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors">
@@ -106,7 +210,7 @@ const DocumentaryDetailsPage = () => {
                                 <Share2 className="w-5 h-5" />
                             </button>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Sidebar (Right) */}

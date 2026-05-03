@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import allMenu from '../../../mockDatas/allMenu.json'
 import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react'
+import { fetchLocus } from '../../../pages/Locus/locusService'
 
 const sortByOrder = (items) => [...items].sort((a, b) => (a.order || 0) - (b.order || 0))
 
@@ -57,7 +58,69 @@ const Navbar = () => {
   const [affixed, setAffixed] = useState(false)
   const [trigger, setTrigger] = useState(0)
   const navRef = useRef(null)
-  const topLevel = sortByOrder((Array.isArray(allMenu) ? allMenu : []).filter(i => i.visible !== false))
+  const [menuItems, setMenuItems] = useState(() => (Array.isArray(allMenu) ? allMenu : []))
+
+  const topLevel = useMemo(() => {
+    return sortByOrder(menuItems.filter(i => i.visible !== false))
+  }, [menuItems])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const toMenuLabel = (raw) => {
+      if (!raw) return ''
+      const normalized = String(raw).trim()
+      if (!normalized) return ''
+      let upper = normalized.toUpperCase()
+      if (!upper.includes('MAHAL')) {
+        upper = `${upper} MAHALI`
+      }
+      return upper
+    }
+
+    const loadMahals = async () => {
+      try {
+        const locusList = await fetchLocus({ limit: 1000 })
+        if (!isMounted) return
+
+        setMenuItems((prev) => {
+          const base = Array.isArray(prev) ? prev : []
+          return base.map((item) => {
+            if (item?.id !== 'menu-mahals') return item
+
+            const existingChildren = Array.isArray(item.children) ? item.children : []
+            const villagesItem = existingChildren.find((c) => c?.path === '/locus/villages')
+
+            const dynamicMahals = (Array.isArray(locusList) ? locusList : [])
+              .filter((l) => l && l.slug)
+              .map((l, idx) => ({
+                id: `submenu-mahals-${l.slug}`,
+                parentId: 'menu-mahals',
+                label: toMenuLabel(l.name || l.title || l.slug),
+                path: `/locus/${l.slug}`,
+                order: idx + 1,
+                icon: 'landmark',
+                permissions: ['public'],
+                visible: true
+              }))
+
+            const children = villagesItem
+              ? [...dynamicMahals, { ...villagesItem, order: dynamicMahals.length + 1 }]
+              : dynamicMahals
+
+            return { ...item, children }
+          })
+        })
+      } catch {
+        if (!isMounted) return
+      }
+    }
+
+    loadMahals()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const toggleOpen = (id) => {
     setOpenSet(prev => {

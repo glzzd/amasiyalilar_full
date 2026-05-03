@@ -1,16 +1,37 @@
-import React, { useMemo, useState } from 'react'
-import { Search, Calendar, MapPin, Award, Briefcase, ChevronDown } from 'lucide-react'
+import React, { useEffect, useMemo, useState } from 'react'
+import { Search, Calendar, MapPin, Award, Briefcase, ChevronDown, Loader2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import allOfficers from '../../mockDatas/allOfficers.json'
+import { fetchOfficials } from '../WesternAzerbaijan/services'
 
 const AllOfficersPage = () => {
-  const officers = useMemo(() => {
-    return Array.isArray(allOfficers) ? allOfficers : []
-  }, [])
+  const [officers, setOfficers] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   const [query, setQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 8
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchOfficials({ limit: 1000 })
+        if (!isMounted) return
+        setOfficers(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Rəsmi şəxslər yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -39,6 +60,16 @@ const AllOfficersPage = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 pb-24">
       <div className="container mx-auto px-6 pt-12">
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-10 h-10 animate-spin text-blue-600" />
+          </div>
+        ) : error ? (
+          <div className="text-center py-20">
+            <h3 className="text-xl font-bold text-gray-900">Xəta baş verdi</h3>
+            <p className="text-gray-500 mt-2">{error}</p>
+          </div>
+        ) : null}
         <div className="max-w-3xl mb-12">
           <h1 className="text-5xl md:text-6xl font-black mb-4 text-gray-900 tracking-tight leading-[0.95]">
             Amasiya Vəzifəli Şəxsləri

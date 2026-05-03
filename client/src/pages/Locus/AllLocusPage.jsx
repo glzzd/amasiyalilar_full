@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Map, ArrowRight, Compass } from 'lucide-react'
-import allLocus from '../../mockDatas/allLocus.json'
+import { Map, ArrowRight, Compass, Loader2 } from 'lucide-react'
+import { fetchLocus } from './locusService'
 
 const AllLocusPage = () => {
+  const [locus, setLocus] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchLocus({ limit: 1000 })
+        if (!isMounted) return
+        setLocus(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Məlumatlar yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-white text-gray-900 pb-24">
       {/* Abstract Background Pattern */}
@@ -32,8 +57,18 @@ const AllLocusPage = () => {
         </div>
 
         {/* Gallery Grid */}
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-10 h-10 animate-spin text-green-600" />
+          </div>
+        ) : error ? (
+          <div className="text-center py-20">
+            <h3 className="text-xl font-bold text-gray-900">Xəta baş verdi</h3>
+            <p className="text-gray-500 mt-2">{error}</p>
+          </div>
+        ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {allLocus.map((locus, index) => (
+          {locus.map((locus, index) => (
             <Link 
               to={`/locus/${locus.slug}`} 
               key={locus.id}
@@ -76,6 +111,7 @@ const AllLocusPage = () => {
             </Link>
           ))}
         </div>
+        )}
       </div>
     </div>
   )

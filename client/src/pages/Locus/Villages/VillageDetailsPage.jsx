@@ -1,14 +1,63 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { MapPin, Landmark, ArrowLeft, Ruler, Mountain, CalendarDays, Compass } from 'lucide-react'
+import { MapPin, Landmark, ArrowLeft, Ruler, Mountain, CalendarDays, Compass, Loader2 } from 'lucide-react'
 import Breadcrumb from '../../../components/shared/Breadcrumb'
-import allVillages from '../../../mockDatas/allVillages.json'
+import { fetchVillages } from '../locusService'
 
 const VillageDetailsPage = () => {
   const { slug } = useParams()
-  const village = React.useMemo(() => {
-    return allVillages.find(v => v.slug === slug)
+  const [villages, setVillages] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchVillages({ limit: 1000 })
+        if (!isMounted) return
+        setVillages(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Kənd məlumatı yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const village = useMemo(() => {
+    return villages.find(v => v.slug === slug)
+  }, [slug, villages])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <Loader2 className="w-10 h-10 animate-spin text-green-600" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900">
+        <h2 className="text-3xl font-bold mb-4">Xəta baş verdi</h2>
+        <p className="text-gray-500 mb-6">{error}</p>
+        <Link to="/locus/villages" className="px-5 py-2.5 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all flex items-center gap-2">
+          <ArrowLeft size={18} /> Kəndlər siyahısına qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!village) {
     return (

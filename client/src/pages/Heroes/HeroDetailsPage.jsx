@@ -1,21 +1,65 @@
-import React, { useMemo, useEffect } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Calendar, Award, MapPin, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import allHeroes from '../../mockDatas/allHeroes.json'
+import { Calendar, Award, MapPin, Share2, Facebook, Twitter, Linkedin, Loader2 } from 'lucide-react'
 import OtherHeroesSlider from '../../components/shared/OtherHeroesSlider'
+import { fetchHeroes } from './heroesService'
 
 const HeroDetailsPage = () => {
   const { slug } = useParams()
+  const [heroes, setHeroes] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   // Scroll to top when slug changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug])
 
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchHeroes({ limit: 1000 })
+        if (!isMounted) return
+        setHeroes(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Qəhrəman məlumatı yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   // Find the hero
   const hero = useMemo(() => {
-    return allHeroes.find(item => item.slug === slug)
-  }, [slug])
+    return heroes.find(item => item.slug === slug)
+  }, [heroes, slug])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <Loader2 className="w-10 h-10 animate-spin text-amber-600" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Xəta baş verdi</h2>
+        <p className="text-gray-500 mt-2">{error}</p>
+        <Link to="/heroes" className="inline-block mt-4 px-6 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
+          Qəhrəmanlar Siyahısına Qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!hero) {
     return (
@@ -95,7 +139,7 @@ const HeroDetailsPage = () => {
                 </div>
 
                 {/* Share Section */}
-                <div className="mt-12 pt-8 border-t border-gray-100 flex items-center justify-between">
+                {/* <div className="mt-12 pt-8 border-t border-gray-100 flex items-center justify-between">
                     <span className="font-medium text-gray-900">Paylaş:</span>
                     <div className="flex gap-3">
                         <button className="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors">
@@ -111,7 +155,7 @@ const HeroDetailsPage = () => {
                             <Share2 className="w-5 h-5" />
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Sidebar (Right) */}

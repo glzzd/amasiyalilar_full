@@ -1,14 +1,37 @@
-import React, { useMemo, useState } from 'react'
-import { Search, Book, Calendar, Tag, ExternalLink, Feather } from 'lucide-react'
+import React, { useEffect, useMemo, useState } from 'react'
+import { Search, Book, Calendar, Tag, ExternalLink, Feather, Loader2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import library from '../../mockDatas/library.json'
+import { fetchLibrary } from './services'
 
 const LibraryPage = () => {
-  const base = useMemo(() => Array.isArray(library) ? library : [], [])
+  const [base, setBase] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const [query, setQuery] = useState('')
   const [genre, setGenre] = useState('Hamısı')
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 6
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchLibrary({ limit: 1000 })
+        if (!isMounted) return
+        setBase(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Kitablar yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const genres = useMemo(() => {
     const set = new Set()
@@ -47,6 +70,16 @@ const LibraryPage = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 pb-24">
       <div className="container mx-auto px-6">
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-10 h-10 animate-spin text-green-600" />
+          </div>
+        ) : error ? (
+          <div className="text-center py-20">
+            <h3 className="text-xl font-bold text-gray-900">Xəta baş verdi</h3>
+            <p className="text-gray-500 mt-2">{error}</p>
+          </div>
+        ) : null}
         <div className="max-w-3xl mb-12">
           <h1 className="text-5xl md:text-6xl font-black mb-4 text-gray-900 tracking-tight leading-[0.95]">
             Kitabxana

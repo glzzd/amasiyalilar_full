@@ -1,0 +1,102 @@
+{
+  "publicBasePath": "/api/public",
+  "authRequired": false,
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/public/news",
+      "description": "Xəbərlər siyahısı",
+      "query": {
+        "page": "number",
+        "limit": "number",
+        "search": "string",
+        "category": "string",
+        "isConfirmed": "boolean"
+      }
+    },
+    { "method": "GET", "path": "/api/public/news/:id", "description": "Xəbər detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/martyrs",
+      "description": "Şəhidlər siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/martyrs/:id", "description": "Şəhid detalı" },
+
+    { "method": "GET", "path": "/api/public/about", "description": "Haqqımızda (singleton)" },
+    { "method": "GET", "path": "/api/public/waabout", "description": "Qərbi Azərbaycan haqqında (singleton)" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/veterans",
+      "description": "Veteranlar siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/veterans/:id", "description": "Veteran detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/documentaries",
+      "description": "Sənədli filmlər siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/documentaries/:id", "description": "Sənədli film detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/heroes",
+      "description": "Qəhrəmanlar siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/heroes/:id", "description": "Qəhrəman detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/locus",
+      "description": "Lokuslar siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/locus/:id", "description": "Lokus detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/regions",
+      "description": "Rayonlar siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/regions/:id", "description": "Rayon detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/intellectuals",
+      "description": "Ziyalılar siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/intellectuals/:id", "description": "Ziyalı detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/officials",
+      "description": "Rəsmi şəxslər siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/officials/:id", "description": "Rəsmi şəxs detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/villages",
+      "description": "Kəndlər siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/villages/:id", "description": "Kənd detalı" },
+
+    {
+      "method": "GET",
+      "path": "/api/public/library",
+      "description": "Kitablar siyahısı",
+      "query": { "page": "number", "limit": "number", "search": "string" }
+    },
+    { "method": "GET", "path": "/api/public/library/:id", "description": "Kitab detalı" }
+  ]
+}

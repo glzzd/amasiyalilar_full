@@ -13,8 +13,8 @@ const AboutPage = () => {
     const fetchData = async () => {
       try {
         const response = await getWesternAbout()
-        if (response.success) {
-          setAbout(response.data)
+        if (response.about) {
+          setAbout(response.about)
         }
       } catch (err) {
         setError(err.message)

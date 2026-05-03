@@ -56,7 +56,6 @@ import AdminCollectionPage from './pages/(admin)/AdminCollectionPage'
 import ContactPage from './pages/Contact'
 import AdminAboutPage from './pages/(admin)/pages/About'
 import AdminAboutWestAzerbaijanPage from './pages/(admin)/pages/WesternAzerbaijan/About'
-import AdminAllMartyrsPage from './pages/(admin)/pages/Martyrs'
 
 
 function App() {
@@ -68,7 +67,7 @@ function App() {
           <Route index element={<HomePage/>} />
           <Route path="about" element={<AboutPage />} />
           <Route path="news" element={<AllNewsPage />} />
-          <Route path="news/:slug" element={<NewDetailsPage />} />
+          <Route path="news/:id" element={<NewDetailsPage />} />
           <Route path="author/:authorName" element={<AuthorNewsPage />} />
           <Route path="martyrs" element={<AllMartyrsPage />} />
           <Route path="martyrs/:slug" element={<MartyrDetailsPage />} />
@@ -122,7 +121,6 @@ function App() {
           <Route path="content/about-us" element={<AdminAboutPage />} />
           <Route path="content/about-west-azerbaijan" element={<AdminAboutWestAzerbaijanPage />} />
           <Route path="content/:collectionId" element={<AdminCollectionPage />} />
-          <Route path="content/martyrs" element={<AdminAllMartyrsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

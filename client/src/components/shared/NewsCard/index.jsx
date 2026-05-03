@@ -25,7 +25,7 @@ const NewsCard = ({ news, className }) => {
 
   return (
     <Link 
-      to={`/news/${news.slug}`} 
+      to={news?._id ? `/news/${news._id}` : '#'} 
       className={cn(
         "group flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100",
         className

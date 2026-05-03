@@ -4,7 +4,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 export const getWesternAbout = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/api/v1/about-west-azerbaijan`)
+    const response = await axios.get(`${API_BASE_URL}/api/public/waabout`)
     return response.data
   } catch (error) {
     const message =

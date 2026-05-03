@@ -73,7 +73,6 @@
   {
     "id": "menu-mahals",
     "label": "MAHALLAR",
-    "path": "/locus",
     "order": 3,
     "icon": "map",
     "permissions": ["public"],
@@ -119,77 +118,7 @@
     "permissions": ["public"],
     "visible": true,
     "children": [
-      {
-        "id": "submenu-garbi-azerbaycan-regions",
-        "parentId": "menu-garbi-azerbaycan",
-        "label": "ŞƏHƏR VƏ RAYONLARI",
-        "order": 1,
-        "icon": "city",
-        "permissions": ["public"],
-        "visible": true,
-        "children": [
-          {
-            "id": "subsubmenu-regions-rayonlar",
-            "parentId": "submenu-garbi-azerbaycan-regions",
-            "label": "RAYONLAR",
-            "path": "/western-azerbaijan/city-and-districts/districts",
-            "order": 1,
-            "icon": "map",
-            "permissions": ["public"],
-            "visible": true
-          },
-          {
-            "id": "subsubmenu-regions-mahals",
-            "parentId": "submenu-garbi-azerbaycan-regions",
-            "label": "MAHALLAR",
-            "path": "western-azerbaijan/city-and-districts/counties",
-            "order": 2,
-            "icon": "map",
-            "permissions": ["public"],
-            "visible": true
-          },
-          {
-            "id": "subsubmenu-regions-city",
-            "parentId": "submenu-garbi-azerbaycan-regions",
-            "label": "ŞƏHƏR",
-            "path": "/western-azerbaijan/city",
-            "order": 3,
-            "icon": "building",
-            "permissions": ["public"],
-            "visible": true
-          },
-          {
-            "id": "subsubmenu-regions-area",
-            "parentId": "submenu-garbi-azerbaycan-regions",
-            "label": "ƏRAZİSİ",
-            "path": "/western-azerbaijan/area",
-            "order": 4,
-            "icon": "ruler",
-            "permissions": ["public"],
-            "visible": true
-          },
-          {
-            "id": "subsubmenu-regions-authors",
-            "parentId": "submenu-garbi-azerbaycan-regions",
-            "label": "ŞAİRLƏRİ VƏ YAZIÇILARI",
-            "path": "/western-azerbaijan/authors",
-            "order": 5,
-            "icon": "pen",
-            "permissions": ["public"],
-            "visible": true
-          },
-          {
-            "id": "subsubmenu-regions-monuments",
-            "parentId": "submenu-garbi-azerbaycan-regions",
-            "label": "ABİDƏLƏR",
-            "path": "/western-azerbaijan/monuments",
-            "order": 6,
-            "icon": "landmark",
-            "permissions": ["public"],
-            "visible": true
-          }
-        ]
-      },
+
       {
         "id": "submenu-garbi-azerbaycan-library",
         "parentId": "menu-garbi-azerbaycan",
@@ -221,104 +150,5 @@
         "visible": true
       }
     ]
-  },
-  {
-    "id": "menu-amasiyalilar",
-    "label": "AMASİYALILAR",
-    "order": 5,
-    "icon": "users",
-    "permissions": ["public"],
-    "visible": true,
-    "children": [
-      {
-        "id": "submenu-amasiyalilar-officials",
-        "parentId": "menu-amasiyalilar",
-        "label": "VƏZİFƏLİ ŞƏXSLƏR",
-        "path": "/amasiyalilar/officers",
-        "order": 1,
-        "icon": "badge",
-        "permissions": ["public"],
-        "visible": true
-      },
-      {
-        "id": "submenu-amasiyalilar-authors",
-        "parentId": "menu-amasiyalilar",
-        "label": "ŞAİRLƏR VƏ YAZIÇILAR",
-        "path": "/amasiyalilar/authors",
-        "order": 2,
-        "icon": "pen",
-        "permissions": ["public"],
-        "visible": true
-      },
-      {
-        "id": "submenu-amasiyalilar-doctors-teachers",
-        "parentId": "menu-amasiyalilar",
-        "label": "HƏKİMLƏR VƏ MÜƏLLİMLƏR",
-        "path": "/amasiyalilar/doctors-and-teachers",
-        "order": 3,
-        "icon": "stethoscope",
-        "permissions": ["public"],
-        "visible": true
-      },
-      {
-        "id": "submenu-amasiyalilar-athletes",
-        "parentId": "menu-amasiyalilar",
-        "label": "İDMANÇILAR",
-        "path": "/amasiyalilar/athletes",
-        "order": 4,
-        "icon": "trophy",
-        "permissions": ["public"],
-        "visible": true
-      },
-      {
-        "id": "submenu-amasiyalilar-videos",
-        "parentId": "menu-amasiyalilar",
-        "label": "VİDEOLAR",
-        "path": "/amasiyalilar/videos",
-        "order": 5,
-        "icon": "video",
-        "permissions": ["public"],
-        "visible": true
-      },
-      {
-        "id": "submenu-amasiyalilar-musics",
-        "parentId": "menu-amasiyalilar",
-        "label": "MUSİQİLƏR",
-        "path": "/amasiyalilar/musics",
-        "order": 6,
-        "icon": "music",
-        "permissions": ["public"],
-        "visible": true
-      },
-      {
-        "id": "submenu-amasiyalilar-business",
-        "parentId": "menu-amasiyalilar",
-        "label": "İŞ ADAMLARI",
-        "path": "/amasiyalilar/business",
-        "order": 7,
-        "icon": "briefcase",
-        "permissions": ["public"],
-        "visible": true
-      },
-      {
-        "id": "submenu-amasiyalilar-abroad",
-        "parentId": "menu-amasiyalilar",
-        "label": "XARİCDƏ YAŞAYANLAR",
-        "path": "/amasiyalilar/abroad",
-        "order": 8,
-        "icon": "plane",
-        "permissions": ["public"],
-        "visible": true
-      }
-    ]
-  },
-  {
-    "id": "menu-contact",
-    "label": "ƏLAQƏ",
-    "path": "/contact",
-    "order": 6,
-    "icon": "phone",
-    "permissions": ["public"],
-    "visible": true
   }
 ]

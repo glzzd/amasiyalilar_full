@@ -3,7 +3,7 @@ import axios from 'axios'
 const NEWS_API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 const newsApi = axios.create({
-  baseURL: `${NEWS_API_BASE_URL}/api/v1`,
+  baseURL: `${NEWS_API_BASE_URL}/api/public`,
   withCredentials: false
 })
 
@@ -29,7 +29,7 @@ export const fetchConfirmedNews = async () => {
   if (pendingRequest) return pendingRequest
 
   pendingRequest = newsApi
-    .get('/news/confirmed')
+    .get('/news', { params: { isConfirmed: true } })
     .then((response) => {
       const normalized = normalizeNewsResponse(response.data)
       cachedNews = normalized
@@ -67,7 +67,9 @@ export const fetchNewsById = async (id) => {
 
 export const fetchConfirmedNewsByAuthor = async (authorId) => {
   try {
-    const response = await newsApi.get(`/author/${encodeURIComponent(authorId)}/confirmed`)
+    const response = await newsApi.get('/news', {
+      params: { isConfirmed: true, authorId: encodeURIComponent(authorId) }
+    })
     return normalizeNewsResponse(response.data)
   } catch (error) {
     const message =

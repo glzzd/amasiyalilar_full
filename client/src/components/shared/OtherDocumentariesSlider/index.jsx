@@ -1,15 +1,35 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
-import allDocumentaries from '../../../mockDatas/allDocumentaries.json'
+import { fetchDocumentaries } from '../../../pages/Documentaries/documentariesService'
 
 const OtherDocumentariesSlider = ({ currentSlug }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [documentaries, setDocumentaries] = useState([])
 
   const others = useMemo(() => {
-    return allDocumentaries.filter(d => d.slug !== currentSlug)
-  }, [currentSlug])
+    return documentaries.filter(d => d.slug !== currentSlug)
+  }, [currentSlug, documentaries])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchDocumentaries({ limit: 1000 })
+        if (!isMounted) return
+        setDocumentaries(Array.isArray(list) ? list : [])
+      } catch {
+        if (isMounted) setDocumentaries([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Responsive items per view
   const [itemsPerView, setItemsPerView] = useState(3)

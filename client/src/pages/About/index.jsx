@@ -3,14 +3,6 @@ import { Link } from 'react-router-dom'
 import Breadcrumb from '../../components/shared/Breadcrumb'
 import { Users, Target, Image as ImageIcon, ArrowRight, Loader2 } from 'lucide-react'
 import { getAbout } from './services/aboutService'
-import allNews from '../../mockDatas/allNews.json'
-import allMartyrs from '../../mockDatas/allMartyrs.json'
-import allVeterans from '../../mockDatas/allVeterans.json'
-import allDocumentaries from '../../mockDatas/allDocumentaries.json'
-import allVideos from '../../mockDatas/allVideos.json'
-import allHeroes from '../../mockDatas/allHeroes.json'
-import allLocus from '../../mockDatas/allLocus.json'
-import ourIntellectuals from '../../mockDatas/ourIntellectuals.json'
 
 const AboutPage = () => {
   const [aboutData, setAboutData] = useState(null)
@@ -21,8 +13,10 @@ const AboutPage = () => {
     const fetchData = async () => {
       try {
         const response = await getAbout()
-        if (response.data) {
-          setAboutData(response.data)
+        console.log(response);
+        
+        if (response.about) {
+          setAboutData(response.about)
         }
       } catch (err) {
         console.error('Haqqımızda məlumatı alınarkən xəta:', err)
@@ -35,37 +29,20 @@ const AboutPage = () => {
   }, [])
 
   const dynamicStats = useMemo(() => {
-    // Eğer backend'den gelen stats varsa onu kullan, yoksa hesaplanan değerleri kullan
     if (aboutData?.stats && aboutData.stats.length > 0) {
       return aboutData.stats
     }
 
-    const safeLen = (arr) => (Array.isArray(arr) ? arr.length : 0)
-    const hasImageCount = (arr, key = 'image') =>
-      Array.isArray(arr)
-        ? arr.filter((item) => typeof item?.[key] === 'string' && item[key].length > 0).length
-        : 0
-
-    const articles = safeLen(allNews)
-    const martyrVeteran = safeLen(allMartyrs) + safeLen(allVeterans)
-    const documentaries = safeLen(allDocumentaries)
-    const photoArchive =
-      hasImageCount(allNews, 'image') +
-      hasImageCount(allMartyrs, 'image') +
-      hasImageCount(allVeterans, 'image') +
-      hasImageCount(allHeroes, 'image') +
-      hasImageCount(allLocus, 'image') +
-      hasImageCount(ourIntellectuals, 'image') +
-      hasImageCount(allDocumentaries, 'thumbnail') +
-      hasImageCount(allVideos, 'thumbnail')
-
     return [
-      { label: 'Toplanan məqalə', value: articles },
-      { label: 'Şəhid və qazi haqqında qeyd', value: martyrVeteran },
-      { label: 'Sənədli film', value: documentaries },
-      { label: 'Foto arxiv', value: photoArchive }
+      { label: 'Toplanan məqalə', value: 0 },
+      { label: 'Şəhid və qazi haqqında qeyd', value: 0 },
+      { label: 'Sənədli film', value: 0 },
+      { label: 'Foto arxiv', value: 0 }
     ]
   }, [aboutData])
+
+
+  
 
   if (loading) {
     return (

@@ -1,22 +1,45 @@
-import React, { useState, useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, Calendar, Award, MapPin, ChevronLeft, ChevronRight } from 'lucide-react'
-import allHeroes from '../../mockDatas/allHeroes.json'
+import { Search, Calendar, Award, MapPin, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react'
 import { cn, formatDate } from '@/lib/utils'
+import { fetchHeroes } from './heroesService'
 
 const AllHeroesPage = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
+  const [heroes, setHeroes] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const itemsPerPage = 9
   
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchHeroes({ limit: 1000 })
+        if (!isMounted) return
+        setHeroes(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Qəhrəmanlar yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const filteredHeroes = useMemo(() => {
-    return allHeroes.filter(hero => 
+    return heroes.filter(hero => 
       hero.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
       hero.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
       hero.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  }, [searchQuery])
+  }, [heroes, searchQuery])
 
   // Pagination Logic
   const totalPages = Math.ceil(filteredHeroes.length / itemsPerPage)
@@ -66,7 +89,17 @@ const AllHeroesPage = () => {
 
       {/* Heroes Grid */}
       <div className="container mx-auto px-4 py-16">
-        {currentHeroes.length > 0 ? (
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <Loader2 className="w-10 h-10 animate-spin text-amber-600" />
+          </div>
+        ) : error ? (
+          <div className="text-center py-20">
+            <h3 className="text-xl font-bold text-gray-900">Xəta baş verdi</h3>
+            <p className="text-gray-500 mt-2">{error}</p>
+          </div>
+        ) : (
+        currentHeroes.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentHeroes.map((hero) => (
               <div key={hero.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
@@ -127,6 +160,7 @@ const AllHeroesPage = () => {
             <h3 className="text-xl font-bold text-gray-900">Nəticə tapılmadı</h3>
             <p className="text-gray-500 mt-2">Axtarışınıza uyğun məlumat tapılmadı.</p>
           </div>
+        )
         )}
 
         {/* Pagination */}

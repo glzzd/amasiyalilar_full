@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import allNews from '../../../mockDatas/allNews.json'
 import { formatDate } from '@/lib/utils'
+import { fetchConfirmedNews } from '@/pages/News/services/newsService'
 
 const Card = ({ item, size = 'md' }) => (
-  <Link to={item.slug ? `/news/${item.slug}` : '#'} className="group relative block md:h-full overflow-hidden rounded-md transform-gpu transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+  <Link to={item?._id ? `/news/${item._id}` : '#'} className="group relative block md:h-full overflow-hidden rounded-md transform-gpu transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
     <img
       src={item.image}
       alt={item.title}
@@ -34,10 +34,34 @@ const Card = ({ item, size = 'md' }) => (
 )
 
 const Hero = () => {
-  const sorted = Array.isArray(allNews)
-    ? [...allNews].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-    : []
-  const items = sorted.slice(0, 4)
+  const [news, setNews] = useState([])
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchConfirmedNews()
+        if (!isMounted) return
+        setNews(Array.isArray(list) ? list : [])
+      } catch {
+        if (isMounted) setNews([])
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const items = useMemo(() => {
+    const sorted = Array.isArray(news)
+      ? [...news].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+      : []
+    return sorted.slice(0, 4)
+  }, [news])
+
   if (items.length === 0) return null
 
   const leftFeatured = items[0]

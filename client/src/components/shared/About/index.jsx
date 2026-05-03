@@ -1,9 +1,38 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Play, CheckCircle2, ArrowRight } from 'lucide-react'
-import about from '../../../mockDatas/aboutUs.json'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { getAbout } from '../../../pages/About/services/aboutService'
 
 const About = () => {
+  const [about, setAbout] = useState(null)
+
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const response = await getAbout()
+        const data = response?.data || response?.about || response
+        if (!isMounted) return
+        setAbout(data || null)
+      } catch {
+        if (isMounted) setAbout(null)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  const cta = useMemo(() => {
+    if (about?.cta?.href) return about.cta
+    return { href: '/about', text: 'Daha çox' }
+  }, [about])
+
+  if (!about) return null
+
   return (
     <section className="mt-12 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
@@ -39,12 +68,12 @@ const About = () => {
               ))}
             </ul>
           ) : null}
-          {about.cta?.href ? (
+          {cta?.href ? (
             <Link
-              to={about.cta.href}
+              to={cta.href}
               className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-red-500 text-white text-sm font-semibold hover:bg-red-600 transition-colors"
             >
-              {about.cta?.text || 'Daha çox'}
+              {cta?.text || 'Daha çox'}
               <ArrowRight size={16} />
             </Link>
           ) : null}

@@ -35,6 +35,53 @@ const VideoDetailsPage = () => {
     day: '2-digit'
   })
 
+  const toEmbeddableUrl = (input) => {
+    if (!input || typeof input !== 'string') return ''
+    const raw = input.trim()
+    if (!raw) return ''
+
+    if (raw.includes('youtube.com/embed/') || raw.includes('youtube-nocookie.com/embed/')) {
+      return raw
+    }
+
+    try {
+      const url = new URL(raw)
+      const host = url.hostname.replace(/^www\./, '')
+
+      if (host === 'youtu.be') {
+        const id = url.pathname.split('/').filter(Boolean)[0]
+        return id ? `https://www.youtube.com/embed/${id}` : ''
+      }
+
+      if (host.endsWith('youtube.com')) {
+        if (url.pathname === '/watch') {
+          const id = url.searchParams.get('v')
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+        if (url.pathname.startsWith('/shorts/')) {
+          const id = url.pathname.split('/').filter(Boolean)[1]
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+        if (url.pathname.startsWith('/live/')) {
+          const id = url.pathname.split('/').filter(Boolean)[1]
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+        if (url.pathname.startsWith('/embed/')) {
+          const id = url.pathname.split('/').filter(Boolean)[1]
+          return id ? `https://www.youtube.com/embed/${id}` : ''
+        }
+      }
+
+      return raw
+    } catch {
+      return raw
+    }
+  }
+
+  const iframeSrc = useMemo(() => {
+    return toEmbeddableUrl(video.videoUrl)
+  }, [video.videoUrl])
+
   return (
     <div className="min-h-screen bg-white pb-16">
       <div className="bg-gradient-to-b from-gray-900 to-gray-950">
@@ -71,9 +118,9 @@ const VideoDetailsPage = () => {
 
         <div className="container mx-auto px-4 pb-10">
           <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
-            {video.videoUrl ? (
+            {iframeSrc ? (
               <iframe
-                src={video.videoUrl}
+                src={iframeSrc}
                 title={video.title}
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

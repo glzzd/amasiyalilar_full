@@ -1,18 +1,62 @@
-import React, { useEffect, useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, MapPin, Calendar, Book, Award, Briefcase, GraduationCap, Lightbulb } from 'lucide-react'
-import allIntellectuals from '../../mockDatas/allIntellectuals.json'
+import { ArrowLeft, MapPin, Calendar, Book, Award, Briefcase, GraduationCap, Lightbulb, Loader2 } from 'lucide-react'
+import { fetchIntellectuals } from './services'
 
 const IntellectualDetails = () => {
   const { slug } = useParams()
+  const [intellectuals, setIntellectuals] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug])
 
+  useEffect(() => {
+    let isMounted = true
+
+    const load = async () => {
+      try {
+        const list = await fetchIntellectuals({ limit: 1000 })
+        if (!isMounted) return
+        setIntellectuals(Array.isArray(list) ? list : [])
+      } catch (err) {
+        if (isMounted) setError(err.message || 'Ziyalı məlumatı yüklənərkən xəta baş verdi')
+      } finally {
+        if (isMounted) setLoading(false)
+      }
+    }
+
+    load()
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
   const intellectual = useMemo(() => {
-    return Array.isArray(allIntellectuals) ? allIntellectuals.find(i => i.slug === slug) : null
-  }, [slug])
+    return intellectuals.find(i => i.slug === slug) || null
+  }, [intellectuals, slug])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <Loader2 className="w-10 h-10 animate-spin text-blue-600" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-20 text-center">
+        <h2 className="text-2xl font-bold text-gray-900">Xəta baş verdi</h2>
+        <p className="text-gray-500 mt-2">{error}</p>
+        <Link to="/western-azerbaijan/intellectuals" className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          Siyahıya Qayıt
+        </Link>
+      </div>
+    )
+  }
 
   if (!intellectual) {
     return (

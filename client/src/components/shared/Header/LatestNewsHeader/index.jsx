@@ -69,7 +69,7 @@ const LatestNewsHeader = () => {
           </div>
           <div className="flex-1 pl-4 text-sm">Xəbərlər yüklənir...</div>
           <div className="hidden md:flex items-center gap-3 ml-4 shrink-0">
-            <a href="#" aria-label="Facebook" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+            {/* <a href="#" aria-label="Facebook" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               <Facebook size={16} />
             </a>
             <a href="#" aria-label="Twitter" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
@@ -80,7 +80,7 @@ const LatestNewsHeader = () => {
             </a>
             <a href="#" aria-label="YouTube" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               <Youtube size={16} />
-            </a>
+            </a> */}
             <a href="/admin" aria-label="Giriş" className="text-slate-300 hover:text-white transition-colors">
               <UserCircle size={18} />
             </a>
@@ -100,7 +100,7 @@ const LatestNewsHeader = () => {
           </div>
           <div className="flex-1 pl-4 text-sm">Son 3 gündə xəbər paylaşılmayıb</div>
           <div className="hidden md:flex items-center gap-3 ml-4 shrink-0">
-            <a href="#" aria-label="Facebook" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+            {/* <a href="#" aria-label="Facebook" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               <Facebook size={16} />
             </a>
             <a href="#" aria-label="Twitter" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
@@ -111,8 +111,8 @@ const LatestNewsHeader = () => {
             </a>
             <a href="#" aria-label="YouTube" className="text-slate-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               <Youtube size={16} />
-            </a>
-            <a href={import.meta.env.VITE_ADMIN_PANEL_URL} aria-label="Giriş" className="text-slate-300 hover:text-white transition-colors">  
+            </a> */}
+            <a href="/admin" aria-label="Giriş" className="text-slate-300 hover:text-white transition-colors">
               <UserCircle size={18} />
             </a>
           </div>

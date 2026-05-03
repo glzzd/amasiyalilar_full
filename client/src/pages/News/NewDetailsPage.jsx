@@ -5,7 +5,7 @@ import { formatDate } from '@/lib/utils'
 import { fetchConfirmedNews, fetchNewsById } from './services/newsService'
 
 const NewDetailsPage = () => {
-  const { slug } = useParams()
+  const { id } = useParams()
   const [news, setNews] = useState(null)
   const [relatedNews, setRelatedNews] = useState([])
   const [loading, setLoading] = useState(true)
@@ -17,7 +17,7 @@ const NewDetailsPage = () => {
     const loadNews = async () => {
       try {
         const [detailData, listData] = await Promise.all([
-          fetchNewsById(slug),
+          fetchNewsById(id),
           fetchConfirmedNews()
         ])
 
@@ -57,7 +57,7 @@ const NewDetailsPage = () => {
     return () => {
       isMounted = false
     }
-  }, [slug])
+  }, [id])
 
   const imageUrl = useMemo(() => {
     if (!news || !news.image) return ''
@@ -209,7 +209,7 @@ const NewDetailsPage = () => {
                     <Link to="#" className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full hover:bg-gray-200 transition-colors">Gündəm</Link>
                  </div>
 
-                 <div className="flex items-center gap-3">
+                 {/* <div className="flex items-center gap-3">
                     <span className="text-sm font-medium text-gray-500">Paylaş:</span>
                     <button className="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors">
                         <Facebook className="w-4 h-4" />
@@ -223,7 +223,7 @@ const NewDetailsPage = () => {
                     <button className="p-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors">
                         <Share2 className="w-4 h-4" />
                     </button>
-                 </div>
+                 </div> */}
               </div>
 
             </div>
